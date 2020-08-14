@@ -1,0 +1,30 @@
+uuid: 752cb49a-739e-49ed-b937-a71c5e40317c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - gravity_20
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: gravity_20_branding
+theme: gravity_20
+region: header
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

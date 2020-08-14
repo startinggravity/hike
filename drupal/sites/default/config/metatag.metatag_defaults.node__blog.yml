@@ -1,0 +1,38 @@
+uuid: 0712180a-4df1-4716-b7ef-2ee66c8f329f
+langcode: en
+status: true
+dependencies: {  }
+id: node__blog
+label: 'Content: Blog'
+tags:
+  robots: 'index, follow'
+  canonical_url: '[node:url]'
+  content_language: en
+  referrer: no-referrer-when-downgrade
+  title: '[node:field_blog_category]: [node:title] | [site:name]'
+  description: '[node:summary]'
+  abstract: '[node:summary]'
+  rights: 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.'
+  fb_admins: '641895471'
+  og_description: '[node:field_secondary_title]'
+  article_publisher: 'https://www.facebook.com/jim.smith'
+  og_site_name: 'Hike with Gravity'
+  article_author: '641895471'
+  og_image_type: image/jpeg
+  og_image_height: '750'
+  og_image: '[node:field_main_image:blog_horizontal_medium_1x]'
+  og_title: '[node:title]'
+  og_url: '[node:url]'
+  og_type: website
+  og_image_width: '1500'
+  twitter_cards_image_height: '300'
+  twitter_cards_type: summary_large_image
+  twitter_cards_creator_id: '2986914490'
+  twitter_cards_creator: '@hikewithgravity'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_image: '[node:field_main_image:blog_tease_1x]'
+  twitter_cards_site_id: '2986914490'
+  twitter_cards_image_width: '200'
+  twitter_cards_site: '@hikewithgravity'
+  twitter_cards_image_alt: '[node:title]'

@@ -1,0 +1,158 @@
+// Search
+
+// Input text box and buttons.
+.ais-SearchBox {
+  padding: 0 1em;
+
+  @include medium {
+    padding: 1.5em 6em;
+  }
+}
+
+.ais-SearchBox-submitIcon,
+.ais-SearchBox-resetIcon {
+  fill: white;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.ais-SearchBox-reset[hidden=""] {
+  display: none;
+}
+
+.ais-SearchBox-input {
+  @extend .form-item__textfield;
+}
+
+.ais-SearchBox-submit,
+.ais-SearchBox-reset {
+  position: relative;
+  top: 0.35em;
+  margin-left: 0.25em;
+  padding: 0.65em 0.65em;
+  background-color: $links;
+  border: none;
+  color: $white;
+  cursor: pointer;
+  line-height: 1em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $links--hover;
+  }
+}
+
+.ais-SearchBox-submitIcon svg {
+  fill: $white;
+}
+
+// Results.
+
+mark.ais-Snippet-highlighted,
+mark.ais-Highlight-highlighted {
+  font-style: italic;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.ais-Hits,
+.HitCount {
+  padding: 0 1em;
+
+  @include medium {
+    padding: 0 6em;
+  }
+}
+
+.ais-Hits-list {
+  margin: 0 0 1em 0;
+  padding: 1em;
+}
+
+.ais-Hits-item {
+  margin-bottom: 1.5em;
+
+  p {
+    line-height: 1.2;
+  }
+}
+
+// Powered by link.
+
+.ais-PoweredBy {
+  padding: 0 1em;
+  margin-bottom: 3em;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    top: 0.4em;
+    text-decoration: none;
+    border: none;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 0.15em 0 0;
+  }
+
+  @include medium {
+    padding: 1.5em 6em;
+  }
+}
+
+.ais-Pagination {
+  @extend .pager-list;
+
+  padding: 1.5em 0;
+
+  @include medium {
+    padding: 1.5em 6em;
+  }
+}
+
+.ais-Pagination-list {
+  padding: 0;
+  margin: 0;
+}
+
+.ais-Pagination-item {
+  @extend .pager-list;
+
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+}
+
+.ais-Pagination-link {
+  @extend .pager-list__item;
+
+  &:hover {
+    color: $white;
+    background-color: $links--hover;
+    border: 1px solid $links--hover;
+  }
+}
+
+.ais-Pagination-link--selected.ais-Pagination-link--selected {
+  color: $links;
+  background-color: $white;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.ais-Pagination-item--firstPage .ais-Pagination-link,
+.ais-Pagination-item.ais-Pagination-item--nextPage .ais-Pagination-link,
+.ais-Pagination-item--previousPage .ais-Pagination-link {
+  font-weight: bold;
+}

@@ -1,0 +1,63 @@
+uuid: a83abca7-698c-4bbc-8cc0-cc9cc213756f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hike_details.field_hike_conditions
+    - field.field.paragraph.hike_details.field_hike_date
+    - field.field.paragraph.hike_details.field_hike_miles_today
+    - field.field.paragraph.hike_details.field_hike_miles_trip
+    - field.field.paragraph.hike_details.field_hike_weather
+    - paragraphs.paragraphs_type.hike_details
+  module:
+    - datetime
+id: paragraph.hike_details.default
+targetEntityType: paragraph
+bundle: hike_details
+mode: default
+content:
+  field_hike_conditions:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_hike_date:
+    weight: 0
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    type: datetime_default
+  field_hike_miles_today:
+    weight: 3
+    label: inline
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 1
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_hike_miles_trip:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ','
+      decimal_separator: .
+      scale: 1
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_hike_weather:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true

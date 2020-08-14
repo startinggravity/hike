@@ -1,0 +1,23 @@
+uuid: 26c5bb17-6afd-44ce-a51b-ca0828ca2986
+langcode: en
+status: true
+dependencies: {  }
+name: hero_medium_2x
+label: 'Hero - Medium - 2x'
+effects:
+  9a1e3df9-e885-4f49-bee2-8de8e11f2f68:
+    uuid: 9a1e3df9-e885-4f49-bee2-8de8e11f2f68
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 500
+      anchor: center-center
+  8898cdf5-5be2-41bf-98bb-de30980f5f8e:
+    uuid: 8898cdf5-5be2-41bf-98bb-de30980f5f8e
+    id: image_scale
+    weight: 2
+    data:
+      width: 2000
+      height: 1000
+      upscale: true

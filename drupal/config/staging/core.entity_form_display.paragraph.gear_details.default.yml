@@ -1,0 +1,39 @@
+uuid: 391ba4d6-7975-4e83-84b8-cad13f9c3a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.gear_details.field_gear_price
+    - field.field.paragraph.gear_details.field_gear_source
+    - field.field.paragraph.gear_details.field_gear_weight
+    - paragraphs.paragraphs_type.gear_details
+  module:
+    - link
+id: paragraph.gear_details.default
+targetEntityType: paragraph
+bundle: gear_details
+mode: default
+content:
+  field_gear_price:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_gear_source:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_gear_weight:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+hidden:
+  created: true
+  status: true
+  uid: true

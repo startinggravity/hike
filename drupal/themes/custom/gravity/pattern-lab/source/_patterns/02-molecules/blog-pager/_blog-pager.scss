@@ -1,0 +1,77 @@
+.main-content ul.blog-pager {
+  margin-top: 1em;
+  margin-right: 2em;
+  margin-bottom: 0;
+  margin-left: 1em;
+  padding-top: 1em;
+}
+
+.blog-pager li {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  vertical-align: top;
+  @include font-size(0.9);
+  @include medium {
+    display: inline-block;
+    width: 49%;
+    @include font-size(1.1);
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 1.6em;
+    padding-right: 0;
+    padding-bottom: 0.2em;
+    padding-left: 0;
+    color: $mule-fawn;
+    line-height: 1em;
+    cursor: pointer;
+    background-color: transparent;
+    border-bottom: none;
+
+    &:link,
+    &:visited {
+      font-weight: bold;
+      color: $mule-fawn;
+    }
+
+    &:hover {
+      color: $ebony-clay;
+    }
+  }
+  span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 0.2em;
+    color: $gray-light;
+  }
+}
+
+.blog-pager__previous {
+  text-align: left;
+  span {
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.blog-pager__next {
+  text-align: right;
+  span {
+    right: 0;
+    z-index: -1;
+  }
+}

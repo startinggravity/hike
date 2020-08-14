@@ -1,0 +1,27 @@
+name: hike-to-gatsby
+recipe: drupal8
+config:
+  webroot: .
+  via: nginx:1.14
+  database: mariadb:10.2.31
+  xdebug: false
+  drush: ^9
+  config:
+    php: .vscode/php.ini
+services:
+  node:
+    type: node
+    globals:
+      gulp-cli: latest
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+  gulp:
+    service: node
+  yarn:
+    service: node
+proxy:
+  appserver:
+    - hike-gatsby.lndo.site

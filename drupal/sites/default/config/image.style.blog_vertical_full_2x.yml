@@ -1,0 +1,23 @@
+uuid: 80296a02-d9ed-4947-849a-c61e63c264fc
+langcode: en
+status: true
+dependencies: {  }
+name: blog_vertical_full_2x
+label: 'Blog - Vertical Full - 2x'
+effects:
+  d6793673-d714-48bc-a988-b4664cdcd7b9:
+    uuid: d6793673-d714-48bc-a988-b4664cdcd7b9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 550
+      height: 985
+      anchor: center-center
+  ea368a90-bb3d-4e01-be4b-9ee6d0aaf5d5:
+    uuid: ea368a90-bb3d-4e01-be4b-9ee6d0aaf5d5
+    id: image_scale
+    weight: 2
+    data:
+      width: 1100
+      height: 1970
+      upscale: true

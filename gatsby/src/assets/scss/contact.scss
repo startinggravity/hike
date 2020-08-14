@@ -1,0 +1,40 @@
+.contact-disclaimer {
+  margin-bottom: 2em;
+  padding: 1em 2em;
+  border: 1px solid $gray-lightest;
+  background-color: lighten($indian-khaki, 28%);
+
+  @include medium {
+    margin-top: 0;
+    margin-right: 8em;
+    margin-bottom: 2em;
+    margin-left: 8em;
+    padding: 1em;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+
+    @include font-size(1);
+  }
+}
+
+.contact-form__input textarea,
+.contact-form__input input {
+  @extend .form-item__textfield;
+
+  width: 100%;
+}
+
+.contact-form__label {
+  margin-top: 2em;
+
+  @extend .form-item__label;
+}
+
+.contact__button button {
+  @extend .button;
+}
+

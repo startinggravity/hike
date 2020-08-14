@@ -1,0 +1,62 @@
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  color: $mine-shaft;
+  line-height: 1.8rem;
+  margin: 0 0 0.5em;
+  width: 100%; // For non header (inline) elements with these styles, e.g. legend
+}
+
+.heading-1 {
+  width: 90%;
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $white;
+
+  @include font-size(1.2);
+
+  @include medium {
+    width: 80%;
+    @include font-size(2);
+  }
+}
+
+.heading-5,
+.heading-6 {
+  color: $gray;
+  text-transform: uppercase;
+
+  @include font-size(0.85);
+}
+
+h1 {
+  @extend .heading-1;
+}
+
+h2 {
+  @extend .heading-2;
+}
+
+h3 {
+  @extend .heading-3;
+}
+
+h4 {
+  @extend .heading-4;
+}
+
+h5 {
+  @extend .heading-5;
+}
+
+h6 {
+  @extend .heading-6;
+}

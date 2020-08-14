@@ -1,0 +1,101 @@
+// Widths and base sizing
+$max-width: 1200px;
+$base-font-size: 62.5%; // setup to work with rems
+$base-border-size: 5px;
+$measure-max: 675px; // use for paragraph measure.
+
+// Transitions
+$transition-fast: 0.2s ease-in;
+$transition-medium: 0.35s ease-in;
+$transition-slow: 2s ease-in;
+
+// Breakpoints variables
+$small: 25em; // 440px
+$small-med: 26em; // 458px
+$small-large: 41em; // 721px
+$in-between: 44em;
+$medium: 48em; // 845px
+$large: 960px; // 960px
+
+$breakpoints: (
+  'small':  $small,
+  'small-med': $small-med,
+  'small-large': $small-large,
+  'in-between': $in-between,
+  'medium': $medium,
+  'large':  $large
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/// Mixin - Small Breakpoint
+/// Allows easier @include small {} syntax
+@mixin small {
+  @include respond-to('small') {
+    @content;
+  }
+}
+
+/// Mixin - Small-Medium Breakpoint
+/// Allows easier @include small-med {} syntax
+@mixin small-med {
+  @include respond-to('small-med') {
+    @content;
+  }
+}
+
+/// Mixin - Small-Large Breakpoint
+/// Allows easier @include small-large {} syntax
+@mixin small-large {
+  @include respond-to('small-large') {
+    @content;
+  }
+}
+
+/// Mixin - In-between Breakpoint
+/// Allows easier @include in-between {} syntax
+@mixin in-between {
+  @include respond-to('in-between') {
+    @content;
+  }
+}
+
+/// Mixin - Medium Breakpoint
+/// Allows easier @include medium {} syntax
+@mixin medium {
+  @include respond-to('medium') {
+    @content;
+  }
+}
+
+/// Mixin - Large Breakpoint
+/// Allows easier @include large {} syntax
+@mixin large {
+  @include respond-to('large') {
+    @content;
+  }
+}
+
+
+body,
+html {
+  overflow-x:hidden;
+}

@@ -1,0 +1,6 @@
+uuid: 90d6dbe2-92d5-4d18-9865-37b8fbca5715
+langcode: en
+status: true
+dependencies: {  }
+id: body_image
+label: 'Horizontal Image'

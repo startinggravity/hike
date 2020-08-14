@@ -1,0 +1,16 @@
+# Breakpoints - change based on site need
+gravity.large:
+  label: large
+  mediaQuery: 'all and (min-width: 1079px)'
+gravity.medium:
+  label: medium
+  mediaQuery: 'all and (min-width: 845px)'
+gravity.small-large:
+  label: small-large
+  mediaQuery: 'all and (min-width: 721px)'
+gravity.small-med:
+  label: small-med
+  mediaQuery: 'all and (min-width: 458px)'
+gravity.small:
+  label: small
+  mediaQuery: 'all and (max-width: 440px)'

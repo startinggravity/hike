@@ -1,0 +1,22 @@
+uuid: d92788e6-3ee2-4cbb-b136-0a3ac17a902c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: random_image
+label: 'Random Image'
+type: 'canonical_entities:node'
+pattern: 'random-image/[node:title]'
+selection_criteria:
+  f7f097f0-05ab-486a-ae45-ce6a87d9b551:
+    id: node_type
+    bundles:
+      random_image: random_image
+    negate: false
+    context_mapping:
+      node: node
+    uuid: f7f097f0-05ab-486a-ae45-ce6a87d9b551
+selection_logic: and
+weight: -5
+relationships: {  }

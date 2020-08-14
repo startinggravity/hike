@@ -1,0 +1,23 @@
+uuid: fcb53e6a-2279-4ae6-8b8e-6c73534a9dbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_type
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - options
+id: paragraph.quotation.field_quote_type
+field_name: field_quote_type
+entity_type: paragraph
+bundle: quotation
+label: 'Quote Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: lyric
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: e83c3a76-82ce-4a96-a631-b97e4eb91999
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_small_1_5x
+label: 'Blog - Horizontal Small - 1.5x'
+effects:
+  0b0decd4-df9b-4a9f-975a-df9a319ed8e3:
+    uuid: 0b0decd4-df9b-4a9f-975a-df9a319ed8e3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 280
+      anchor: center-center
+  bd69de8b-bcbb-4dff-ab48-b0f27e01f15b:
+    uuid: bd69de8b-bcbb-4dff-ab48-b0f27e01f15b
+    id: image_scale
+    weight: 2
+    data:
+      width: 750
+      height: 420
+      upscale: true

@@ -1,0 +1,23 @@
+uuid: 810bd412-5015-419d-926b-45e31430ad4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gear_weight
+    - paragraphs.paragraphs_type.gear_details
+id: paragraph.gear_details.field_gear_weight
+field_name: field_gear_weight
+entity_type: paragraph
+bundle: gear_details
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: oz.
+field_type: decimal

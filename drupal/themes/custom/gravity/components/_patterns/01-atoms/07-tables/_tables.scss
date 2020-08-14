@@ -1,0 +1,125 @@
+$table-gray: #f8f8f8;
+
+.table {
+  width: 100%;
+  border-right: 1px solid $gray-lighter;
+  border-bottom: 1px solid $gray-lighter;
+  border-left: 1px solid $gray-lighter;
+  border-radius: 0;
+  border-spacing:0;
+  background-color: $table-gray;
+}
+
+.table__heading-cell {
+  border: none;
+  border-left: 1px solid $gray-lighter;
+  color: $black;
+  font-weight: 700;
+  padding: 0.2em 0.5em;
+  text-align: left;
+
+  &:first-child {
+    border:none;
+  }
+}
+
+.table__row {
+  &:nth-child(odd) {
+    background-color: $white;
+  }
+
+  // Non-BEM but always contained
+  &:last-child {
+    td:first-child {
+      border-radius: 0 0 0 5px;
+    }
+
+    td:last-child {
+      border-radius: 0 0 5px 0;
+    }
+  }
+}
+
+.table__cell {
+  border: 1px solid $gray-lighter;
+  border-left: none;
+  border-bottom: none;
+  padding: 0.2em 0.5em;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.table__footer-cell,
+.table__footer-cell:first-child {
+  border-left: none;
+  border-top: 1px solid $gray-lighter;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.text-long {
+  table {
+    @extend .table;
+  }
+
+  th {
+    @extend .table__heading-cell;
+  }
+
+  td {
+    @extend .table__cell;
+  }
+
+  tbody tr {
+    @extend .table__row;
+  }
+
+  tfoot th {
+    @extend .table__footer-cell;
+  }
+}
+
+.gear-list {
+  &__heading {
+    text-align: center;
+  }
+  &__table {
+    margin-bottom: 2em;
+    th {
+      vertical-align: top;
+      line-height: 1.1;
+      text-align: center;
+      font-weight: bold;
+      background-color: $gray-lightest;
+    }
+  }
+  &__item {
+    width: 70%;
+    line-height: 1.1;
+    vertical-align: top;
+  }
+  &__weight {
+    width: 30%;
+    vertical-align: top;
+    line-height: 1.1;
+  }
+}
+
+td.gear-list__weight {
+  text-align: right;
+  padding-right: 1em !important;
+  @include small-med {
+    padding-right: 3em !important;
+  }
+  @include small-large {
+    padding-right: 4em !important;
+  }
+  @include medium {
+    padding-right: 4em !important;
+  }
+  @include large {
+    padding-right: 5em !important;
+  }
+}

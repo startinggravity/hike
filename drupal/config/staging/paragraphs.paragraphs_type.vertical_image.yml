@@ -1,0 +1,6 @@
+uuid: 445fb667-8e89-4869-a2af-192b0f791405
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_image
+label: 'Vertical Image'

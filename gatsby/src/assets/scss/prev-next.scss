@@ -1,0 +1,209 @@
+// Previous/Next links
+
+$links--light-hover: #f2f5f9;
+
+.prev-next {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50%;
+  row-gap: 1em;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 2em 1.5em;
+
+  @include medium {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    column-gap: 1em;
+    margin: 2em;
+  }
+
+  a {
+    border-bottom: 2px solid $links;
+  }
+
+  &__prev--link,
+  &__next--link {
+    position: relative;
+    display: block;
+    min-height: 3.5em;
+    height: 100%;
+    padding: 0.75em;
+
+    &:hover p,
+    &:hover h3 {
+      color: $links--hover;
+    }
+
+    p {
+      display: block;
+      margin: 0;
+      padding: 0;
+      color: $links;
+      line-height: 1;
+
+      @include font-size(0.8);
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+      color: $links;
+      line-height: 1;
+
+      @include font-size(1);
+    }
+}
+}
+
+.prev-next__prev--link .prev-next__inner {
+  text-align: left;
+}
+
+.prev-next__next--link .prev-next__inner {
+  text-align: right;
+}
+
+// Arrows - Previous
+.prev-next__prev--link {
+	position: relative;
+	background: $white;
+	border: 2px solid $links;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:after, 
+.prev-next__prev--link:before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: $white;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all $transition-fast;
+}
+.prev-next__prev--link:before {
+	border-color: rgba(152, 74, 45, 0);
+	border-right-color: $links;
+	border-width: 23px;
+	margin-top: -23px;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:hover {
+	position: relative;
+	background: $links--light-hover;
+	border: 2px solid $links--hover;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:hover::after, 
+.prev-next__prev--link:hover::before {
+	right: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:hover::after {
+	border-color: rgba(0, 0, 0, 0);
+	border-right-color: $links--light-hover;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all $transition-fast;
+}
+
+.prev-next__prev--link:hover::before {
+	border-color: rgba(39, 50, 70, 0);
+	border-right-color: $links--hover;
+	border-width: 23px;
+	margin-top: -23px;
+	transition: all $transition-fast;
+}
+
+// Arrows -- Next
+.prev-next__next--link {
+	position: relative;
+	background: $white;
+	border: 2px solid $links;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:after, 
+.prev-next__next--link:before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-left-color: $white;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all $transition-fast;
+}
+.prev-next__next--link:before {
+	border-color: rgba(152, 74, 45, 0);
+	border-left-color: $links;
+	border-width: 23px;
+	margin-top: -23px;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:hover {
+	position: relative;
+	background: $links--light-hover;
+	border: 2px solid $links--hover;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:hover::after, 
+.prev-next__next--link:hover::before {
+	left: 100%;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:hover::after {
+	border-color: rgba(0, 0, 0, 0);
+	border-left-color: $links--light-hover;
+	border-width: 20px;
+	margin-top: -20px;
+	transition: all $transition-fast;
+}
+
+.prev-next__next--link:hover::before {
+	border-color: rgba(39, 50, 70, 0);
+	border-left-color: $links--hover;
+	border-width: 23px;
+	margin-top: -23px;
+	transition: all $transition-fast;
+}

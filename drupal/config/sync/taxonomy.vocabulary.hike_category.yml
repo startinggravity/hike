@@ -1,0 +1,9 @@
+uuid: 3a009aca-1087-4602-888d-d6d3c648b144
+langcode: en
+status: true
+dependencies: {  }
+name: 'Blog Category'
+vid: hike_category
+description: ''
+hierarchy: 0
+weight: 0

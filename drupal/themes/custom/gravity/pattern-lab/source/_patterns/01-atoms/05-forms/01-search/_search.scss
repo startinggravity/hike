@@ -1,0 +1,62 @@
+.search-block-form {
+  display: none;
+}
+
+.search-block-form.search-block-form__show {
+  display: block;
+  position: fixed;
+  z-index: 2;
+  top: 8em;
+  left: 50%;
+  width: 90%;
+  transform: translate(-50%, 0);
+  padding: 0.5em;
+  background: $indian-khaki;
+  border: 2px solid $border;
+  form {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .form-item {
+    width: 75%;
+    padding-right: 0.5em;
+    .form-item__textfield {
+      width: 100%;
+    }
+  }
+  .form-actions {
+    width: 25%;
+    .form-submit {
+      width: 100%;
+    }
+  }
+  @include small-med {
+    padding: 1.5em;
+    .form-item {
+      padding-right: 1.5em;
+    }
+  }
+  @include medium {
+    top: 12em;
+    eft: 50%;
+    width: 50%;
+  }
+}
+
+.search-page-form {
+  padding-top: 2em;
+  .form-wrapper {
+    display: flex;
+  }
+  .form-item {
+    width: 100%;
+    margin-bottom: 0;
+    input {
+      width: calc(100% - 1em);
+    }
+  }
+  .form-item__label {
+    display: none;
+  }
+}

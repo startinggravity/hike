@@ -1,0 +1,20 @@
+uuid: 44470c8a-13cb-4379-84de-ff1d63fc5906
+langcode: en
+status: true
+dependencies:
+  module:
+    - gravity_blocks
+  theme:
+    - bartik
+id: footerblock
+theme: bartik
+region: footer_first
+weight: 0
+provider: null
+plugin: footer_block
+settings:
+  id: footer_block
+  label: 'Footer block'
+  provider: gravity_blocks
+  label_display: '0'
+visibility: {  }

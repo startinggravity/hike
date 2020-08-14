@@ -1,0 +1,15 @@
+<div class="hero">
+
+  <div class="hero__image">
+    {{ hero_image }}
+  </div>
+  <div class="hero__text">
+    <h1 class="heading-1">{{ category_name }} {% autoescape %}{{ content|striptags|raw }}{% endautoescape %}</h1>
+    {% if secondary_title %}
+    {% autoescape %}
+      {{ secondary_title|raw }}
+    {% endautoescape %}
+    {% endif %}
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+uuid: 47f49f46-9def-4190-a0f5-39f8769d58fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hike_miles_trip
+    - paragraphs.paragraphs_type.hike_details
+id: paragraph.hike_details.field_hike_miles_trip
+field_name: field_hike_miles_trip
+entity_type: paragraph
+bundle: hike_details
+label: 'Trip Miles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ' miles'
+field_type: decimal

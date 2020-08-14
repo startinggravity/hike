@@ -1,0 +1,31 @@
+uuid: 9bcad11d-9378-4296-81d7-8e6b001ae0ff
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e3acdfd0-3226-4a61-ba1f-4d5c1302bc78'
+  module:
+    - block_content
+    - system
+  theme:
+    - gravity_20
+id: gravity_20_contactwelcomeanddisclaimer
+theme: gravity_20
+region: content
+weight: -7
+provider: null
+plugin: 'block_content:e3acdfd0-3226-4a61-ba1f-4d5c1302bc78'
+settings:
+  id: 'block_content:e3acdfd0-3226-4a61-ba1f-4d5c1302bc78'
+  label: 'Contact Welcome and Disclaimer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }

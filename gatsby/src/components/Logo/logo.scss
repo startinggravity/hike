@@ -1,0 +1,93 @@
+a.site-header__logo-link {
+  position: fixed;
+  top: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 108px;
+  width: 132px;
+  background: $envy;
+  transition: top $transition-medium, background $transition-fast;
+  border-bottom: none;
+
+  @include small-med {
+    height: 120px;
+    width: 165px;
+  }
+
+  @include small-large {
+    height: 175px;
+    width: 220px;
+  }
+}
+
+.content--scroll a.site-header__logo-link {
+  position: fixed;
+  top: -0.02em;
+  transition: top $transition-medium, background $transition-fast;
+  background: none;
+}
+
+.site-header__logo-img {
+  position: fixed;
+  top: 0.5em;
+  display: block;
+  height: 96px;
+  width: 132px;
+  transition: top $transition-medium;
+
+  @include small-med {
+    height: 120px;
+    width: 165px;
+  }
+
+  @include small-large {
+    height: 160px;
+    width: 220px;
+  }
+}
+
+.site-header__logo-img svg {
+  height: 96px;
+  width: 132px;
+
+  @include small-med {
+    height: 120px;
+    width: 165px;
+  }
+
+  @include medium {
+    height: 160px;
+    width: 220px;
+  }
+}
+
+.content--scroll .site-header__logo-img {
+  position: fixed;
+  top: -4.5em;
+  transition: top $transition-medium;
+
+  @include small-large {
+    top: -5.2em;
+  }
+}
+
+.site-header__logo-img .st1 {
+  fill: $white;
+}
+
+@media (min-width: 41em) and (max-height: 1100px) {
+  a.site-header__logo-link {
+    height: 130px;
+    width: 165px;
+  }
+
+  .site-header__logo-img {
+    height: 120px;
+    width: 165px;
+  }
+
+  .content--scroll .site-header__logo-img {
+    top: -3.5em;
+  }
+}

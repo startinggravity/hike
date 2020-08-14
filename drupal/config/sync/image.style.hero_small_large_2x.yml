@@ -1,0 +1,22 @@
+uuid: c6f3200f-9d77-470c-9ed5-1473e1827a24
+langcode: en
+status: true
+dependencies: {  }
+name: hero_small_large_2x
+label: 'Hero - Small Large - 2x'
+effects:
+  bc79c25b-2961-4b74-897b-dcc675b644dd:
+    uuid: bc79c25b-2961-4b74-897b-dcc675b644dd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 500
+  7f12078d-d703-489b-9cb8-6a405b977d59:
+    uuid: 7f12078d-d703-489b-9cb8-6a405b977d59
+    id: image_scale
+    weight: 2
+    data:
+      width: 1500
+      height: 1000
+      upscale: true

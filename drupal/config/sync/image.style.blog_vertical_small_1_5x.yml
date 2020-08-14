@@ -1,0 +1,22 @@
+uuid: 3504731d-dbb4-44bd-9af5-4b6d8971bba9
+langcode: en
+status: true
+dependencies: {  }
+name: blog_vertical_small_1_5x
+label: 'Blog - Vertical Small - 1.5x'
+effects:
+  ded22cdc-1371-4679-80e5-baef2f3a49a3:
+    uuid: ded22cdc-1371-4679-80e5-baef2f3a49a3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 780
+  59b2252d-03f4-448a-b5af-8666f8846cd6:
+    uuid: 59b2252d-03f4-448a-b5af-8666f8846cd6
+    id: image_scale
+    weight: 2
+    data:
+      width: 660
+      height: 1170
+      upscale: true

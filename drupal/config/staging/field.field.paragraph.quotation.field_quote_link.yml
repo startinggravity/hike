@@ -1,0 +1,23 @@
+uuid: f271f3d5-a059-44d3-aae7-93bef6f9c76b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_quote_link
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - link
+id: paragraph.quotation.field_quote_link
+field_name: field_quote_link
+entity_type: paragraph
+bundle: quotation
+label: 'Quote Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

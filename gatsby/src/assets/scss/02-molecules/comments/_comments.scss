@@ -1,0 +1,44 @@
+.comments {
+  padding-top: 1em;
+}
+
+h3.comments__header {
+  margin-right: 1.6em;
+  margin-bottom: 0;
+  margin-left: 1.6em;
+
+  @include medium {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+p.comments__quote {
+  margin-right: 1.7em;
+  margin-bottom: 0.2em;
+  margin-left: 1.7em;
+  font-style: italic;
+  color: $gray-light;
+
+  @include medium {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  span {
+    font-style: normal;
+    @include font-size(0.7);
+  }
+}
+
+.comments__wrapper {
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 2em;
+  padding-right: 2em;
+
+  @include medium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

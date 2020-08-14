@@ -1,0 +1,15 @@
+uuid: 747d10aa-46e3-401b-ae27-b9b7f4c36cad
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_small_1x
+label: 'Blog - Horizontal Small - 1x'
+effects:
+  241ea79c-13cd-4d9d-94dd-b7a3179506e9:
+    uuid: 241ea79c-13cd-4d9d-94dd-b7a3179506e9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 280
+      anchor: center-center

@@ -1,0 +1,64 @@
+uuid: 9a359fb9-595b-4449-9ec4-cd0c8a82b129
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_large_1_5x
+    - image.style.hero_large_1x
+    - image.style.hero_large_2x
+    - image.style.hero_medium_1_5x
+    - image.style.hero_medium_1x
+    - image.style.hero_medium_2x
+    - image.style.hero_small_1_5x
+    - image.style.hero_small_1x
+    - image.style.hero_small_2x
+    - image.style.hero_small_large_1_5x
+    - image.style.hero_small_large_1x
+    - image.style.hero_small_large_2x
+  theme:
+    - gravity
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: gravity.large
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_large_1_5x
+        - hero_large_1x
+        - hero_large_2x
+  -
+    breakpoint_id: gravity.medium
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_medium_1_5x
+        - hero_medium_1x
+        - hero_medium_2x
+  -
+    breakpoint_id: gravity.small-med
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_small_large_1_5x
+        - hero_small_large_1x
+        - hero_small_large_2x
+  -
+    breakpoint_id: gravity.small
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_small_1_5x
+        - hero_small_1x
+        - hero_small_2x
+breakpoint_group: gravity
+fallback_image_style: hero_large_1x

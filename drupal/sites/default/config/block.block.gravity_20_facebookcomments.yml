@@ -1,0 +1,38 @@
+uuid: 67370a2b-bbbe-42c5-8012-70270a766afc
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+    - facebook_comments
+    - system
+  theme:
+    - gravity_20
+id: gravity_20_facebookcomments
+theme: gravity_20
+region: header
+weight: -3
+provider: null
+plugin: facebook_comments
+settings:
+  id: facebook_comments
+  label: Comments
+  provider: facebook_comments
+  label_display: '0'
+  facebook_comments_style: light
+  facebook_comments_width: '208'
+  facebook_comments_width_fluid: 1
+  facebook_comments_amount: '5'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      blog: blog
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: 'hikes/*'
+    negate: false
+    context_mapping: {  }

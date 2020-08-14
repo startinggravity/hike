@@ -1,0 +1,10 @@
+uuid: 64675c88-6f50-46c9-81d8-7d327a45db0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blog_tease
+label: 'Blog Tease'
+targetEntityType: node
+cache: true

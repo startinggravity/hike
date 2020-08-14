@@ -1,0 +1,31 @@
+uuid: 8203cd49-691e-4e22-b102-f80034ffc5a6
+langcode: en
+status: true
+dependencies: {  }
+id: blogger
+label: Blogger
+weight: 3
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'administer facebook comments'
+  - 'administer nodes'
+  - 'create blog content'
+  - 'create url aliases'
+  - 'delete any blog content'
+  - 'delete blog revisions'
+  - 'delete own blog content'
+  - 'edit any blog content'
+  - 'edit own blog content'
+  - 'revert blog revisions'
+  - 'search content'
+  - 'use text format full_html'
+  - 'use text format mailchimp'
+  - 'use text format markdown'
+  - 'view all revisions'
+  - 'view blog revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

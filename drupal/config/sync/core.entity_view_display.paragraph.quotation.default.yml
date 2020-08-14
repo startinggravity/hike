@@ -1,0 +1,44 @@
+uuid: b7179b4d-f24b-45e7-a02f-d14f97fbeddf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quotation.field_quote_link
+    - field.field.paragraph.quotation.field_quote_text
+    - field.field.paragraph.quotation.field_quote_type
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - link
+    - options
+    - text
+id: paragraph.quotation.default
+targetEntityType: paragraph
+bundle: quotation
+mode: default
+content:
+  field_quote_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: null
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+  field_quote_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_quote_type:
+    type: list_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

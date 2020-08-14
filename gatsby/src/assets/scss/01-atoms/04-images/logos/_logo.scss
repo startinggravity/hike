@@ -1,0 +1,60 @@
+.site-header__logo-link {
+  position: fixed;
+  top: 0.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 120px;
+  width: 165px;
+  background: $envy;
+  transition: all $transition-fast;
+
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.sticky .site-header__logo-link {
+  position: fixed;
+  top: -14em;
+  transition: all $transition-fast;
+}
+
+.site-header__logo-img {
+  position: fixed;
+  top: 0.5em;
+  display: block;
+  height: 120px;
+  width: 165px;
+  transition: all $transition-fast;
+
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.site-header__logo-img svg {
+  height: 120px;
+  width: 165px;
+
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.sticky .site-header__logo-img {
+  position: fixed;
+  top: -3.65em;
+  transition: all $transition-fast;
+
+  @include medium {
+    top: -5.5em;
+  }
+}
+
+.site-header__logo-img .st1 {
+  fill: $white;
+}

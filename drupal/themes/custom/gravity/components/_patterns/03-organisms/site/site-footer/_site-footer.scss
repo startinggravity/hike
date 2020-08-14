@@ -1,0 +1,30 @@
+.site-footer {
+  padding: 2em;
+  min-height: 14em;
+  text-align: center;
+  color: $white;
+  background-color: $envy;
+  a {
+    color: $white;
+    border: none;
+  }
+}
+p.site-footer__copyright {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 1em;
+  margin-left: auto;
+  padding: 0;
+  line-height: 1.2;
+  @include font-size(.85);
+  a {
+    color: $white;
+    background-color: transparent;
+    border-bottom: none;
+  }
+}
+.site-footer__image {
+  margin: 0 auto;
+}
+
+

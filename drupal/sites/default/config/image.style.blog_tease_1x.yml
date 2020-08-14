@@ -1,0 +1,15 @@
+uuid: ed27b50f-6b98-4397-a3ee-5e427d7021ec
+langcode: en
+status: true
+dependencies: {  }
+name: blog_tease_1x
+label: 'Blog Tease 1x'
+effects:
+  563064c0-77c7-4057-a8c6-73c69ef27ca2:
+    uuid: 563064c0-77c7-4057-a8c6-73c69ef27ca2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      anchor: center-center

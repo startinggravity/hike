@@ -1,0 +1,22 @@
+uuid: b9414738-4907-4a6b-9670-611afeb31ad5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gravity
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: gravity_local_tasks
+theme: gravity
+region: content
+weight: -11
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

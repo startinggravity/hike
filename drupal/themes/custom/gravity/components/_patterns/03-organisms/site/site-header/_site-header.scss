@@ -1,0 +1,56 @@
+.site-header {
+  position: fixed;
+  z-index: 1;
+  height: 4em;
+  width: 100%;
+  background-image: url(../images/grunge_bg.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  > div {
+    display: block;
+  }
+}
+
+.site-header__menu-button {
+  position: fixed;
+  top: 0.1em;
+  left: 1em;
+  @include small-large {
+    left: 10%;
+  }
+}
+
+.site-header__search-button {
+  position: fixed;
+  top: 0.1em;
+  right: 1em;
+  @include small-large {
+    right: 10%;
+  }
+}
+
+.site-logo {
+  position: absolute;
+  top: 0.5em;
+  left: 50%;
+  z-index: 10;
+  margin-left: -82px;
+  transition: all 0.5s ease-in;
+  @include medium {
+    margin-left: -110px;
+  }
+}
+
+.sticky .logo__head {
+  opacity: 0;
+  transition: all 0.5s ease-in;
+}
+
+.sticky .site-header {
+  background-image: url(../images/grunge_bg_scroll.svg);
+  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,Color='#444')";
+  filter: url(#drop-shadow);
+  -webkit-filter: drop-shadow(9px 1px 6px rgba(0,0,0,0.3));
+  filter: drop-shadow(9px 1px 6px rgba(0,0,0,0.3));
+  transition: all 0.5s ease-in;
+}

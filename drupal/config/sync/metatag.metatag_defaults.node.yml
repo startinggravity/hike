@@ -1,0 +1,24 @@
+uuid: 7906055e-c834-4e2c-8d51-ea39515726d8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ydpmSCtxLjO9xqkBxObkeYx0Bf2dkW-d8bB_6Q1Ggjs
+id: node
+label: Content
+tags:
+  description: '[node:summary]'
+  title: '[node:title] | [site:name]'
+  fb_admins: '10157079515205472'
+  fb_app_id: '1224500344298525'
+  twitter_cards_creator: '@hikewithgravity'
+  twitter_cards_creator_id: '2986914490'
+  twitter_cards_description: '[node:field_secondary_title]'
+  twitter_cards_image: '[node:field_main_image]'
+  twitter_cards_image_alt: '[node:title]'
+  twitter_cards_page_url: '[node:url:absolute]'
+  twitter_cards_site: '@hikewithgravity'
+  twitter_cards_site_id: '2986914490'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary_large_image
+  google: x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk

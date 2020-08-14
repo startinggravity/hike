@@ -1,0 +1,38 @@
+uuid: c613b16e-9581-4273-b772-c37ef6733b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.blog_vertical_full_1_5x
+    - image.style.blog_vertical_full_1x
+    - image.style.blog_vertical_full_2x
+    - image.style.hero_small_1_5x
+    - image.style.hero_small_1x
+    - image.style.hero_small_2x
+  theme:
+    - gravity
+id: blog_vertical
+label: 'Blog Vertical'
+image_style_mappings:
+  -
+    breakpoint_id: gravity.small-med
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - blog_vertical_full_1x
+        - blog_vertical_full_1_5x
+        - blog_vertical_full_2x
+  -
+    breakpoint_id: gravity.small
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - hero_small_1x
+        - hero_small_1_5x
+        - hero_small_2x
+breakpoint_group: gravity
+fallback_image_style: blog_vertical_full_1x

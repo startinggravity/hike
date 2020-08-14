@@ -1,0 +1,26 @@
+uuid: d247ecef-df2b-4746-9162-a36b34e7169a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Global
+tags:
+  abstract: 'The hiking journal of Jim "Gravity" Smith, who completed a thru-hike of the Appalachian Trail (Georgia to Maine) in 2017.'
+  google: x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk
+  title: 'Hike with Gravity'
+  rights: 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.'
+  description: 'The hiking journal of Jim "Gravity" Smith, who completed a thru-hike of the Appalachian Trail (Georgia to Maine) in 2017. He is attempting a thru-hike of the Pacific Crest Trail in 2019. '
+  shortlink: '[node:url:absolute]'
+  fb_admins: '641895471'
+  article_author: '641895471'
+  og_type: website
+  og_image: 'https://hikewithgravity.com/themes/custom/gravity/images/hike_with_gravity.png'
+  og_description: 'The hiking journal of Jim "Gravity" Smith, who is attempting to thru-hike the Appalachian Trail from Georgia to Maine, in 2017.'
+  og_site_name: 'Hike with Gravity'
+  og_url: '[node:url:absolute]'
+  og_title: 'Hike with Gravity'
+  og_image_type: image/png
+  twitter_cards_image_alt: 'Hike with Gravity'
+  twitter_cards_image: 'https://hikewithgravity.com/themes/custom/gravity/images/hike_with_gravity.png'

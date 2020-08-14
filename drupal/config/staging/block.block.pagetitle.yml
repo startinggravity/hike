@@ -1,0 +1,18 @@
+uuid: 15676b54-3275-49ec-9ad0-b9c2f8e976c7
+langcode: en
+status: true
+dependencies:
+  theme:
+    - gravity
+id: pagetitle
+theme: gravity
+region: hero
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

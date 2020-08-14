@@ -1,0 +1,22 @@
+uuid: 1ea17e50-0a4a-464b-ae8b-83f72624e353
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_medium_1_5x
+label: 'Blog - Horizontal Medium - 1.5x'
+effects:
+  4a8417d1-fc36-448d-829e-0794fdd1aa06:
+    uuid: 4a8417d1-fc36-448d-829e-0794fdd1aa06
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 400
+  cd133384-817d-4191-9e33-eb23a232544f:
+    uuid: cd133384-817d-4191-9e33-eb23a232544f
+    id: image_scale
+    weight: 2
+    data:
+      width: 1080
+      height: 600
+      upscale: true

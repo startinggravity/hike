@@ -1,0 +1,17 @@
+uuid: 913168f4-f1b8-4e89-81b2-21eed8be60e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Random Image'
+type: random_image
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

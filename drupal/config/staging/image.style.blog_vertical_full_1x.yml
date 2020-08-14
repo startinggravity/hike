@@ -1,0 +1,14 @@
+uuid: 88e538ca-444d-4c98-a820-9f4e1e45998c
+langcode: en
+status: true
+dependencies: {  }
+name: blog_vertical_full_1x
+label: 'Blog - Vertical Full - 1x'
+effects:
+  dea897cd-aaa4-47ea-8769-e337f91990ed:
+    uuid: dea897cd-aaa4-47ea-8769-e337f91990ed
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 550
+      height: 1360

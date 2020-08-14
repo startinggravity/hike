@@ -1,0 +1,6 @@
+uuid: 9b06d38b-6116-4b48-a010-d15402137b1f
+langcode: en
+status: true
+dependencies: {  }
+id: gear_details
+label: 'Gear Details'

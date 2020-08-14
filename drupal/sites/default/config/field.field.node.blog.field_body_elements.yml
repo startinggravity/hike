@@ -1,0 +1,55 @@
+uuid: dc719e72-7591-41a2-8a22-cc2e33296ac4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body_elements
+    - node.type.blog
+    - paragraphs.paragraphs_type.body_image
+    - paragraphs.paragraphs_type.body_text
+    - paragraphs.paragraphs_type.gear_details
+    - paragraphs.paragraphs_type.hike_details
+    - paragraphs.paragraphs_type.quotation
+    - paragraphs.paragraphs_type.vertical_image
+  module:
+    - entity_reference_revisions
+id: node.blog.field_body_elements
+field_name: field_body_elements
+entity_type: node
+bundle: blog
+label: 'Body Elements'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      body_image: body_image
+      vertical_image: vertical_image
+      body_text: body_text
+      quotation: quotation
+      hike_details: hike_details
+      gear_details: gear_details
+    target_bundles_drag_drop:
+      body_image:
+        enabled: true
+        weight: -13
+      vertical_image:
+        enabled: true
+        weight: -12
+      body_text:
+        enabled: true
+        weight: -11
+      quotation:
+        enabled: true
+        weight: -10
+      hike_details:
+        enabled: true
+        weight: -9
+      gear_details:
+        enabled: true
+        weight: -8
+field_type: entity_reference_revisions

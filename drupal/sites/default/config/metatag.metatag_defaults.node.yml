@@ -1,0 +1,33 @@
+uuid: 7906055e-c834-4e2c-8d51-ea39515726d8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ydpmSCtxLjO9xqkBxObkeYx0Bf2dkW-d8bB_6Q1Ggjs
+id: node
+label: Content
+tags:
+  robots: 'index, follow'
+  title: '[site:name]'
+  description: '[node:summary]'
+  keywords: 'Appalachian Trail, long distance hiking, backpacking, Great Smoky Mountains'
+  abstract: '[node:summary]'
+  rights: 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.'
+  fb_admins: '641895471'
+  fb_app_id: '1224500344298525'
+  og_site_name: 'Hike with Gravity'
+  og_image_url: '[node:field_main_image]'
+  og_image: '[node:field_main_image]'
+  og_title: '[node:title]'
+  og_type: blog
+  twitter_cards_type: summary_large_image
+  twitter_cards_creator_id: '2986914490'
+  twitter_cards_creator: '@hikewithgravity'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_page_url: '[node:url:absolute]'
+  twitter_cards_image: '[node:field_main_image]'
+  twitter_cards_site_id: '2986914490'
+  twitter_cards_description: '[node:field_secondary_title]'
+  twitter_cards_site: '@hikewithgravity'
+  twitter_cards_image_alt: '[node:title]'
+  google: x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk

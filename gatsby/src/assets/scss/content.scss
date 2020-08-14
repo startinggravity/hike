@@ -1,0 +1,256 @@
+/* Hero block */
+
+.hero,
+.hero__image-img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.semi-hero,
+.semi-hero__image-img {
+  width: 100vw;
+  height: 40vh;
+}
+
+@media (min-width: 35em) and (max-height: 500px) {
+  .semi-hero,
+  .semi-hero__image-img {
+    width: 100vw;
+    height: 80vh;
+  }
+}
+
+.hero,
+.semi-hero {
+  position: relative;
+
+  &__image {
+    position: relative;
+    z-index: -10;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 0.5em;
+    z-index: -6;
+    margin-bottom: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+
+    @include medium {
+      bottom: 4em;
+    }
+  }
+
+  &__text h1 {
+    width: 90%;
+    margin: 0 auto 1em;
+    line-height: 1.2;
+    text-align: center;
+    color: $white;
+
+    @include font-size(1.6);
+
+    @include medium {
+      width: 80%;
+      bottom: 2em;
+
+      @include font-size(2);
+    }
+  }
+
+  &__text h2 {
+    width: 90%;
+    margin: 0 auto 0;
+    line-height: 1;
+    text-align: center;
+    color: $white;
+
+    @include font-size(2.2);
+
+    @include medium {
+      width: 80%;
+
+      @include font-size(2.8);
+    }
+  }
+}
+
+.semi-hero .semi-hero__text {
+  bottom: 0;
+
+  h1,
+  h2 {
+    margin: 0 auto;
+  }
+}
+
+.hero:after,
+.semi-hero:after {
+  position: absolute;
+  z-index: -8;
+  height: 50%;
+  width: 100%;
+  bottom: 0;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  content: "";
+}
+
+.content--scroll .hero__image-img,
+.content--scroll .semi-hero__image-img {
+  -webkit-filter: blur(15px);
+  -moz-filter: blur(15px);
+  -o-filter: blur(15px);
+  -ms-filter: blur(15px);
+  filter: blur(15px);
+  transition: -webkit-filter 2s;
+  transition: -moz-filter 2s;
+  transition: -o-filter 2s;
+  transition: -ms-filter 2s;
+  transition: filter 2s;
+}
+
+/* Image sections. */
+
+.horizontal-image,
+.vertical-image {
+  margin: 1em 0 1em 0;
+  clear: both;
+}
+
+.horizontal-image p,
+.vertical-image p,
+.body-text,
+.body-text .gear-list,
+.text {
+  margin: 1.5em 1em;
+
+  @include medium {
+    margin: 1em 6em;
+  }
+}
+
+.vertical-image__img {
+  margin: 1em 1.5em;
+}
+
+@media only screen and (min-width: 766px) {
+  .vertical-image__img {
+    margin: 1em 6em;
+  }
+}
+
+/* Details box. */
+
+.blog-details {
+  width: 40%;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+  float: right;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: #f8f8f8;
+  line-height: 1.3;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 766px) {
+  .blog-details {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.blog-details td {
+  padding: 0.3em 0.5em;
+  display: table-cell;
+  vertical-align: top;
+  background-color: #f7f4ef;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-bottom: none;
+  line-height: 1.4;
+}
+
+.blog-details__label {
+  width: 40%;
+  text-align: right;
+  color: #273246;
+  font-weight: bold;
+}
+
+.blog-details__content {
+  width: 60%;
+  border-left: 1px solid #ccc;
+}
+
+/* Quotation block */
+
+.quotation {
+  min-height: 8em;
+  margin-top: 1.5em;
+  margin-right: 0;
+  margin-bottom: 1em;
+  margin-left: 0;
+  padding: 1em 2em 0.5em 6em;
+  background-color: #e1d3c3;
+  border-bottom: solid 2px #c8ad90;
+  font-weight: 700;
+
+  @include medium {
+    margin-right: 6em;
+    margin-left: 6em;
+  }
+}
+
+.quotation__lyric {
+  background-image: url("../assets/images/music.svg");
+  background-repeat: no-repeat;
+  background-size: 90px 90px;
+  background-position: 0.2em 0.5em;
+
+  @include medium {
+    background-size: 100px 100px;
+  }
+}
+
+.quotation__text {
+  background-image: url("../assets/images/quotation.svg");
+  background-repeat: no-repeat;
+  background-position: 0.7em 0.7em;
+  background-size: 80px 80px;
+
+  @include medium {
+    background-size: 90px 90px;
+  }
+}
+
+.bottom-links {
+  margin: 2em 0 0 0;
+
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $links;
+
+    @include font-size(0.85);
+  }
+}
+
+.gear-disclaimer {
+  font-style: italic;
+}

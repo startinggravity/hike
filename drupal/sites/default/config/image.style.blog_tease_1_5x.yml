@@ -1,0 +1,23 @@
+uuid: bfa71b34-753c-4a45-84cc-62249462dd0e
+langcode: en
+status: true
+dependencies: {  }
+name: blog_tease_1_5x
+label: 'Blog Tease 1.5x'
+effects:
+  6ff1905b-e73b-44bd-9dbf-68102cb4c9e6:
+    uuid: 6ff1905b-e73b-44bd-9dbf-68102cb4c9e6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 200
+      anchor: center-center
+  a9e13ec5-ec2c-40d2-b6ff-c794baf1bff4:
+    uuid: a9e13ec5-ec2c-40d2-b6ff-c794baf1bff4
+    id: image_scale
+    weight: 2
+    data:
+      width: 450
+      height: 300
+      upscale: true

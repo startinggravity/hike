@@ -1,0 +1,19 @@
+uuid: 7bd17d72-939c-4679-9cc4-a0ffd1374688
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_gear_source
+field_name: field_gear_source
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

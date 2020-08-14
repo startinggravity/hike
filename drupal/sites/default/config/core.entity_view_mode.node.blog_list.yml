@@ -1,0 +1,10 @@
+uuid: fdabb196-eb26-4330-b8ad-793392170dc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.blog_list
+label: 'Blog List'
+targetEntityType: node
+cache: true

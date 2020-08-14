@@ -1,0 +1,19 @@
+uuid: 82492163-992c-4aa9-a168-a2baa7981220
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_secondary_title
+    - node.type.blog
+id: node.blog.field_secondary_title
+field_name: field_secondary_title
+entity_type: node
+bundle: blog
+label: 'Secondary Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

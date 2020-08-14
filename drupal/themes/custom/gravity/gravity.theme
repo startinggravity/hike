@@ -1,0 +1,83 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Pattern Lab theme.
+ */
+
+/**
+ * Implements theme_preprocess_page.
+ */
+function gravity_preprocess_page(&$variables) {
+  // Set a variable for the site name that can be used (hidden) on the front page.
+  $variables['site_name'] = \Drupal::config('system.site')->get('name');
+}
+
+/**
+ * Implements hook_preprocess_region() for region templates.
+ *
+ */
+function gravity_preprocess_region(&$variables) {
+  // Put blog post's main image in the Hero region instead of the Content region.
+  if ($variables['region'] == 'hero') {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+      if ($node->getType() == 'blog') {
+        //$path = $node->get('field_main_image')->entity->uri->value;
+        $image = $node->get('field_main_image');
+        $image_variables = array(
+          'responsive_image_style_id' => 'hero',
+          'uri' => $image->entity->uri->value,
+          'width' => NULL,
+          'height' => NULL,
+        );
+        // The image.factory service will check if our image is valid.
+        $picture = \Drupal::service('image.factory')
+          ->get($image->entity->uri->value);
+        if ($picture->isValid()) {
+          $image_variables['width'] = $picture->getWidth();
+          $image_variables['height'] = $picture->getHeight();
+        }
+        else {
+          $image_variables['width'] = $variables['height'] = NULL;
+        }
+        $hero_image = [
+          '#theme' => 'responsive_image',
+          '#width' => $image_variables['width'],
+          '#height' => $image_variables['height'],
+          '#responsive_image_style_id' => $image_variables['responsive_image_style_id'],
+          '#uri' => $image_variables['uri'],
+        ];
+        $variables['hero_image'] = $hero_image;
+
+        // Get the Secondary Title field.
+        $variables['secondary_title'] = $node->get('field_secondary_title')->view();
+
+          // Get the Blog Category.
+        $tid = $node->get('field_blog_category')->target_id;
+        $term_object = \Drupal\taxonomy\Entity\Term::load($tid);
+        $variables['category_name'] =  taxonomy_term_title($term_object) . ': ';
+      }
+      else {
+        $variables['hero_image'] = views_embed_view('random_images', 'embed');
+      }
+    }
+    else {
+      $variables['hero_image'] = views_embed_view('random_images', 'embed');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_flippy().
+ *
+ * This is a fix in place due to https://www.drupal.org/node/2833461
+ * @todo This can be removed when https://www.drupal.org/node/2833461 is fixed.
+ */
+function gravity_preprocess_flippy(&$vars) {
+  if (!empty($vars['prev']['#title'])) {
+    $vars['prev']['#title'] = \Drupal\Component\Utility\Html::decodeEntities($vars['prev']['#title']);
+  }
+  if (!empty($vars['next']['#title'])) {
+    $vars['next']['#title'] = \Drupal\Component\Utility\Html::decodeEntities($vars['next']['#title']);
+  }
+}

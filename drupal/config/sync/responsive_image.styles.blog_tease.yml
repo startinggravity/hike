@@ -1,0 +1,35 @@
+uuid: d244b0b9-a6e2-487d-a772-76ef58fd76d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.blog_tease_1_5x
+    - image.style.blog_tease_1x
+    - image.style.blog_tease_2x
+  theme:
+    - gravity
+id: blog_tease
+label: 'Blog Tease'
+image_style_mappings:
+  -
+    breakpoint_id: gravity.small-med
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - blog_tease_1_5x
+        - blog_tease_1x
+        - blog_tease_2x
+  -
+    breakpoint_id: gravity.small
+    multiplier: 1x
+    image_mapping_type: sizes
+    image_mapping:
+      sizes: 100vw
+      sizes_image_styles:
+        - blog_tease_1_5x
+        - blog_tease_1x
+        - blog_tease_2x
+breakpoint_group: gravity
+fallback_image_style: blog_tease_1x

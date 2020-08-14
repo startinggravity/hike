@@ -1,0 +1,30 @@
+uuid: 8203cd49-691e-4e22-b102-f80034ffc5a6
+langcode: en
+status: true
+dependencies: {  }
+id: blogger
+label: Blogger
+weight: 3
+is_admin: null
+permissions:
+  - 'use text format full_html'
+  - 'use text format markdown'
+  - 'create blog content'
+  - 'delete any blog content'
+  - 'delete own blog content'
+  - 'delete blog revisions'
+  - 'edit any blog content'
+  - 'edit own blog content'
+  - 'revert blog revisions'
+  - 'view blog revisions'
+  - 'create url aliases'
+  - 'administer facebook comments'
+  - 'view own unpublished content'
+  - 'access content'
+  - 'search content'
+  - 'access site reports'
+  - 'view the administration theme'
+  - 'access toolbar'
+  - 'access content overview'
+  - 'administer nodes'
+  - 'view all revisions'

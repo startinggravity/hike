@@ -1,0 +1,15 @@
+uuid: 3b3834e0-dea0-44f5-995c-3b4c46dd8a31
+langcode: en
+status: true
+dependencies: {  }
+name: blog_vertical_small_1x
+label: 'Blog - Vertical Small - 1x'
+effects:
+  3b790074-4418-4920-a8ce-6fff49999f71:
+    uuid: 3b790074-4418-4920-a8ce-6fff49999f71
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 440
+      height: 785
+      anchor: center-center

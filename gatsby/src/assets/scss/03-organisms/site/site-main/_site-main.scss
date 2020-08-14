@@ -1,0 +1,67 @@
+.main-content {
+  width: 100%;
+  margin: 2em auto 0 auto;
+  background-image: url(../assets/images/trees.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  -webkit-transform: translate3d(0, 0, 0);
+
+  @include medium {
+    width: 800px;
+  }
+
+  ul {
+    margin: 0 2em;
+
+    @include medium {
+      margin: 0 8em;
+    }
+  }
+
+  form {
+    margin: 0 2em;
+
+    @include medium {
+      margin: 0 8em;
+    }
+  }
+}
+
+.main-content ul.menu-social-media {
+  margin: 0 2em;
+}
+
+.body-image {
+  margin-bottom: 1em;
+
+  .image__caption {
+    margin: 0 auto;
+    border-bottom: 1px solid #ededed;
+  }
+}
+
+.vertical-image {
+  margin-top: 0;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+
+  @include medium {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .image__caption {
+    border-bottom: 1px solid #ededed;
+
+    p {
+      margin-top: 0;
+      margin-right: 1em;
+      margin-left: 0;
+      @include medium {
+        margin-left: 1.5em;
+      }
+    }
+  }
+}
+

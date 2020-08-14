@@ -1,0 +1,40 @@
+uuid: f9f79615-c846-4b81-b770-aa7a50eb8f7e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yBqw6UD3j0MM1yoDSVDif7nw4SNdoS2e385nw--3ysk
+id: front
+label: 'Front page'
+tags:
+  robots: 'index, follow'
+  shortlink: '[site:url]'
+  canonical_url: '[site:url]'
+  title: '[site:name]'
+  description: 'The hiking journal of Jim "Gravity" Smith, who is attempting to thru-hike the Appalachian Trail from Georgia to Maine, in 2017.'
+  keywords: 'Appalachian Trail, long distance hiking, backpacking, Great Smoky Mountains'
+  abstract: 'The hiking journal of Jim "Gravity" Smith, who is attempting to thru-hike the Appalachian Trail from Georgia to Maine, in 2017.'
+  news_keywords: 'Appalachian Trail, long distance hiking, backpacking, Great Smoky Mountains'
+  rights: 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.'
+  fb_admins: '641895471'
+  fb_app_id: '1224500344298525'
+  og_description: 'The hiking journal of Jim "Gravity" Smith, who is attempting to thru-hike the Appalachian Trail from Georgia to Maine, in 2017.'
+  og_image_secure_url: 'https://hikewithgravity.com/themes/custom/gravity/images/hike_with_gravity.png'
+  og_site_name: 'Hike with Gravity'
+  og_image_type: image/png
+  og_image_height: '357'
+  og_image: 'https://hikewithgravity.com/themes/custom/gravity/images/hike_with_gravity.png'
+  og_title: 'Hike with Gravity'
+  og_url: 'https://hikewithgravity.com'
+  og_type: blog
+  og_image_width: '492'
+  twitter_cards_image_height: '357'
+  twitter_cards_type: summary_large_image
+  twitter_cards_creator: '@hikewithgravity'
+  twitter_cards_title: '[site:name]'
+  twitter_cards_page_url: 'https://hikewithgravity.com'
+  twitter_cards_image: 'https://hikewithgravity.com/themes/custom/gravity/images/hike_with_gravity.png'
+  twitter_cards_image_width: '492'
+  twitter_cards_description: 'The hiking journal of Jim "Gravity" Smith, who is attempting to thru-hike the Appalachian Trail from Georgia to Maine, in 2017.'
+  twitter_cards_site: '@hikewithgravity'
+  twitter_cards_image_alt: 'Hike with Gravity'

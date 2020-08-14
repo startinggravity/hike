@@ -1,0 +1,16 @@
+uuid: 18c83379-d6ea-469f-bb90-2d8759e54491
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_campaign
+name: MailChimp
+format: mailchimp
+weight: 0
+filters:
+  filter_mailchimp_campaign:
+    id: filter_mailchimp_campaign
+    provider: mailchimp_campaign
+    status: true
+    weight: 0
+    settings: {  }

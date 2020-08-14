@@ -1,0 +1,32 @@
+.more-link {
+  @include more-link;
+}
+
+// Drupal-specific
+.align-left {
+  float: left;
+  margin-right: .4em;
+}
+
+.align-right {
+  float: left;
+  margin-left: .4em;
+}
+
+.kint {
+  position: absolute;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  line-height: 1.7;
+}
+
+input[type=search] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}

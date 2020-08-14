@@ -1,0 +1,136 @@
+.menu {
+  @include list-reset;
+}
+
+.menu__item {
+  margin: 0 1em .5em 0;
+
+  @include medium {
+    display: inline;
+    margin-bottom: 1em;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.menu-main {
+  display: none;
+}
+
+.menu-main.menu-main__show {
+  display: block;
+  position: fixed;
+  overflow: hidden;
+  top: 8em;
+  left: 50%;
+  z-index: 999;
+  width: 220px;
+  transform: translate(-50%, 0);
+  background: $indian-khaki;
+  border: 2px solid $border;
+  @include medium {
+    top: 12em;
+  }
+}
+
+.search-menu nav h2 {
+  display: none
+}
+
+.menu__link {
+  @include font-size(.75);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu-main__item {
+  border-top: 1px solid $border;
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.menu-main__link {
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  @include font-size(1.4);
+  font-weight: 700;
+  &:link,
+  &:visited {
+    color: $white;
+    border-bottom: none;
+  }
+}
+
+.menu-main__link:hover {
+  transition: all 0.3s ease-in;
+  background-color: rgba(205, 205, 205, 0.5);
+  &:link,
+  &:visited {
+    color: $links;
+  }
+}
+
+.menu-main__link--contact {
+  padding: 0.5em 0.5em 0.5em 3.6em;
+  background-image: url(../images/icons/contact_fire.svg);
+  background-position: 1.6em center;
+}
+
+.menu-main__link--contact:hover {
+  background-image: url(../images/icons/contact_fire-hover.svg);
+}
+
+.menu-main__link--hikes {
+  padding: 0.5em 0.5em 0.5em 4.4em;
+  background-image: url(../images/icons/hike_map.svg);
+  background-position: 2.3em center;
+}
+
+.menu-main__link--hikes:hover {
+  background-image: url(../images/icons/hike_map-hover.svg);
+}
+
+.menu-main__link--about {
+  padding: 0.5em 0.5em 0.5em 4.1em;
+  background-image: url(../images/icons/about_gravity.svg);
+  background-position: 2.1em center;
+}
+
+.menu-main__link--about:hover {
+  background-image: url(../images/icons/about_gravity-hover.svg);
+}
+
+.menu-main__link--gear {
+  padding: 0.5em 0.5em 0.5em 4.5em;
+  background-image: url(../images/icons/gear_tent.svg);
+  background-position: 2.3em center;
+}
+
+.menu-main__link--gear:hover {
+  background-image: url(../images/icons/gear_tent-hover.svg);
+}
+
+.menu-main__link--sign-up-to-receive-email-updates {
+  text-transform: capitalize;
+  text-align: center;
+  line-height: 1.2;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  @include font-size(1);
+}
+
+.menu-main__submenu {
+  border-top: 1px solid $border;
+  .menu-main__link {
+    text-transform: capitalize;
+    text-align: center;
+    @include font-size(1);
+  }
+}

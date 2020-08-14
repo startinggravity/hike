@@ -1,0 +1,22 @@
+uuid: 18923070-ab56-4636-be9e-e8a1fab61a35
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_medium_2x
+label: 'Blog - Horizontal Medium - 2x'
+effects:
+  056d6c79-2f5e-4f29-98f8-1d6afdf84f3f:
+    uuid: 056d6c79-2f5e-4f29-98f8-1d6afdf84f3f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 400
+  a3de6c8c-3227-4f42-ac05-4351ec210459:
+    uuid: a3de6c8c-3227-4f42-ac05-4351ec210459
+    id: image_scale
+    weight: 2
+    data:
+      width: 1440
+      height: 800
+      upscale: true

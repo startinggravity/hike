@@ -1,0 +1,6 @@
+uuid: 0d16dcf0-1f72-4bc1-a17e-35f3af7a74db
+langcode: en
+status: true
+dependencies: {  }
+id: hike_details
+label: 'Hike Details'

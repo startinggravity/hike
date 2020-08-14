@@ -1,0 +1,8 @@
+uuid: 6efc9370-95f6-486e-89db-43ea9b9e54d1
+langcode: en
+status: true
+dependencies: {  }
+id: node__random_image
+label: 'Content: Random Image'
+tags:
+  robots: 'noindex, nofollow, noarchive, nosnippet, noodp, noydir, noimageindex, notranslate'

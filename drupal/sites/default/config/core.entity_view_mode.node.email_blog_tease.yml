@@ -1,0 +1,10 @@
+uuid: c89b06e5-966a-44bc-9df5-7ca931114856
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.email_blog_tease
+label: 'Email Blog Tease'
+targetEntityType: node
+cache: true

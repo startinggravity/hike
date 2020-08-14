@@ -1,0 +1,48 @@
+uuid: 69cad3ec-b29e-4afe-920f-908db9ce72ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.email_blog_tease
+    - field.field.node.blog.field_blog_category
+    - field.field.node.blog.field_blog_type
+    - field.field.node.blog.field_body_elements
+    - field.field.node.blog.field_comments
+    - field.field.node.blog.field_main_image
+    - field.field.node.blog.field_secondary_title
+    - field.field.node.blog.field_summary
+    - image.style.medium
+    - node.type.blog
+  module:
+    - image
+    - text
+    - user
+id: node.blog.email_blog_tease
+targetEntityType: node
+bundle: blog
+mode: email_blog_tease
+content:
+  field_main_image:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_blog_category: true
+  field_blog_type: true
+  field_body_elements: true
+  field_comments: true
+  field_secondary_title: true
+  flippy_pager: true
+  links: true

@@ -1,0 +1,103 @@
+.hike-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+  margin: 0;
+  padding: 1em;
+  list-style: none;
+
+  @include medium {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @include large {
+    padding: 0;
+  }
+
+  a:hover .hike-list__image {
+    -webkit-filter: sepia(1) brightness(30%);
+    filter: sepia(1) brightness(30%);
+    transition: all $transition-fast;
+  }
+
+  .hike-list__image {
+    -webkit-filter: sepia(1) brightness(60%);
+    filter: sepia(1) brightness(60%);
+  }
+}
+
+.hike-list__item {
+  position: relative;
+  text-align: center;
+  margin: 0;
+}
+
+.hike-list__image {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.hike-list__text h2 {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5em;
+  line-height: 1.1;
+  font-size: 14px;
+  font-size: 1.3rem;
+  color: white;
+  text-shadow: 0 0 10px #000;
+  border: none;
+}
+
+.hike-list__image {
+  -webkit-filter: sepia(1) brightness(60%);
+  filter: sepia(1) brightness(60%);
+  transition: all $transition-fast;
+}
+
+// Pager.
+
+.pager-list {
+  margin: 0.5em 0.1em;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  .pager-list__item {
+    display: inline-block;
+    margin: 0 0.5em;
+    padding: 0.3em;
+    width: 2em;
+    height: 2em;
+    cursor: pointer;
+    color: $white;
+    background-color: $links;
+    border: 1px solid $links;
+
+    &:hover {
+      background-color: $links--hover;
+      border: 1px solid $links--hover;
+    }
+
+    &--active {
+      color: $links;
+      background-color: $white;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.pager .pager-list__item {
+  margin: 0.5em;
+}

@@ -1,0 +1,25 @@
+uuid: 42675796-0eee-4fca-b6a5-34ca241afc18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_gear_price
+    - paragraphs.paragraphs_type.gear_details
+id: paragraph.gear_details.field_gear_price
+field_name: field_gear_price
+entity_type: paragraph
+bundle: gear_details
+label: Price
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: $
+  suffix: ''
+field_type: decimal

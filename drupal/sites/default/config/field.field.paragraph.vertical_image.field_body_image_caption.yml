@@ -1,0 +1,21 @@
+uuid: f6e4dc8e-c9e1-417c-b1f3-61f919799cbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_body_image_caption
+    - paragraphs.paragraphs_type.vertical_image
+  module:
+    - text
+id: paragraph.vertical_image.field_body_image_caption
+field_name: field_body_image_caption
+entity_type: paragraph
+bundle: vertical_image
+label: 'Body Image Caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

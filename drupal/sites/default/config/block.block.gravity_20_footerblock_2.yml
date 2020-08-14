@@ -1,0 +1,20 @@
+uuid: 27565764-b9a5-485c-a240-53d4d6b517e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - gravity_blocks
+  theme:
+    - gravity_20
+id: gravity_20_footerblock_2
+theme: gravity_20
+region: footer
+weight: -8
+provider: null
+plugin: footer_block
+settings:
+  id: footer_block
+  label: 'Footer block'
+  provider: gravity_blocks
+  label_display: '0'
+visibility: {  }

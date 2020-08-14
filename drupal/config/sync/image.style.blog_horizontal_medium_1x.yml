@@ -1,0 +1,14 @@
+uuid: b2b1b0f9-0646-4f26-970f-1a1ed594e417
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_medium_1x
+label: 'Blog - Horizontal Medium - 1x'
+effects:
+  78d303f1-33e8-4061-b15b-07f66558bcdd:
+    uuid: 78d303f1-33e8-4061-b15b-07f66558bcdd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 720
+      height: 400

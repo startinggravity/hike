@@ -1,0 +1,14 @@
+uuid: d247ecef-df2b-4746-9162-a36b34e7169a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5rOnjIF_aDyGBmfXNhJnkPXxQMlem0CmVmggV-TF3Fg
+id: global
+label: Global
+tags:
+  shortlink: '[node:url:absolute]'
+  rights: 'This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.'
+  fb_pages: '641895471'
+  fb_app_id: '1224500344298525'
+  og_url: '[node:url:absolute]'

@@ -1,0 +1,20 @@
+uuid: 1c2fc11b-c60e-4ad6-8f78-710a6a449d0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_gear_price
+field_name: field_gear_price
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

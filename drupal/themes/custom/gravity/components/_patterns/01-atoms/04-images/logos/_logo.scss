@@ -1,0 +1,54 @@
+.site-header__logo-link {
+  position: fixed;
+  top: 0.5em;
+  display: block;
+  height: 120px;
+  width: 165px;
+  background: $envy;
+  transition: all 0.5s ease-in;
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.sticky .site-header__logo-link {
+  position: fixed;
+  top: -14em;
+  transition: all 0.5s ease-in;
+}
+
+.site-header__logo-img {
+  position: fixed;
+  top: 0.5em;
+  display: block;
+  height: 120px;
+  width: 165px;
+  transition: all 0.5s ease-in;
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.site-header__logo-img svg {
+  height: 120px;
+  width: 165px;
+  @include medium {
+    height: 160px;
+    width: 220px
+  }
+}
+
+.sticky .site-header__logo-img {
+  position: fixed;
+  top: -3.65em;
+  transition: all 0.5s ease-in;
+  @include medium {
+    top: -5.5em;
+  }
+}
+
+.site-header__logo-img .st1 {
+  fill: $white;
+}

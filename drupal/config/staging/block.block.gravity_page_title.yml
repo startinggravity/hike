@@ -1,0 +1,20 @@
+uuid: 005e0cff-d6e7-4a39-8863-f7e34221a909
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gravity
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: gravity_page_title
+theme: gravity
+region: '-1'
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,68 @@
+uuid: 83341ffb-b81f-4bfe-92db-bf86c4e0853b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.field_blog_category
+    - field.field.node.blog.field_blog_type
+    - field.field.node.blog.field_body_elements
+    - field.field.node.blog.field_comments
+    - field.field.node.blog.field_main_image
+    - field.field.node.blog.field_secondary_title
+    - field.field.node.blog.field_summary
+    - node.type.blog
+  module:
+    - entity_reference_revisions
+    - facebook_comments
+    - text
+    - user
+id: node.blog.default
+targetEntityType: node
+bundle: blog
+mode: default
+content:
+  field_body_elements:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_comments:
+    weight: 3
+    label: above
+    settings:
+      facebook_comments_style: light
+      facebook_comments_width: 620
+      facebook_comments_width_fluid: true
+      facebook_comments_amount: 15
+    third_party_settings: {  }
+    type: facebook_comments_formatter
+    region: content
+  field_secondary_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  flippy_pager:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_blog_category: true
+  field_blog_type: true
+  field_main_image: true
+  links: true

@@ -1,0 +1,20 @@
+uuid: 5d2bc820-612f-421b-a4ed-4bd91ff775d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_hike_miles_today
+field_name: field_hike_miles_today
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 1
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

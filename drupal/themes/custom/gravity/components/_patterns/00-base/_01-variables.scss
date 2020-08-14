@@ -1,0 +1,30 @@
+// Widths and base sizing
+$max-width: 1200px;
+$base-font-size: 62.5%; // setup to work with rems
+$base-border-size: 5px;
+$measure-max: 675px; // use for paragraph measure.
+
+// Fonts
+
+// Import fonts.
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,800);
+@import url(https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,700);
+
+// Font families.
+$sans-serif: 'Questrial', sans-serif;
+$serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$display: 'Montserrat', sans-serif;
+
+$body: $sans-serif;
+$heading: $display;
+
+// Pattern Lab layout.
+.sg-subtype {
+  clear: both;
+}
+
+body,
+html {
+  overflow-x:hidden;
+}

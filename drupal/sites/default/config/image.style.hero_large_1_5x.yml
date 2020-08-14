@@ -1,0 +1,23 @@
+uuid: 4f3ba58f-4393-43ee-a15f-65a053d71eec
+langcode: en
+status: true
+dependencies: {  }
+name: hero_large_1_5x
+label: 'Hero - Large - 1.5x'
+effects:
+  edae0163-4cdd-4e32-8717-31166f2e6f26:
+    uuid: edae0163-4cdd-4e32-8717-31166f2e6f26
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1500
+      height: 750
+      anchor: center-center
+  ab161360-3a82-47a0-9aec-2189d6a33402:
+    uuid: ab161360-3a82-47a0-9aec-2189d6a33402
+    id: image_scale
+    weight: 2
+    data:
+      width: 2250
+      height: 1125
+      upscale: true

@@ -1,0 +1,19 @@
+uuid: 92ba66c3-0530-4a7f-bade-7bb82a26308e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hike_conditions
+    - paragraphs.paragraphs_type.hike_details
+id: paragraph.hike_details.field_hike_conditions
+field_name: field_hike_conditions
+entity_type: paragraph
+bundle: hike_details
+label: 'Trail Conditions'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

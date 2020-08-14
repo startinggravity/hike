@@ -1,0 +1,71 @@
+{
+  "items": [
+    {
+      "name": "$white",
+      "value": "#fff"
+    },
+    {
+      "name": "$near-white",
+      "value": "#f2f2f2"
+    },
+    {
+      "name": "$gray-lightest",
+      "value": "#e5e5e5"
+    },
+    {
+      "name": "$gray-lighter",
+      "value": "#ccc"
+    },
+    {
+      "name": "$gray-light",
+      "value": "#999"
+    },
+    {
+      "name": "$gray",
+      "value": "#666"
+    },
+    {
+      "name": "$gray-dark",
+      "value": "#4c4c4c"
+    },
+    {
+      "name": "$gray-darker",
+      "value": "#333"
+    },
+    {
+      "name": "$envy",
+      "value": "#8eb48c"
+    },
+    {
+      "name": "$ebony-clay",
+      "value": "#273246"
+    },
+    {
+      "name": "$mule-fawn",
+      "value": "#984a2d"
+    },
+    {
+      "name": "$safron",
+      "value": "#f8b238"
+    },
+    {
+      "name": "$indian-khaki",
+      "value": "#c8ad90"
+    },
+    {
+      "name": "$eden",
+      "value": "#0E513F"
+    },
+    {
+      "name": "$claret",
+      "value": "#731527"
+    },
+    {
+      "name": "$mine-shaft",
+      "value": "#2b2b2b"
+    }
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$</code> in <code>.//components/_patterns/00-base/global/01-colors/_color-vars.scss</code>"
+  }
+}

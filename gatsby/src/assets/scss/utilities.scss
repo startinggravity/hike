@@ -1,0 +1,37 @@
+.more-link {
+  @include more-link;
+}
+
+// Drupal-specific
+.align-left {
+  float: left;
+  margin-right: 0.4em;
+}
+
+.align-right {
+  float: left;
+  margin-left: 0.4em;
+}
+
+input,
+textarea {
+  max-width: 100%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  line-height: 1.7;
+}
+
+input[type="search"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}

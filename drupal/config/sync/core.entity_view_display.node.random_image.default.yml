@@ -1,0 +1,26 @@
+uuid: 0f7732e3-3a0c-4871-8c45-d4493885e467
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.random_image.field_random_hero
+    - node.type.random_image
+  module:
+    - image
+    - user
+id: node.random_image.default
+targetEntityType: node
+bundle: random_image
+mode: default
+content:
+  field_random_hero:
+    weight: 101
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+hidden: {  }

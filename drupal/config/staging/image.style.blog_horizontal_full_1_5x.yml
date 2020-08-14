@@ -1,0 +1,22 @@
+uuid: 6053d273-1413-48ac-91df-78c8c4fbaeb9
+langcode: en
+status: true
+dependencies: {  }
+name: blog_horizontal_full_1_5x
+label: 'Blog - Horizontal Full - 1.5x'
+effects:
+  08e3ed98-d634-4e76-981a-903393a6a57f:
+    uuid: 08e3ed98-d634-4e76-981a-903393a6a57f
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 880
+      height: 490
+  90e9d1c2-c0a7-4008-8075-dcf4c2d624b8:
+    uuid: 90e9d1c2-c0a7-4008-8075-dcf4c2d624b8
+    id: image_scale
+    weight: 2
+    data:
+      width: 1320
+      height: 735
+      upscale: true

@@ -1,0 +1,20 @@
+uuid: 0d6352c6-650a-4eeb-b7da-c5f89783f1fe
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_hike_miles_trip
+field_name: field_hike_miles_trip
+entity_type: paragraph
+type: decimal
+settings:
+  precision: 10
+  scale: 1
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
