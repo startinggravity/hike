@@ -19,7 +19,9 @@ export const nodeBlogFragment = graphql`
       main: field_main_image {
         localFile {
           cis: childImageSharp {
-            f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+            f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]
+              cropFocus: CENTER
+              ) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

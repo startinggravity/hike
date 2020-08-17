@@ -14,7 +14,7 @@ export const bodyImageFragment = graphql`
         localFile {
           cis: childImageSharp {
             f: fluid(
-              srcSetBreakpoints: [480, 640, 960, 1280, 2560]
+              srcSetBreakpoints: [480, 640, 960, 1920]
               cropFocus: CENTER
             ) {
               ...GatsbyImageSharpFluid_withWebp
@@ -42,7 +42,8 @@ export const vertImageFragment = graphql`
         localFile {
           cis: childImageSharp {
             f: fluid(
-              srcSetBreakpoints: [480, 640, 960, 1280, 2560]
+              srcSetBreakpoints: [480, 640, 720, 1440]
+              cropFocus: CENTER
             ) {
               ...GatsbyImageSharpFluid_withWebp
             }

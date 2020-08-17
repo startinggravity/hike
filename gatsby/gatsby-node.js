@@ -22,9 +22,6 @@ exports.createPages = ({ actions, graphql }) => {
                   path {
                     alias
                   }
-                  field_summary {
-                    processed
-                  }
                 }
               }
             }
