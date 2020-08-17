@@ -75,7 +75,7 @@ module.exports = {
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: "http://hike-to-gatsby.lndo.site/",
+        baseUrl: "https://dev-hike-with-gravity.pantheonsite.io/",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
