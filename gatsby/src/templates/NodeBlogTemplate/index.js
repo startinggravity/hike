@@ -5,6 +5,7 @@ import Parser from "html-react-parser"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import SEO from "../../components/seo"
+import HyvorTalk from "hyvor-talk-react"
 
 // Layout
 import Layout from "../../components/layout"
@@ -14,7 +15,7 @@ import Content from "../../components/fields/Content"
 import GearMenu from "../../components/fields/GearMenu"
 
 const NodeBlogTemplate = ({ data, pageContext }) => {
-  const { title, subtitle, summary, r, alt } = data.nodeBlog
+  const { title, subtitle, summary, r, alt, path } = data.nodeBlog
   const { content, category, type } = data.nodeBlog.r
 
   let media = r.main.localFile.cis.f
@@ -116,9 +117,7 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
           )}
         </div>
         <div className="semi-hero__text">
-          <h1>
-            {title}:
-          </h1>
+          <h1>{title}:</h1>
           <h2>{subtitle}</h2>
         </div>
       </div>
@@ -127,8 +126,10 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-
-      <SEO title={ blogType === 2 ? gearTitle : fullTitle } description={subtitle} />
+      <SEO
+        title={blogType === 2 ? gearTitle : fullTitle}
+        description={subtitle}
+      />
 
       {blogType === 2 ? <SemiHeroImage /> : <HeroImage />}
 
@@ -138,7 +139,19 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
         <div className="body-text">{Parser(summary.processed)}</div>
         <Content content={content} />
 
+        <div className="comments">
+          <h3 className="comments__header">Comments</h3>
+          <p className="comments__quote">
+            "Nothing to tell now. Let the words be yours, I'm done with mine."
+            <span>
+              <a href="https://youtu.be/3aMBIeD0ThU?t=16s">ref.</a>
+            </span>
+          </p>
+          <HyvorTalk.Embed websiteId={1614} id={path.alias}/>
+        </div>
+
         {blogType === 1 ? <PrevNextLinks /> : ""}
+
       </div>
     </Layout>
   )

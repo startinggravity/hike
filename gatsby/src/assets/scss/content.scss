@@ -118,7 +118,6 @@
 
 .horizontal-image,
 .vertical-image {
-  margin: 1em 0 1em 0;
   clear: both;
 }
 
@@ -127,20 +126,26 @@
 .body-text,
 .body-text .gear-list,
 .text {
-  margin: 1.5em 1em;
+  padding: 0 1em;
 
   @include medium {
-    margin: 1em 6em;
+    padding: 0 6em;
   }
 }
 
-.vertical-image__img {
-  margin: 1em 1.5em;
+.horizontal-image__img {
+  margin: 0 0 1em 0;
+  border: 1px solid $gray-lightest;
 }
 
-@media only screen and (min-width: 766px) {
+.vertical-image__img {
+  margin: 0 1.5em 1em 1.5em;
+  border: 1px solid $gray-lightest;
+}
+
+@media (min-width: 766px) {
   .vertical-image__img {
-    margin: 1em 6em;
+    margin: 0 6em 1em 6em;
   }
 }
 
@@ -253,4 +258,13 @@
 
 .gear-disclaimer {
   font-style: italic;
+}
+
+// Comments.
+.comments {
+  margin: 0 1em;
+
+  @include medium {
+    margin: 0 6em;
+  }
 }

@@ -1,0 +1,23 @@
+/*  Layout. */
+
+// Main section.
+
+main {
+  background-image: url(../assets/images/trees.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+
+  @include medium {
+    background-position: 90% bottom;
+  }
+}
+
+.main__content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5em 0 0 0;
+}
+
+.outer-wrapper {
+  position: relative;
+}

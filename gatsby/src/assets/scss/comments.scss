@@ -1,0 +1,20 @@
+.comments {
+  padding-top: 1em;
+}
+
+h3.comments__header {
+  margin-bottom: 0;
+}
+
+p.comments__quote {
+  margin-bottom: 0.2em;
+  font-style: italic;
+  color: $gray-light;
+
+  span {
+    margin-left: 0.5em;
+    font-style: normal;
+
+    @include font-size(0.7);
+  }
+}
