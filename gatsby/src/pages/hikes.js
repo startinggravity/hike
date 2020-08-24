@@ -45,6 +45,7 @@ class Hikes extends Component {
     const renderContent = currentItems.map(hike => {
       let media =
         hike.node.relationships.field_main_image.localFile.childImageSharp.fluid
+
       return (
         <li className="hike-list__item" key={hike.node.nid}>
           <Link to={hike.node.path.alias}>
@@ -165,9 +166,7 @@ export const hikeQuery = graphql`
       sort: { fields: [created], order: [DESC] }
       filter: {
         relationships: {
-          field_blog_category: {
-            drupal_internal__tid: { in: [5, 6, 7, 8, 16] }
-          }
+          field_blog_category: { drupal_internal__tid: { in: [5, 6, 7, 8, 16] } }
         }
       }
     ) {
@@ -196,6 +195,9 @@ export const hikeQuery = graphql`
             category: field_blog_category {
               tid: drupal_internal__tid
             }
+          }
+          alt: field_main_image {
+            alt
           }
         }
       }

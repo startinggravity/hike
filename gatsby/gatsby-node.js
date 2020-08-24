@@ -53,6 +53,20 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
+exports.onCreateNode = ({ node, actions }) => {
+  const { createNodeField } = actions
+  if (
+    node.internal.type === `node__blog`
+  ) {
+    const slug = `${node.path.alias}`
+    createNodeField({
+      node,
+      name: `slug`,
+      value: slug,
+    })
+  }
+}
+
 // exports.onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
 //   const { createNode } = actions
 //   if (node.internal.type.indexOf('node__') === 0) {

@@ -113,6 +113,11 @@ export const hikeQuery = graphql`
   {
     posts: allNodeBlog(
       sort: { fields: [created], order: [DESC] }
+      filter: {
+        relationships: {
+          field_blog_category: { drupal_internal__tid: { in: [16] } }
+        }
+      }
     ) {
       edges {
         node {
@@ -136,6 +141,12 @@ export const hikeQuery = graphql`
                 }
               }
             }
+            category: field_blog_category {
+              tid: drupal_internal__tid
+            }
+          }
+          alt: field_main_image {
+            alt
           }
         }
       }
