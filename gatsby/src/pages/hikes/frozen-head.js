@@ -188,10 +188,6 @@ export const hikeQuery = graphql`
               tid: drupal_internal__tid
             }
           }
-          field_secondary_title
-          alt: field_main_image {
-            alt
-          }
         }
       }
     }
