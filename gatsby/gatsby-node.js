@@ -58,35 +58,11 @@ exports.onCreateNode = ({ node, actions }) => {
   if (
     node.internal.type === `node__blog`
   ) {
-    const slug = `${node.path.alias}`
+    const slug = `${node.nid}`
     createNodeField({
       node,
       name: `slug`,
       value: slug,
     })
   }
-}
-
-// exports.onCreateNode = ({ node, actions, createNodeId, createContentDigest }) => {
-//   const { createNode } = actions
-//   if (node.internal.type.indexOf('node__') === 0) {
-//     const newId = createNodeId(`normalized_${node.drupal_id}`);
-//     const normalizedTypeNode = {
-//       ...node,
-//       id: createNodeId(node.drupal_id),
-//       internal: {
-//         type: 'Blog',
-//       },
-//     };
-//     normalizedTypeNode.internal.contentDigest = createContentDigest(normalizedTypeNode)
-//     createNode(normalizedTypeNode);
-//   }
-// }
-
-exports.createSchemaCustomization = ({ actions }) => {
-  actions.createTypes(`
-    type SitePage implements Node @dontInfer {
-      path: String!
-    }
-  `)
 }
