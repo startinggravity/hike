@@ -135,23 +135,23 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
 
       <div className="main__content">
         {blogType === 2 ? <GearMenu /> : ""}
+        <article>
+          <div className="body-text">{Parser(summary.processed)}</div>
+          <Content content={content} />
 
-        <div className="body-text">{Parser(summary.processed)}</div>
-        <Content content={content} />
+          <div className="comments">
+            <h3 className="comments__header">Comments</h3>
+            <p className="comments__quote">
+              "Nothing to tell now. Let the words be yours, I'm done with mine."
+              <span>
+                <a href="https://youtu.be/3aMBIeD0ThU?t=16s">ref.</a>
+              </span>
+            </p>
+            <HyvorTalk.Embed websiteId={1614} id={path.alias} />
+          </div>
 
-        <div className="comments">
-          <h3 className="comments__header">Comments</h3>
-          <p className="comments__quote">
-            "Nothing to tell now. Let the words be yours, I'm done with mine."
-            <span>
-              <a href="https://youtu.be/3aMBIeD0ThU?t=16s">ref.</a>
-            </span>
-          </p>
-          <HyvorTalk.Embed websiteId={1614} id={path.alias}/>
-        </div>
-
-        {blogType === 1 ? <PrevNextLinks /> : ""}
-
+          {blogType === 1 ? <PrevNextLinks /> : ""}
+        </article>
       </div>
     </Layout>
   )

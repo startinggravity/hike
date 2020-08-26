@@ -15,10 +15,22 @@ exports.createPages = ({ actions, graphql }) => {
               sort: { fields: [created], order: [ASC] }
             ) {
               edges {
+                next {
+                  title
+                  path {
+                    alias
+                  }
+                }
                 node {
                   title
                   status
                   nid: drupal_internal__nid
+                  path {
+                    alias
+                  }
+                }
+                previous {
+                  title
                   path {
                     alias
                   }
@@ -31,20 +43,14 @@ exports.createPages = ({ actions, graphql }) => {
         if (result.errors) reject(result.errors)
         if (!result.data) reject("No data found. Fix your GraphQL stuff")
         console.log("Creating Blog Nodes")
-        result.data.allNodeBlog.edges.forEach(({ node }, index) => {
+        result.data.allNodeBlog.edges.forEach(({ node, next, previous }) => {
           createPage({
             path: node.path.alias,
             component: blogTemplate,
             context: {
               slug: node.nid,
-              prev:
-                index === 0
-                  ? null
-                  : result.data.allNodeBlog.edges[index - 1].node,
-              next:
-                index === result.data.allNodeBlog.edges.length - 1
-                  ? null
-                  : result.data.allNodeBlog.edges[index + 1].node,
+              prev: previous,
+              next: next,
             },
           })
         })
