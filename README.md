@@ -2,6 +2,6 @@
 
 ## A hiking blog by Jim "Gravity" Smith
 
-### Developed in Drupal and GatsbyJS
+### Developed in [Drupal](https://www.drupal.org/) and [GatsbyJS](https://www.gatsbyjs.com/)
 
-https://hikewithgravity.com
+[https://hikewithgravity.com]()
