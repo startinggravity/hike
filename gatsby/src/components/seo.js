@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, keywords, lang, meta, title }) {
+function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -29,9 +29,13 @@ function SEO({ description, keywords, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords || site.siteMetadata.keywords
-
   const defaultImagePath = '/assets/images/hike-with-gravity-logo'
   const defaultImage = `${site.siteMetadata.siteUrl}${defaultImagePath}`
+  const defaultUrl = `${site.siteMetadata.siteUrl}`
+  const blogPath = `${site.siteMetadata.siteUrl}${nodePath}`
+  const imagePath = `${site.siteMetadata.siteUrl}${nodeImage}`
+  const url = blogPath || defaultUrl
+  const metaImage = imagePath || defaultImage
 
   return (
     <Helmet
@@ -42,16 +46,36 @@ function SEO({ description, keywords, lang, meta, title }) {
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
+          name: `HandheldFriendly`,
+          content: `true`,
+        },
+        {
+          name: `MobileOptimized`,
+          content: `width`,
+        },
+        {
           name: `description`,
           content: metaDescription,
         },
         {
           name: `thumbnail`,
-          content: defaultImage,
+          content: metaImage,
+        },
+        {
+          property: `image`,
+          content: metaImage,
+        },
+        {
+          property: `og:site_name`,
+          content: `Hike with Gravity`,
         },
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: url,
         },
         {
           property: `og:description`,
@@ -62,12 +86,52 @@ function SEO({ description, keywords, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image:type`,
+          content: `image/jpeg`,
+        },
+        {
+          name: `og:image:alt`,
+          content: title,
+        },
+        {
+          name: `og:image:width`,
+          content: `600`,
+        },
+        {
+          name: `og:image:height`,
+          content: `338`,
+        },
+        {
+          property: `article:author`,
+          content: `641895471`,
+        },
+        {
+          property: `article:publisher`,
+          content: `https://www.facebook.com/jim.smith`,
+        },
+        {
+          name: `twitter:site`,
+          content: `@hikewithgravity`,
+        },
+        {
+          property: `twitter:image`,
+          content: metaImage,
+        },
+        {
+          name: `twitter:site:id`,
+          content: `2986914490`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
+        },
+        {
+          name: `twitter:creator:id`,
+          content: `2986914490`,
         },
         {
           name: `twitter:title`,
@@ -78,8 +142,48 @@ function SEO({ description, keywords, lang, meta, title }) {
           content: metaDescription,
         },
         {
+          name: `twitter:image:alt`,
+          content: title,
+        },
+        {
+          name: `twitter:image:width`,
+          content: `600`,
+        },
+        {
+          name: `twitter:image:height`,
+          content: `338`,
+        },
+        {
+          name: `news_keywords`,
+          content: `backpacking, hiking, Appalachian Trail, Continental Divide Trail, Pacific Crest Trail, AT, PCT, CDT, long distance hiking, thru-hiking`,
+        },
+        {
+          name: `keywords`,
+          content: `backpacking, hiking, Appalachian Trail, Continental Divide Trail, Pacific Crest Trail, AT, PCT, CDT, long distance hiking, thru-hiking`,
+        },
+        {
+          name: `google-site-verification`,
+          content: `x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk`,
+        },
+        {
+          name: `fb:admins`,
+          content: `641895471`
+        },
+        {
           name: `keywords`,
           content: metaKeywords.join(", "),
+        },
+        {
+          name: `robots`,
+          content: `index, follow`,
+        },
+        {
+          name: `referrer`,
+          content: `no-referrer-when-downgrade`,
+        },
+        {
+          name: `rights`,
+          content: `This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.`,
         },
       ].concat(meta)}
     />
