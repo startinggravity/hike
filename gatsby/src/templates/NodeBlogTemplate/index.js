@@ -15,7 +15,7 @@ import Content from "../../components/fields/Content"
 import GearMenu from "../../components/fields/GearMenu"
 
 const NodeBlogTemplate = ({ data, pageContext }) => {
-  const { title, subtitle, summary, r, alt, path } = data.nodeBlog
+  const { title, subtitle, summary, r, alt, path, rel } = data.nodeBlog
   const { content, category, type } = data.nodeBlog.r
 
   let media = r.main.localFile.cis.f
@@ -129,6 +129,8 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
       <SEO
         title={blogType === 2 ? gearTitle : fullTitle}
         description={subtitle}
+        nodePath={path.alias}
+        nodeImage={rel.img.localFile.childImageSharp.fixed.src}
       />
 
       {blogType === 2 ? <SemiHeroImage /> : <HeroImage />}
@@ -147,7 +149,7 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
                 <a href="https://youtu.be/3aMBIeD0ThU?t=16s">ref.</a>
               </span>
             </p>
-            <HyvorTalk.Embed websiteId={1614} id={path.alias} />
+            <HyvorTalk.Embed websiteId={1614} id={path.alias} loadMode="scroll" />
           </div>
 
           {blogType === 1 ? <PrevNextLinks /> : ""}
@@ -163,6 +165,17 @@ export const query = graphql`
   query Template($slug: Int) {
     nodeBlog(drupal_internal__nid: { eq: $slug }) {
       ...nodeBlogFragment
+      rel: relationships {
+        img: field_main_image {
+          localFile {
+            childImageSharp {
+              fixed(width: 600, height: 338) {
+                src
+              }
+            }
+          }
+        }
+      }
     }
   }
 `
