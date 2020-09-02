@@ -8,9 +8,9 @@
   overflow: hidden;
   background-size: cover;
 
-  @include medium {
-    background-image: none !important;
-  }
+  // @include medium {
+  //   background-image: none !important;
+  // }
 }
 
 .hero-video__player {
@@ -96,14 +96,14 @@ h3.hero-video__quote-attribution {
   }
 }
 
-.hero:after {
+.hero-video:after {
   position: absolute;
   z-index: -8;
-  height: 50%;
+  height: 70%;
   width: 100%;
   bottom: 0;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.7), transparent);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.9), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   content: "";
 }
 
