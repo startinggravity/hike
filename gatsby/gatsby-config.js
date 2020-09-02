@@ -42,6 +42,54 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+    resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Quattrocento Sans`,
+            variants: [`400`, `700`]
+          },
+          {
+            family: `Work Sans`,
+            variants: [`600`]
+          },
+        ],
+      },
+    },
+    {
+    resolve: `@fec/gatsby-plugin-advanced-feed`,
+      options: {
+        feeds: [
+          {
+            // Configure the feed; smart defaults are choosen if not set
+            author: `Jim 'Gravity' Smith`, // default: site.siteMetadata.author
+            copyright: undefined, // default: "All rights reserved {year}, {site.siteMetadata.author}"
+            description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
+            email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
+            id: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
+            link: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
+            title: `Hike with Gravity`, // default: site.siteMetadata.title
+
+            // Add <link> tags in <head> to feeds
+            createLinkInHead: true, // `true` for all pages or regular expression to match pathnames
+
+            // Number of articles to include in feed
+            limit: 10,
+
+            // Include all pages which `fileAbsolutePath` matches this regular expression
+            match: "^/blog/",
+
+            // File names of generated feeds
+            output: {
+              rss2: "rss.xml",
+              atom: "atom.xml",
+              json: "feed.json",
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
