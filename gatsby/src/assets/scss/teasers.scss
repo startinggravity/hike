@@ -15,15 +15,32 @@
     padding: 0;
   }
 
-  a:hover .hike-list__image {
-    -webkit-filter: sepia(1) brightness(30%);
-    filter: sepia(1) brightness(30%);
+  a:hover .hike-list__image:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    content: "";
+    background: rgba(39, 50, 70, 0.6);
     transition: all $transition-fast;
   }
 
-  .hike-list__image {
-    -webkit-filter: sepia(1) brightness(60%);
-    filter: sepia(1) brightness(60%);
+  a .hike-list__image {
+    background-color: $black;
+    transition: all $transition-fast;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      content: "";
+      background: rgba(152, 74, 45, 0.6);
+    }
   }
 }
 
@@ -57,11 +74,11 @@
   border: none;
 }
 
-.hike-list__image {
-  -webkit-filter: sepia(1) brightness(60%);
-  filter: sepia(1) brightness(60%);
-  transition: all $transition-fast;
-}
+// .hike-list__image {
+//   -webkit-filter: sepia(1) brightness(60%);
+//   filter: sepia(1) brightness(60%);
+//   transition: all $transition-fast;
+// }
 
 // Pager.
 

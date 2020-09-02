@@ -180,11 +180,11 @@ export const hikeQuery = graphql`
               id
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 500, quality: 50) {
-                    src
-                    srcSet
-                    aspectRatio
-                    sizes
+                  fluid(
+                    maxWidth: 500
+                    grayscale: true
+                  ) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

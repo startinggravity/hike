@@ -108,7 +108,7 @@ class Hikes extends Component {
           </div>
         </div>
         <div className="main__content">
-        <Filter />
+          <Filter />
           <div className="body-text">
             <p>
               I hiked the every mile of the Appalachian Trail in 2017 and the
@@ -116,8 +116,8 @@ class Hikes extends Component {
             </p>
             <p>
               This page displays the day-by-day posts of those hikes in reverse
-              chronological order. If you prefer read from the
-              beginning of one of those hikes, select one of the links above.
+              chronological order. If you prefer read from the beginning of one
+              of those hikes, select one of the links above.
             </p>
           </div>
           <div className="container">
@@ -166,7 +166,9 @@ export const hikeQuery = graphql`
       sort: { fields: [created], order: [DESC] }
       filter: {
         relationships: {
-          field_blog_category: { drupal_internal__tid: { in: [5, 6, 7, 8, 16] } }
+          field_blog_category: {
+            drupal_internal__tid: { in: [5, 6, 7, 8, 16] }
+          }
         }
       }
     ) {
@@ -180,14 +182,13 @@ export const hikeQuery = graphql`
           created
           relationships {
             field_main_image {
-              id
               localFile {
                 childImageSharp {
-                  fluid(maxWidth: 500, quality: 50) {
-                    src
-                    srcSet
-                    aspectRatio
-                    sizes
+                  fluid(
+                    maxWidth: 500
+                    grayscale: true
+                  ) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -204,9 +205,7 @@ export const hikeQuery = graphql`
     }
     file(relativePath: { eq: "sun-trees-appalachian-trail.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          srcSetBreakpoints: [480, 640, 960, 1280, 2560]
-        ) {
+        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
