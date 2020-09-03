@@ -57,39 +57,39 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "@fec/gatsby-plugin-advanced-feed",
-      options: {
-        feeds: [
-          {
-            // Configure the feed; smart defaults are choosen if not set
-            author: ``, // default: site.siteMetadata.author
-            copyright: ``, // default: "All rights reserved {year}, {site.siteMetadata.author}"
-            description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
-            email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
-            id: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
-            link: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
-            title: `Hike with Gravity`, // default: site.siteMetadata.title
+    // {
+    //   resolve: "@fec/gatsby-plugin-advanced-feed",
+    //   options: {
+    //     feeds: [
+    //       {
+    //         // Configure the feed; smart defaults are choosen if not set
+    //         author: `Gravity`, // default: site.siteMetadata.author
+    //         copyright: ``, // default: "All rights reserved {year}, {site.siteMetadata.author}"
+    //         description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
+    //         email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
+    //         id: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
+    //         link: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
+    //         title: `Hike with Gravity`, // default: site.siteMetadata.title
 
-            // Add <link> tags in <head> to feeds
-            createLinkInHead: true, // `true` for all pages or regular expression to match pathnames
+    //         // Add <link> tags in <head> to feeds
+    //         createLinkInHead: true, // `true` for all pages or regular expression to match pathnames
 
-            // Number of articles to include in feed
-            limit: 10,
+    //         // Number of articles to include in feed
+    //         limit: 10,
 
-            // Include all pages which `fileAbsolutePath` matches this regular expression
-            match: "^/hikes/",
+    //         // Include all pages which `fileAbsolutePath` matches this regular expression
+    //         match: "^/hikes/",
 
-            // File names of generated feeds
-            output: {
-              rss2: "hikes.xml",
-              atom: "atom.xml",
-              json: "feed.json",
-            },
-          },
-        ],
-      },
-    },
+    //         // File names of generated feeds
+    //         output: {
+    //           rss2: "hikes.xml",
+    //           atom: "atom.xml",
+    //           json: "feed.json",
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
