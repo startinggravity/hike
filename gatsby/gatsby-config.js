@@ -63,7 +63,7 @@ module.exports = {
         feeds: [
           {
             // Configure the feed; smart defaults are choosen if not set
-            author: `Jim Smith`, // default: site.siteMetadata.author
+            author: false, // default: site.siteMetadata.author
             copyright: undefined, // default: "All rights reserved {year}, {site.siteMetadata.author}"
             description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
             email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
