@@ -86,12 +86,12 @@ class IndexPage extends Component {
               I'm now writing posts about my PCT hike and the most recent posts
               can be found below. Please check back because I'm posting
               regularly. If you wish to start from the beginning, you can find
-              all of my PCT trail reports <Link to="/hikes/pct-2019">here</Link>
+              all of <Link to="/hikes/pct-2019"> my PCT trail reports here</Link>
               .
             </p>
             <p>
-              Trail reports from my AT thru-hike can be found
-              <Link to="/hikes/at-2017"> here</Link>.
+              Trail reports from 
+              <Link to="/hikes/at-2017"> my AT thru-hike can be found here</Link>.
             </p>
           </div>
           <div className="container">
