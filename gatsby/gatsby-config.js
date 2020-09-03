@@ -82,7 +82,7 @@ module.exports = {
 
             // File names of generated feeds
             output: {
-              rss2: "rss.xml",
+              rss2: "hikes.xml",
               atom: "atom.xml",
               json: "feed.json",
             },
