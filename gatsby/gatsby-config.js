@@ -43,28 +43,28 @@ module.exports = {
       },
     },
     {
-    resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
             family: `Quattrocento Sans`,
-            variants: [`400`, `700`]
+            variants: [`400`, `700`],
           },
           {
             family: `Work Sans`,
-            variants: [`600`]
+            variants: [`600`],
           },
         ],
       },
     },
     {
-    resolve: `@fec/gatsby-plugin-advanced-feed`,
+      resolve: "@fec/gatsby-plugin-advanced-feed",
       options: {
         feeds: [
           {
             // Configure the feed; smart defaults are choosen if not set
-            // author: undefined, // default: site.siteMetadata.author
-            copyright: undefined, // default: "All rights reserved {year}, {site.siteMetadata.author}"
+            author: ``, // default: site.siteMetadata.author
+            copyright: ``, // default: "All rights reserved {year}, {site.siteMetadata.author}"
             description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
             email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
             id: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
@@ -78,7 +78,7 @@ module.exports = {
             limit: 10,
 
             // Include all pages which `fileAbsolutePath` matches this regular expression
-            match: "^/blog/",
+            match: "^/hikes/",
 
             // File names of generated feeds
             output: {
@@ -93,7 +93,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    // `gatsby-plugin-feed`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
