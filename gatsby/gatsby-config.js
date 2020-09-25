@@ -85,19 +85,21 @@ module.exports = {
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
               guid: site.siteMetadata.siteUrl + edge.node.path.alias,
-              custom_elements: [{ pubDate: edge.node.fields.created_formatted }]
+              custom_elements: [{ pubDate: edge.node.created }]
             })),
             query: `
               {
                 allNodeBlog(
                   filter: { status: { eq: true } }
-                  sort: { fields: [created], order: [ASC] }
+                  sort: { fields: [created], order: [DESC] }
+                  limit: 10
                 ) {
                   edges {
                     node {
                       id
                       title
                       status
+                      created
                       nid: drupal_internal__nid
                       path {
                         alias
