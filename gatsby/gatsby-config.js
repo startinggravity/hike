@@ -7,7 +7,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
-    siteUrl: `https://www.hikewithgravity.com`,
+    siteUrl: `https://hikewithgravity.com`,
     description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`,
     author: `Jim 'Gravity' Smith`,
     social: {
@@ -29,6 +29,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://hikewithgravity.com`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -57,39 +63,64 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: "@fec/gatsby-plugin-advanced-feed",
-    //   options: {
-    //     feeds: [
-    //       {
-    //         // Configure the feed; smart defaults are choosen if not set
-    //         author: `Gravity`, // default: site.siteMetadata.author
-    //         copyright: ``, // default: "All rights reserved {year}, {site.siteMetadata.author}"
-    //         description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`, // default: site.siteMetadata.description
-    //         email: false, // default: false ➞ no email in feed; undefined ➞ site.siteMetadata.email
-    //         id: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
-    //         link: `https://www.hikewithgravity.com`, // default: site.siteMetadata.siteUrl
-    //         title: `Hike with Gravity`, // default: site.siteMetadata.title
-
-    //         // Add <link> tags in <head> to feeds
-    //         createLinkInHead: true, // `true` for all pages or regular expression to match pathnames
-
-    //         // Number of articles to include in feed
-    //         limit: 10,
-
-    //         // Include all pages which `fileAbsolutePath` matches this regular expression
-    //         match: "^/hikes/",
-
-    //         // File names of generated feeds
-    //         output: {
-    //           rss2: "hikes.xml",
-    //           atom: "atom.xml",
-    //           json: "feed.json",
-    //         },
-    //       },
-    //     ],
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allNodeBlog } }) => allNodeBlog.edges.map(edge => Object.assign({}, edge.node.id, {
+              id: edge.node.id,
+              description: edge.node.field_summary.processed + "Continue reading at " + site.siteMetadata.siteUrl + edge.node.path.alias,
+              title: edge.node.title,
+              url: site.siteMetadata.siteUrl + edge.node.path.alias,
+              guid: site.siteMetadata.siteUrl + edge.node.path.alias,
+              custom_elements: [{ pubDate: edge.node.fields.created_formatted }]
+            })),
+            query: `
+              {
+                allNodeBlog(
+                  filter: { status: { eq: true } }
+                  sort: { fields: [created], order: [ASC] }
+                ) {
+                  edges {
+                    node {
+                      id
+                      title
+                      status
+                      nid: drupal_internal__nid
+                      path {
+                        alias
+                      }
+                      field_summary {
+                        processed
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/hikes.xml",
+            title: "RSS Feed | Hike with Gravity",
+            // optional configuration to insert feed reference in pages:
+            // if `string` is used, it will be used to create RegExp and then test if pathname
+            // of current page satisfied this regular expression;
+            // if not provided or `undefined`, all pages will have feed reference inserted
+            match: "^/hikes/",
+          },
+        ],
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,

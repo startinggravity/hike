@@ -104,7 +104,7 @@ class Hikes extends Component {
           <Filter />
           <div className="body-text">
             <p>
-              I hiked the Pacific Crest Trail in 2019, starting from from the
+              I hiked the <Link to="/about/the-pacific-crest-trail">Pacific Crest Trail</Link> in 2019, starting from from the
               U.S. border with Mexico on March 24.
             </p>
             <p>

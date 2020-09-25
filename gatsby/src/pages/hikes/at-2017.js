@@ -104,7 +104,7 @@ class Hikes extends Component {
           <Filter />
           <div className="body-text">
             <p>
-              The Appalachian Trail is nearly 2,200 miles long, running through
+              <Link to="/about/the-appalachian-trail">The Appalachian Trail</Link> is nearly 2,200 miles long, running through
               14 states. I hiked the entire trail in 2017, starting on April 3
               and finishing on October 8. My daily journal appears here in
               chronological order.

@@ -78,21 +78,22 @@ class IndexPage extends Component {
         <div className="main__content">
           <div className="body-text">
             <p>
-              I hiked the entire Appalachian Trail in 2017 and Pacific Crest
-              Trail in 2019.
+              Hello! I'm a long distance hiker, and as you might have already
+              guessed, my trail name is Gravity. I hiked the entire Appalachian
+              Trail in 2017 and Pacific Crest Trail in 2019. A little
+              information about me and the trails I've hiked can be{" "}
+              <Link to="/about">found on my About page</Link>.
             </p>
-
             <p>
               I'm now writing posts about my PCT hike and the most recent posts
               can be found below. Please check back because I'm posting
               regularly. If you wish to start from the beginning, you can find
-              all of <Link to="/hikes/pct-2019"> my PCT trail reports here</Link>
+              all of <Link to="/hikes/pct-2019">my PCT trail reports here</Link>
+              . Trail reports from{" "}
+              <Link to="/hikes/at-2017">my AT thru-hike are here</Link>
               .
             </p>
-            <p>
-              Trail reports from 
-              <Link to="/hikes/at-2017"> my AT thru-hike can be found here</Link>.
-            </p>
+            <h2 className="centered-heading">Latest Reports from the Trail</h2>
           </div>
           <div className="container">
             <ul className="hike-list">{renderContent}</ul>
@@ -132,10 +133,7 @@ export const hikeQuery = graphql`
               id
               localFile {
                 childImageSharp {
-                  fluid(
-                    maxWidth: 500
-                    grayscale: true
-                  ) {
+                  fluid(maxWidth: 500, grayscale: true) {
                     ...GatsbyImageSharpFluid
                   }
                 }

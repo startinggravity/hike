@@ -165,43 +165,61 @@ export const query = graphql`
     }
     hikingImage: file(relativePath: { eq: "hiking_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     shelterImage: file(relativePath: { eq: "shelter_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     clothingImage: file(relativePath: { eq: "clothing_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     cookingImage: file(relativePath: { eq: "cooking_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     firstAidImage: file(relativePath: { eq: "first-aid_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     electronicsImage: file(relativePath: { eq: "electronics_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

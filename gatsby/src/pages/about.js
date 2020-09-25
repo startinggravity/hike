@@ -49,7 +49,7 @@ const About = ({ data }) => (
     </div>
     <div className="main__content">
       <div className="body-text">
-        <p>Here is a little information about me and the trails I hike.</p>
+        <p>Here is a little information about me, this site, and some of the trails I have hiked.</p>
       </div>
       <div className="container">
         <ul className="hike-list">
@@ -72,7 +72,7 @@ const About = ({ data }) => (
           <li className="hike-list__item">
             <Link to="/about/my-trail-name" title="About my Trail Name">
               <div className="hike-list__text">
-                <h2>Trail Name</h2>
+                <h2>My Trail Name</h2>
               </div>
               <div className="hike-list__image">
                 <Img
@@ -80,6 +80,24 @@ const About = ({ data }) => (
                   alt="Gravity hiking in Frozen Head State Park"
                   sizes={{
                     ...data.gravityTrailImage.cis.f,
+                    aspectRatio: 1 / 1,
+                  }}
+                />
+              </div>
+            </Link>
+          </li>
+          {/* This site */}
+          <li className="hike-list__item">
+            <Link to="/about/this-site" title="About This Site">
+              <div className="hike-list__text">
+                <h2>This Site</h2>
+              </div>
+              <div className="hike-list__image">
+                <Img
+                  fluid={data.gravityLogo.cis.f}
+                  alt="Hike with Gravity logo"
+                  sizes={{
+                    ...data.gravityLogo.cis.f,
                     aspectRatio: 1 / 1,
                   }}
                 />
@@ -141,29 +159,51 @@ export const query = graphql`
     }
     gravityImage: file(relativePath: { eq: "gravity_teaser.jpg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     gravityTrailImage: file(relativePath: { eq: "gravity-trail_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    gravityLogo: file(relativePath: { eq: "about-site_teaser.jpeg" }) {
+      cis: childImageSharp {
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     atImage: file(relativePath: { eq: "at_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     pctImage: file(relativePath: { eq: "pct_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960]) {
-          ...GatsbyImageSharpFluid_withWebp
+        f: fluid(
+          maxWidth: 500
+          grayscale: true
+        ) {
+          ...GatsbyImageSharpFluid
         }
       }
     }

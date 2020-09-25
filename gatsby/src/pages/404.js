@@ -17,7 +17,7 @@ const NotFoundPage = ({ data }) => (
         />
       </div>
       <div className="semi-hero__text">
-        <h1>Oops! You've wandered off the trail</h1>
+        <h1>Looks like you've wandered off the trail</h1>
       </div>
     </div>
     <div className="main__content">
@@ -35,23 +35,7 @@ const NotFoundPage = ({ data }) => (
         </p>
         <p>&nbsp;</p>
       </div>
-      <div className="quotation quotation__lyric">
-        <p>
-          Going where the wind don't blow so strange
-          <br />
-          Maybe off on some high cold mountain range
-          <br />
-          Lost one round but the price wasn't anything
-          <br />A knife in the back and more of the same
-        </p>
-        <a
-          href="https://youtu.be/dRwq9HrkTI0"
-          title="See more about this quote"
-        >
-          From "He's Gone" by Robert Hunter and Jerry Garcia
-          (Grateful Dead)
-        </a>
-      </div>
+     
     </div>
   </Layout>
 )
@@ -60,7 +44,7 @@ export default NotFoundPage
 
 export const query = graphql`
   query {
-    semiHero: file(relativePath: { eq: "gravity-in-sierra.jpeg" }) {
+    semiHero: file(relativePath: { eq: "404-marmot.jpeg" }) {
       cis: childImageSharp {
         f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
           ...GatsbyImageSharpFluid_withWebp

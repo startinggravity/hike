@@ -16,6 +16,12 @@ const GearMenu = () => (
       <li className="secondary-menu__item">
           <Link to="/gear/cooking-filtration">Cooking & Filtration</Link>
       </li>
+      <li className="secondary-menu__item">
+          <Link to="/gear/first-aid-hygiene-miscellaneous">First Aid, Hygiene, Misc.</Link>
+      </li>
+      <li className="secondary-menu__item">
+          <Link to="/gear/electronics">Electronics</Link>
+      </li>
     </ul>
   </div>
 )
