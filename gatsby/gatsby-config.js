@@ -81,8 +81,8 @@ module.exports = {
           {
             serialize: ({ query: { site, allNodeBlog } }) => allNodeBlog.edges.map(edge => Object.assign({}, edge.node.id, {
               id: edge.node.id,
-              description: edge.node.field_summary.processed + `<p>Continue reading at <a href="` + site.siteMetadata.siteUrl + edge.node.path.alias + `">` 
-              + site.siteMetadata.siteUrl + edge.node.path.alias + `</a></p>`,
+              description: edge.node.field_summary.processed + `<p>Continue reading at <a href="` + site.siteMetadata.siteUrl 
+                + edge.node.path.alias + `">` + site.siteMetadata.siteUrl + edge.node.path.alias + `</a></p>`,
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
               enclosure: rel.img.localFile && {
