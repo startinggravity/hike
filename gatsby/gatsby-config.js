@@ -81,11 +81,15 @@ module.exports = {
           {
             serialize: ({ query: { site, allNodeBlog } }) => allNodeBlog.edges.map(edge => Object.assign({}, edge.node.id, {
               id: edge.node.id,
-              description: edge.node.field_summary.processed + "Continue reading at " + site.siteMetadata.siteUrl + edge.node.path.alias,
+              description: edge.node.field_summary.processed + `<p>Continue reading at <a href="` + site.siteMetadata.siteUrl + edge.node.path.alias + `">` 
+              + site.siteMetadata.siteUrl + edge.node.path.alias + `</a></p>`,
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
+              enclosure: rel.img.localFile && {
+                url: site.siteMetadata.siteUrl + rel.img.localFile.publicURL,
+              },
               guid: site.siteMetadata.siteUrl + edge.node.path.alias,
-              custom_elements: [{ pubDate: edge.node.created }]
+              custom_elements: [{ pubDate: edge.node.created + `GMT`}]
             })),
             query: `
               {
@@ -99,13 +103,24 @@ module.exports = {
                       id
                       title
                       status
-                      created
+                      created(formatString: "ddd MMM YYYY hh:mm:ss")
                       nid: drupal_internal__nid
                       path {
                         alias
                       }
                       field_summary {
                         processed
+                      }
+                      rel: relationships {
+                        img: field_main_image {
+                          localFile {
+                            childImageSharp {
+                              fixed(width: 600, height: 338) {
+                                src
+                              }
+                            }
+                          }
+                        }
                       }
                     }
                   }

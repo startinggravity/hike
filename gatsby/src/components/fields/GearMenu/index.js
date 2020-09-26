@@ -11,7 +11,7 @@ const GearMenu = () => (
         <Link to="/gear/shelter-sleeping">Shelter & Sleep System</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/clothing">Clothing</Link>
+        <Link to="/gear/clothing-shoers">Clothing & Shoes</Link>
       </li>
       <li className="secondary-menu__item">
           <Link to="/gear/cooking-filtration">Cooking & Filtration</Link>
