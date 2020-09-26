@@ -85,8 +85,8 @@ module.exports = {
                 + edge.node.path.alias + '">' + site.siteMetadata.siteUrl + edge.node.path.alias + '</a></p>',
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
-              enclosure: rel.img.localFile && {
-                url: site.siteMetadata.siteUrl + rel.img.localFile.publicURL,
+              enclosure: edge.node.rel.img.localFile && {
+                url: site.siteMetadata.siteUrl + edge.node.rel.img.localFile.publicURL,
               },
               guid: site.siteMetadata.siteUrl + edge.node.path.alias,
               custom_elements: [{ pubDate: edge.node.created + 'GMT'}]
