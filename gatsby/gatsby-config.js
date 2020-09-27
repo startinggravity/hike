@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
     siteUrl: `https://hikewithgravity.com`,
-    description: `The hiking journal of Jim 'Gravity' Smith, who completed a thru-hike of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`,
+    description: `The hiking journal of Jim 'Gravity' Smith, who completed thru-hikes of the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019.`,
     author: `Jim 'Gravity' Smith`,
     social: {
       twitter: `@hikewithgravity`,
@@ -86,10 +86,10 @@ module.exports = {
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
               enclosure: edge.node.rel.img.localFile && {
-                url: site.siteMetadata.siteUrl + edge.node.rel.img.localFile.publicURL,
+                url: site.siteMetadata.siteUrl + edge.node.rel.img.localFile.cis.f,
               },
               guid: site.siteMetadata.siteUrl + edge.node.path.alias,
-              custom_elements: [{ pubDate: edge.node.created + 'GMT'}]
+              custom_elements: [{ pubDate: edge.node.created + ' GMT'}]
             })),
             query: `
               {
@@ -114,8 +114,8 @@ module.exports = {
                       rel: relationships {
                         img: field_main_image {
                           localFile {
-                            childImageSharp {
-                              fixed(width: 600, height: 338) {
+                            cis: childImageSharp {
+                              f: fixed(width: 600, height: 338) {
                                 src
                               }
                             }

@@ -150,7 +150,7 @@ export default About
 
 export const query = graphql`
   query {
-    semiHero: file(relativePath: { eq: "gravity-in-sierra.jpeg" }) {
+    semiHero: file(relativePath: { eq: "gravity-in-maine.jpeg" }) {
       cis: childImageSharp {
         f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
           ...GatsbyImageSharpFluid_withWebp

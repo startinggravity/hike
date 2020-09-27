@@ -7,9 +7,7 @@ import video from "../../assets/video/blog_loop.mp4"
 // import StyledArtDirectedBackground from "../ArtDirectedBackground"
 
 const HeroVideo = (title, subtitle) => (
-  <div
-    className="hero-video"
-  >
+  <div className="hero-video">
     <video
       className="hero-video__player"
       autoPlay
@@ -24,7 +22,11 @@ const HeroVideo = (title, subtitle) => (
     </video>
 
     <div className="hero-video__text">
-<img src={quoteImage} alt="In every walk with nature, one receives far more than he seeks. - John Muir" className="quote-img"/>
+      <img
+        src={quoteImage}
+        alt="In every walk with nature, one receives far more than he seeks. - John Muir"
+        className="quote-img"
+      />
       {/* <h2 className="hero-video__quote">
         "In every walk with nature, one receives far more than he seeks."
       </h2>
