@@ -85,11 +85,11 @@ module.exports = {
                 + edge.node.path.alias + '">' + site.siteMetadata.siteUrl + edge.node.path.alias + '</a></p>',
               title: edge.node.title,
               url: site.siteMetadata.siteUrl + edge.node.path.alias,
-              enclosure: edge.node.rel.img.localFile && {
-                url: site.siteMetadata.siteUrl + edge.node.rel.img.localFile.cis.f,
+              enclosure: edge.node.relationships.field_main_image.localFile && {
+                url: site.siteMetadata.siteUrl + edge.node.relationships.field_main_image.localFile.cis.f.src,
               },
               guid: site.siteMetadata.siteUrl + edge.node.path.alias,
-              custom_elements: [{ pubDate: edge.node.created + ' GMT'}]
+              custom_elements: [{ pubDate: edge.node.created + ' ' + 'GMT'}]
             })),
             query: `
               {
@@ -111,8 +111,8 @@ module.exports = {
                       field_summary {
                         processed
                       }
-                      rel: relationships {
-                        img: field_main_image {
+                      relationships {
+                        field_main_image {
                           localFile {
                             cis: childImageSharp {
                               f: fixed(width: 600, height: 338) {
