@@ -103,7 +103,7 @@ module.exports = {
                       id
                       title
                       status
-                      created(formatString: "ddd MMM YYYY hh:mm:ss")
+                      created(formatString: "ddd, DD MMM YYYY hh:mm:ss")
                       nid: drupal_internal__nid
                       path {
                         alias
