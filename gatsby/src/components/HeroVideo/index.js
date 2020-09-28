@@ -1,10 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
-// import bgImage from "../../assets/images/no_video_background.jpg"
 import quoteImage from "../../assets/images/quote-min.png"
 import firstFrame from "../../assets/images/blog_loop_first_frame.jpg"
 import video from "../../assets/video/blog_loop.mp4"
-// import StyledArtDirectedBackground from "../ArtDirectedBackground"
+
 
 const HeroVideo = (title, subtitle) => (
   <div className="hero-video">
@@ -17,12 +16,10 @@ const HeroVideo = (title, subtitle) => (
       poster={firstFrame}
       preload="auto"
       src={video}
-    >
-      {/* <source className="video" src={video} type="video/mp4" /> */}
-    </video>
+    />
 
     <div className="hero-video__text">
-      <img
+      <Img
         src={quoteImage}
         alt="In every walk with nature, one receives far more than he seeks. - John Muir"
         className="quote-img"
@@ -32,7 +29,6 @@ const HeroVideo = (title, subtitle) => (
       </h2>
       <h3 className="hero-video__quote-attribution">John Muir</h3> */}
     </div>
-    {/* <StyledArtDirectedBackground /> */}
   </div>
 )
 
