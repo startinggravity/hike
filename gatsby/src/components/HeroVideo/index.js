@@ -16,10 +16,11 @@ const HeroVideo = (title, subtitle) => (
       poster={firstFrame}
       preload="auto"
       src={video}
-    />
+    >
+    </video>
 
     <div className="hero-video__text">
-      <Img
+      <img
         src={quoteImage}
         alt="In every walk with nature, one receives far more than he seeks. - John Muir"
         className="quote-img"

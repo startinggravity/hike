@@ -129,10 +129,7 @@ module.exports = {
             `,
             output: "/hikes.xml",
             title: "RSS Feed | Hike with Gravity",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname
-            // of current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
+            link: "https://hikewithgravity.com",
             match: "^/hikes/",
           },
         ],
