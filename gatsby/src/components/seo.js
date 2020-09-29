@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultImagePath from "../assets/images/hike-with-gravity-logo.jpg"
 
 function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) {
   const { site } = useStaticQuery(
@@ -29,11 +30,10 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
 
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = keywords || site.siteMetadata.keywords
-  const defaultImagePath = '/assets/images/hike-with-gravity-logo'
   const defaultImage = `${site.siteMetadata.siteUrl}${defaultImagePath}`
   const defaultUrl = `${site.siteMetadata.siteUrl}`
-  const blogPath = `${site.siteMetadata.siteUrl}${nodePath}`
-  const imagePath = `${site.siteMetadata.siteUrl}${nodeImage}`
+  const blogPath = nodePath && `${site.siteMetadata.siteUrl}${nodePath}`
+  const imagePath = nodeImage && `${site.siteMetadata.siteUrl}${nodeImage}`
   const url = blogPath || defaultUrl
   const metaImage = imagePath || defaultImage
 
@@ -86,6 +86,10 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
           property: `og:image:type`,
           content: `image/jpeg`,
         },
@@ -114,16 +118,16 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
           content: `@hikewithgravity`,
         },
         {
+          name: `twitter:card`,
+          content: `summary_large_image`,
+        },
+        {
           property: `twitter:image`,
           content: metaImage,
         },
         {
           name: `twitter:site:id`,
           content: `2986914490`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
         },
         {
           name: `twitter:creator`,

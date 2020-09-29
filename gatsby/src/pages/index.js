@@ -48,7 +48,7 @@ class IndexPage extends Component {
     return (
       <Layout>
         <SEO
-          title="Home"
+          title="Home | Hike with Gravity"
           description="This site is the trail journal of Jim 'Gravity' Smith, who thru-hiked the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019."
           keywords={[
             `Pacific Crest Trail`,
