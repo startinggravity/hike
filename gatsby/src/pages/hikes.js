@@ -116,8 +116,9 @@ class Hikes extends Component {
             </p>
             <p>
               This page displays the day-by-day posts of those hikes in reverse
-              chronological order. If you prefer read from the beginning of one
-              of those hikes, select one of the links above.
+              chronological order. If you prefer to read about one of those
+              hikes from the beginning of the trip, select one of the links
+              above.
             </p>
           </div>
           <div className="container">
@@ -184,10 +185,7 @@ export const hikeQuery = graphql`
             field_main_image {
               localFile {
                 childImageSharp {
-                  fluid(
-                    maxWidth: 500
-                    grayscale: true
-                  ) {
+                  fluid(maxWidth: 500, grayscale: true) {
                     ...GatsbyImageSharpFluid
                   }
                 }
