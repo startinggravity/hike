@@ -79,18 +79,34 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allNodeBlog } }) => allNodeBlog.edges.map(edge => Object.assign({}, edge.node.id, {
-              id: edge.node.id,
-              description: edge.node.field_summary.processed + '<p>Continue reading at <a href="' + site.siteMetadata.siteUrl 
-                + edge.node.path.alias + '">' + site.siteMetadata.siteUrl + edge.node.path.alias + '</a></p>',
-              title: edge.node.title,
-              url: site.siteMetadata.siteUrl + edge.node.path.alias,
-              enclosure: edge.node.relationships.field_main_image.localFile && {
-                url: site.siteMetadata.siteUrl + edge.node.relationships.field_main_image.localFile.cis.f.src,
-              },
-              guid: site.siteMetadata.siteUrl + edge.node.path.alias,
-              custom_elements: [{ pubDate: edge.node.created + ' ' + 'GMT'}]
-            })),
+            serialize: ({ query: { site, allNodeBlog } }) =>
+              allNodeBlog.edges.map(edge =>
+                Object.assign({}, edge.node.id, {
+                  id: edge.node.id,
+                  description:
+                    edge.node.field_summary.processed +
+                    '<p>Continue reading at <a href="' +
+                    site.siteMetadata.siteUrl +
+                    edge.node.path.alias +
+                    '">' +
+                    site.siteMetadata.siteUrl +
+                    edge.node.path.alias +
+                    "</a></p>",
+                  title: edge.node.title,
+                  url: site.siteMetadata.siteUrl + edge.node.path.alias,
+                  enclosure: edge.node.relationships.field_main_image
+                    .localFile && {
+                    url:
+                      site.siteMetadata.siteUrl +
+                      edge.node.relationships.field_main_image.localFile.cis.f
+                        .src,
+                  },
+                  guid: site.siteMetadata.siteUrl + edge.node.path.alias,
+                  custom_elements: [
+                    { pubDate: edge.node.created + " " + "GMT" },
+                  ],
+                })
+              ),
             query: `
               {
                 allNodeBlog(
@@ -133,7 +149,7 @@ module.exports = {
             match: "^/hikes/",
           },
         ],
-      }
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -168,6 +184,35 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: "https://dev-hike-with-gravity.pantheonsite.io/",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "UA-91337611-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        // exclude: ["/preview/**", "/do-not-track/me/too/"],
+        // // Delays sending pageview hits on route update (in milliseconds)
+        // pageTransitionDelay: 0,
+        // // Enables Google Optimize using your container Id
+        // optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        // // Enables Google Optimize Experiment ID
+        // experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
+        // // Set Variation ID. 0 for original 1,2,3....
+        // variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
+        // // Defers execution of google analytics script after page load
+        // defer: false,
+        // // Any additional optional fields
+        // sampleRate: 5,
+        // siteSpeedSampleRate: 10,
+        // cookieDomain: "example.com",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
