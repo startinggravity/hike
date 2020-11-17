@@ -49,18 +49,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `Quattrocento Sans`,
-            variants: [`400`, `700`],
-          },
-          {
-            family: `Work Sans`,
-            variants: [`600`],
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `Quattrocento Sans`,
+              variants: [`400`, `700`],
+            },
+            {
+              family: `Work Sans`,
+              variants: [`600`],
+            },
+         ],
+        },
       },
     },
     {
