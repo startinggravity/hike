@@ -48,6 +48,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+<<<<<<< HEAD
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
@@ -61,6 +62,24 @@ module.exports = {
     //         variants: [`600`],
     //       },
     //     ],
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-webfonts`,
+    //   options: {
+    //     fonts: {
+    //       google: [
+    //         {
+    //           family: `Quattrocento Sans`,
+    //           variants: [`400`, `700`],
+    //         },
+    //         {
+    //           family: `Work Sans`,
+    //           variants: [`600`],
+    //         },
+    //       ],
+    //     },
+    //     usePreload: true,
     //   },
     // },
     {
