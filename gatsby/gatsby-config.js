@@ -48,7 +48,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-<<<<<<< HEAD
     // {
     //   resolve: `gatsby-plugin-prefetch-google-fonts`,
     //   options: {
