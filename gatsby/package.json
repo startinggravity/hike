@@ -2,7 +2,7 @@
   "name": "gatsby-gravity",
   "private": true,
   "description": "A Gatsby front-end for Hike with Gravity",
-  "version": "1.0",
+  "version": "1.0.0",
   "author": " ",
   "dependencies": {
     "@styled-icons/fa-brands": "^10.22.0",
@@ -47,7 +47,9 @@
     "styled-components": "^5.2.1",
     "styled-icons": "^10.22.0",
     "typography": "^0.16.19",
-    "typography-theme-fairy-gates": "^0.16.19"
+    "typography-theme-fairy-gates": "^0.16.19",
+    "yargs": "^16.1.1",
+    "yargs-parser": "^20.2.4"
   },
   "devDependencies": {
     "prettier": "2.0.5"
