@@ -103,5 +103,5 @@ module.exports = {
   apiKey: process.env.GATSBY_ALGOLIA_ADMIN_API_KEY,
   indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
   queries,
-  enablePartialUpdates: true,
+  enablePartialUpdates: false,
 }
