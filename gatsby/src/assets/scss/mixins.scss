@@ -302,7 +302,6 @@ $granny-light: lighten($granny-smith, 80%);
 // Shadow.
 
 @mixin shadow {
-  filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12,Color='#444')";
   filter: url(#drop-shadow);
   -webkit-filter: drop-shadow(9px 1px 6px rgba(0, 0, 0, 0.3));
   filter: drop-shadow(9px 1px 6px rgba(0, 0, 0, 0.3));

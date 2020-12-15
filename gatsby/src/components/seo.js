@@ -34,7 +34,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
   const defaultUrl = `${site.siteMetadata.siteUrl}`
   const blogPath = nodePath && `${site.siteMetadata.siteUrl}${nodePath}`
   const imagePath = nodeImage && `${site.siteMetadata.siteUrl}${nodeImage}`
-  const url = blogPath || defaultUrl
+  const url = blogPath + `/` || defaultUrl
   const metaImage = imagePath || defaultImage
 
   return (
