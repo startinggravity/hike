@@ -170,7 +170,11 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
           content: `x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk`,
         },
         {
-          name: `fb:admins`,
+          name: `fb:app_id`,
+          content: `1224500344298525`
+        },
+        {
+          property: `fb:admins`,
           content: `641895471`
         },
         {
