@@ -28,7 +28,7 @@
     "gatsby-plugin-styled-components": "^3.4.0",
     "gatsby-plugin-typography": "^2.6.0",
     "gatsby-source-drupal": "^3.7.0",
-    "gatsby-source-filesystem": "^2.9.0-next.0",
+    "gatsby-source-filesystem": "^2.9.0||2.9.0-next.1",
     "gatsby-transformer-json": "^2.5.0",
     "gatsby-transformer-sharp": "^2.6.0",
     "html-react-parser": "^0.14.1",
