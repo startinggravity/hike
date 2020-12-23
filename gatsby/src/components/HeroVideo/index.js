@@ -11,7 +11,7 @@ const HeroVideo = (title, subtitle) => (
       className="hero-video__player"
       autoPlay
       muted
-      playsinline
+      playsInline
       loop=""
       poster={firstFrame}
       preload="auto"
