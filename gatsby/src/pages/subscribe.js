@@ -82,7 +82,7 @@ export default class Subscribe extends React.Component {
               className="semi-hero__image-img"
               fluid={this.state.heroImage}
               alt="Chicago Basin, Weminuche Wilderness Area, Colorado"
-              sizes={{ ...this.state.heroImage, aspectRatio: 32 / 9 }}
+              fluid={{ ...this.state.heroImage, aspectRatio: 32 / 9 }}
             />
           </div>
           <div className="semi-hero__text">

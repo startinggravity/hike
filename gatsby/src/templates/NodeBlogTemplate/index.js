@@ -83,7 +83,7 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
               className={imageClass}
               fluid={media}
               alt={alt.alt}
-              sizes={{
+              fluid={{
                 ...media,
                 aspectRatio: 16 / 9,
               }}
@@ -109,7 +109,7 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
               className="semi-hero__image-img"
               fluid={media}
               alt={alt.alt}
-              sizes={{
+              fluid={{
                 ...media,
                 aspectRatio: 32 / 9,
               }}

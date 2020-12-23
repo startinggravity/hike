@@ -13,7 +13,7 @@ const NotFoundPage = ({ data }) => (
           className="semi-hero__image-img"
           fluid={data.semiHero.cis.f}
           alt="Gravity in the Sierra Nevada"
-          sizes={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
+          fluid={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
         />
       </div>
       <div className="semi-hero__text">

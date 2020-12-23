@@ -75,7 +75,7 @@ class BlogIndex extends React.Component {
               className="semi-hero__image-img"
               fluid={this.props.data.file.cis.f}
               alt="Sun filters through trees in Maine on the Appalachian Trail"
-              sizes={{ ...this.props.data.file.cis.f, aspectRatio: 32 / 9 }}
+              fluid={{ ...this.props.data.file.cis.f, aspectRatio: 32 / 9 }}
             />
           </div>
           <div className="semi-hero__text">

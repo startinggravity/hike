@@ -57,7 +57,7 @@ class Hikes extends Component {
               <Img
                 fluid={media}
                 alt={hike.node.alt.alt}
-                sizes={{ ...media, aspectRatio: 1 / 1 }}
+                fluid={{ ...media, aspectRatio: 1 / 1 }}
               />
             </div>
           </Link>
@@ -93,7 +93,7 @@ class Hikes extends Component {
               className="semi-hero__image-img"
               fluid={this.props.data.file.cis.f}
               alt="A trail in Frozen Head State Park, Tennessee"
-              sizes={{ ...this.props.data.file.cis.f, aspectRatio: 32 / 9 }}
+              fluid={{ ...this.props.data.file.cis.f, aspectRatio: 32 / 9 }}
             />
           </div>
           <div className="semi-hero__text">

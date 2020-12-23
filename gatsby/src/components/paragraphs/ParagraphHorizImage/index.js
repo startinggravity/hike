@@ -25,7 +25,7 @@ const ParagraphHorizImage = props => {
             className={imageClass}
             fluid={media}
             alt={props.alt.alt}
-            sizes={{ ...media, aspectRatio: 16 / 9 }}
+            fluid={{ ...media, aspectRatio: 16 / 9 }}
           />
         )}
       </a>

@@ -25,7 +25,7 @@ const ParagraphVertImage = props => {
             className={imageClass}
             fluid={media}
             alt={props.alt.alt}
-            sizes={{ ...media, aspectRatio: 9 / 16 }}
+            fluid={{ ...media, aspectRatio: 9 / 16 }}
           />
         )}
       </a>

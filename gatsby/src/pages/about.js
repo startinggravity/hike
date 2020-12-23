@@ -39,7 +39,7 @@ const About = ({ data }) => (
           className="semi-hero__image-img"
           fluid={data.semiHero.cis.f}
           alt="Gravity in the Sierra Nevada"
-          sizes={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
+          fluid={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
         />
       </div>
       <div className="semi-hero__text">
@@ -63,7 +63,7 @@ const About = ({ data }) => (
                 <Img
                   fluid={data.gravityImage.cis.f}
                   alt="Gravity on the AT"
-                  sizes={{ ...data.gravityImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.gravityImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -78,7 +78,7 @@ const About = ({ data }) => (
                 <Img
                   fluid={data.gravityTrailImage.cis.f}
                   alt="Gravity hiking in Frozen Head State Park"
-                  sizes={{
+                  fluid={{
                     ...data.gravityTrailImage.cis.f,
                     aspectRatio: 1 / 1,
                   }}
@@ -96,7 +96,7 @@ const About = ({ data }) => (
                 <Img
                   fluid={data.gravityLogo.cis.f}
                   alt="Hike with Gravity logo"
-                  sizes={{
+                  fluid={{
                     ...data.gravityLogo.cis.f,
                     aspectRatio: 1 / 1,
                   }}
@@ -117,7 +117,7 @@ const About = ({ data }) => (
                 <Img
                   fluid={data.atImage.cis.f}
                   alt="A rock with the Appalachian Trail emblem painted on it"
-                  sizes={{ ...data.atImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.atImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -135,7 +135,7 @@ const About = ({ data }) => (
                 <Img
                   fluid={data.pctImage.cis.f}
                   alt="Goat Rocks on the PCT"
-                  sizes={{ ...data.pctImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.pctImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>

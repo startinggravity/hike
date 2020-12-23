@@ -39,7 +39,7 @@ const Gear = ({ data }) => (
           className="semi-hero__image-img"
           fluid={data.semiHero.cis.f}
           alt="Gravity in the Sierra Nevada"
-          sizes={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
+          fluid={{ ...data.semiHero.cis.f, aspectRatio: 32 / 9 }}
         />
       </div>
       <div className="semi-hero__text">
@@ -66,7 +66,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.hikingImage.cis.f}
                   alt="Hiking on the PCT"
-                  sizes={{ ...data.hikingImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.hikingImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -81,7 +81,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.shelterImage.cis.f}
                   alt="Tents on the PCT"
-                  sizes={{ ...data.shelterImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.shelterImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -96,7 +96,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.clothingImage.cis.f}
                   alt="Gravity on the PCT"
-                  sizes={{ ...data.clothingImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.clothingImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -111,7 +111,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.cookingImage.cis.f}
                   alt="Cooking on the AT"
-                  sizes={{ ...data.cookingImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.cookingImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -126,7 +126,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.firstAidImage.cis.f}
                   alt="The Pacific Crest Trail"
-                  sizes={{ ...data.firstAidImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.firstAidImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -141,7 +141,7 @@ const Gear = ({ data }) => (
                 <Img
                   fluid={data.electronicsImage.cis.f}
                   alt="Flowers on the Pacific Crest Trail"
-                  sizes={{ ...data.electronicsImage.cis.f, aspectRatio: 1 / 1 }}
+                  fluid={{ ...data.electronicsImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>

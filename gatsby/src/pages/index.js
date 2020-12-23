@@ -37,7 +37,7 @@ class IndexPage extends Component {
               <Img
                 fluid={media}
                 alt={hike.node.alt.alt}
-                sizes={{ ...media, aspectRatio: 1 / 1 }}
+                fluid={{ ...media, aspectRatio: 1 / 1 }}
               />
             </div>
           </Link>
