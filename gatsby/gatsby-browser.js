@@ -1,7 +1,7 @@
 // Prevent Gatsby from returning to scroll position on refresh.
 
 exports.onInitialClientRender = () => {
-  window.scrollTo(0, 0)
+  if (typeof window !== `undefined`) {
+    window.scrollTo(0, 0)
+  }
 }
-
-
