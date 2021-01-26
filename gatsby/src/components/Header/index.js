@@ -100,6 +100,7 @@ class Header extends React.Component {
                   className="menu-button__toggle js-toggle__menu"
                   href="#"
                   onClick={this.toggleMenu}
+                  aria-label="Menu"
                 >
                   <span className="menu-button__text">Menu</span>
                 </button>
@@ -109,6 +110,7 @@ class Header extends React.Component {
               </div>
               <div className="site-header__search-button">
                 <Link
+                  aria-label="Search"
                   className="search-button__toggle js-toggle__search"
                   to="/search"
                 >

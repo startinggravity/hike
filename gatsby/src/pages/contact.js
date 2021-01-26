@@ -104,7 +104,10 @@ const Contact = ({ data }) => (
               </label>
             </div>
             <div className="contact__button">
-              <button type="submit">Send</button>
+              <button 
+              aria-label="Submit"
+              type="submit"
+            >Send</button>
             </div>
           </form>
         </div>
