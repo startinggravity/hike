@@ -11,7 +11,15 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import defaultImagePath from "../assets/images/hike-with-gravity-logo.jpg"
 
-function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) {
+function SEO({
+  description,
+  keywords,
+  lang,
+  meta,
+  title,
+  nodePath,
+  nodeImage,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -36,6 +44,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
   const imagePath = nodeImage && `${site.siteMetadata.siteUrl}${nodeImage}`
   const url = blogPath + `/` || defaultUrl
   const metaImage = imagePath || defaultImage
+  const metaTitle = title || site.siteMetadata.title
 
   return (
     <Helmet
@@ -71,7 +80,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:url`,
@@ -95,7 +104,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
         },
         {
           name: `og:image:alt`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `og:image:width`,
@@ -139,7 +148,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
@@ -147,7 +156,7 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
         },
         {
           name: `twitter:image:alt`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:image:width`,
@@ -170,12 +179,12 @@ function SEO({ description, keywords, lang, meta, title, nodePath, nodeImage }) 
           content: `x_GeJdd3hdrVD476zhxG_VKS_kITt0_24ILpqhfkPhk`,
         },
         {
-          name: `fb:app_id`,
-          content: `1224500344298525`
+          property: `fb:app_id`,
+          content: `1224500344298525`,
         },
         {
           property: `fb:admins`,
-          content: `641895471`
+          content: `641895471`,
         },
         {
           name: `keywords`,
