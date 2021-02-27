@@ -104,17 +104,26 @@ class Hikes extends Component {
           <Filter />
           <div className="body-text">
             <p>
-              I hiked the <Link to="/about/the-pacific-crest-trail">Pacific Crest Trail</Link> in 2019, starting from from the
-              U.S. border with Mexico on March 24.
+              I hiked all of the{" "}
+              <Link to="/about/the-pacific-crest-trail">
+                Pacific Crest Trail
+              </Link>{" "}
+              in 2019. Starting from the U.S. border with Mexico on March 24, I
+              reached Kennedy Meadows and the start of the Sierra Nevada on May
+              16.
             </p>
             <p>
-              Because of unusually-heavy snowfall in the Sierra Nevada, I chose
-              to flip to Washing to complete my hike.
+              Because of unusually-heavy snowfall in the Sierra that year, I
+              chose to flip to Washington, and resumed my hike from there on
+              June 30.
             </p>
             <p>
-              I am still writing posts about this hike, so please check back
-              regularly for additions.
+              Later, I flipped again to make sure I finished the Sierra before
+              any chance of snow returning in the fall. After completing that
+              section, I returned to finish all of the miles in Northern
+              California that I had skipped.
             </p>
+            <p>My hike ended on October 25 near Truckee, California.</p>
           </div>
 
           <div className="container">
@@ -180,10 +189,7 @@ export const hikeQuery = graphql`
               id
               localFile {
                 childImageSharp {
-                  fluid(
-                    maxWidth: 500
-                    grayscale: true
-                  ) {
+                  fluid(maxWidth: 500, grayscale: true) {
                     ...GatsbyImageSharpFluid
                   }
                 }
