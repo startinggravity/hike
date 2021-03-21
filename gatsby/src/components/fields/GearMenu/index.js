@@ -8,16 +8,16 @@ const GearMenu = () => (
         <Link to="/gear/hiking">Hiking</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/shelter-sleeping">Shelter & Sleep System</Link>
+        <Link to="/gear/shelter-sleeping">Shelter and Sleep System</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/clothing-shoes">Clothing & Shoes</Link>
+        <Link to="/gear/clothing-shoes">Clothing and Shoes</Link>
       </li>
       <li className="secondary-menu__item">
-          <Link to="/gear/cooking-filtration">Cooking & Filtration</Link>
+          <Link to="/gear/cooking-filtration">Cooking and Filtration</Link>
       </li>
       <li className="secondary-menu__item">
-          <Link to="/gear/first-aid-hygiene-miscellaneous">First Aid, Hygiene, Misc.</Link>
+          <Link to="/gear/first-aid-hygiene-miscellaneous">First Aid, Hygiene, and Miscellaneous</Link>
       </li>
       <li className="secondary-menu__item">
           <Link to="/gear/electronics">Electronics</Link>

@@ -111,14 +111,23 @@ class Hikes extends Component {
           <Filter />
           <div className="body-text">
             <p>
-              I hiked the every mile of the Appalachian Trail in 2017 and the
-              every mile of the Pacific Crest Trail in 2019.
+              I thru-hiked the{" "}
+              <Link to="/about/the-appalachian-trail">Appalachian Trail</Link>{" "}
+              in 2017 and the{" "}
+              <Link to="/about/the-pacific-crest-trail">
+              Pacific Crest Trail</Link>{" "}
+              in 2019.
             </p>
             <p>
-              This page displays the day-by-day posts of those hikes in reverse
+              This page displays the day-by-day posts of my hikes in reverse
               chronological order. If you prefer to read about one of those
               hikes from the beginning of the trip, select one of the links
               above.
+            </p>
+            <p>
+              I also thru-hiked the Benton MacKaye Trail in 2020 and I'm now
+              attempting to thru-hike the Continental Divide Trail. Trip reports
+              about these hikes will be written after I complete my CDT hike.
             </p>
           </div>
           <div className="container">
