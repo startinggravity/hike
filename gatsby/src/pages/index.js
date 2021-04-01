@@ -81,16 +81,17 @@ class IndexPage extends Component {
               Hello! I'm a long distance hiker, and as you might have already
               guessed, my trail name is Gravity. I thru-hiked the{" "}
               <Link to="/hikes/at-2017">Appalachian Trail in 2017</Link> and the{" "}
-              <Link to="/hikes/pct-2019">Pacific Crest Trail in 2019</Link>. A
-              little information about me and the trails I've hiked can be found
-              on <Link to="/about">my About page</Link>.
+              <Link to="/hikes/pct-2019">Pacific Crest Trail in 2019</Link>. You
+              can find daily reports about those hikes on this site. A little more 
+              information about me and the trails I've hiked can be found on{" "}
+              <Link to="/about">my About page</Link>.
             </p>
             <p>
               I also completed a thru-hike of the Benton MacKaye Trail in 2020,
               and I'm now attempting to thru-hike the Continental Divid Trail. I
               will be writing trail reports about those hikes once I return from
               the CDT. Although I'm not live-blogging, I will be posting from
-              time to time on
+              time to time on{" "}
               <a href="https://twitter.com/hikewithgravity">Twitter</a>,{" "}
               <a href="https://www.instagram.com/hikewithgravity/">Instagram</a>
               , and <a href="https://www.facebook.com/jim.smith">Facebook</a>.
