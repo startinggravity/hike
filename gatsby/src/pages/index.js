@@ -88,7 +88,7 @@ class IndexPage extends Component {
             </p>
             <p>
               I also completed a thru-hike of the Benton MacKaye Trail in 2020,
-              and I'm now attempting to thru-hike the Continental Divid Trail. I
+              and I'm now attempting to thru-hike the Continental Divide Trail. I
               will be writing trail reports about those hikes once I return from
               the CDT. Although I'm not live-blogging, I will be posting from
               time to time on{" "}
