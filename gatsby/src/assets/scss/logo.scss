@@ -64,11 +64,11 @@ a.site-header__logo-link {
 
 .content--scroll .site-header__logo-img {
   position: fixed;
-  top: -3.5em;
+  top: -3.2em;
   transition: top $transition-medium;
 
   @include small-large {
-    top: -5.2em;
+    top: -4.5em;
   }
 }
 
@@ -76,7 +76,7 @@ a.site-header__logo-link {
   fill: $white;
 }
 
-@media (min-width: 41em) and (max-height: 1100px) {
+@media (min-width: 41em) and (max-height: 1300px) {
   a.site-header__logo-link {
     height: 130px;
     width: 165px;
@@ -88,6 +88,6 @@ a.site-header__logo-link {
   }
 
   .content--scroll .site-header__logo-img {
-    top: -3.5em;
+    top: -3em;
   }
 }
