@@ -76,7 +76,7 @@ a.site-header__logo-link {
   fill: $white;
 }
 
-@media (min-width: 41em) and (max-height: 1300px) {
+@media only screen and (min-device-width: 420px) and (min-device-height: 900px) and (-webkit-device-pixel-ratio: 3) {
   a.site-header__logo-link {
     height: 130px;
     width: 165px;
@@ -88,6 +88,6 @@ a.site-header__logo-link {
   }
 
   .content--scroll .site-header__logo-img {
-    top: -3em;
+    top: -4.5em;
   }
 }
