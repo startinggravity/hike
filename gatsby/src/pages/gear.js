@@ -50,8 +50,9 @@ const Gear = ({ data }) => (
       <div className="body-text">
         <p>
           I've put together lists of clothing and gear I carried on my hikes.
-          Some items are no longer used, but I've included them with notes on
-          why I switched.
+          Some items listed are no longer used, but I've included them with
+          notes on why I switched. A complete list of my current gear can also
+          be found on a <a href="https://lighterpack.com/r/u89wvg">Lighterpack.com page</a>.
         </p>
       </div>
       <div className="container">
@@ -73,7 +74,7 @@ const Gear = ({ data }) => (
           </li>
           {/* Shelter & Sleep System */}
           <li className="hike-list__item">
-            <Link to="/gear/shelter-sleeping" title="Shelter & Sleep System">
+            <Link to="/gear/shelter-sleeping" title="Shelter and Sleep System">
               <div className="hike-list__text">
                 <h2>Shelter & Sleep System</h2>
               </div>
@@ -118,7 +119,10 @@ const Gear = ({ data }) => (
           </li>
           {/* First Aid, Hygiene, Miscellaneous */}
           <li className="hike-list__item">
-            <Link to="/gear/first-aid-hygiene-miscellaneous" title="First Aid, Hygiene, Miscellaneous">
+            <Link
+              to="/gear/first-aid-hygiene-miscellaneous"
+              title="First Aid, Hygiene, and Miscellaneous"
+            >
               <div className="hike-list__text">
                 <h2>First Aid, Hygiene, Miscellaneous</h2>
               </div>
@@ -165,60 +169,42 @@ export const query = graphql`
     }
     hikingImage: file(relativePath: { eq: "hiking_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     shelterImage: file(relativePath: { eq: "shelter_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     clothingImage: file(relativePath: { eq: "clothing_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     cookingImage: file(relativePath: { eq: "cooking_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     firstAidImage: file(relativePath: { eq: "first-aid_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     electronicsImage: file(relativePath: { eq: "electronics_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }

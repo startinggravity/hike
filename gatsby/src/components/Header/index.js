@@ -35,7 +35,7 @@ class Header extends React.Component {
                     <li className="main-menu__item">
                       <Link
                         to="/hikes/at-2017"
-                        title="Hike Reports"
+                        title="Hike Reports: Aooalachian Trail 2017"
                         className="main-menu__link main-menu__link--appalachian-trail-2017"
                       >
                         Appalachian Trail 2017
@@ -44,10 +44,28 @@ class Header extends React.Component {
                     <li className="main-menu__item">
                       <Link
                         to="/hikes/pct-2019"
-                        title="Hike Reports"
+                        title="Hike Reports: Pacific Crest Trail 2019"
                         className="main-menu__link main-menu__link--pacific-crest-trail-2019"
                       >
                         Pacific Crest Trail 2019
+                      </Link>
+                    </li>
+                    <li className="main-menu__item">
+                      <Link
+                        to="/hikes/bmt-2020"
+                        title="Hike Reports: Benton MacKaye Trail 2020"
+                        className="main-menu__link main-menu__link--benton-mackaye-trail-2020"
+                      >
+                        Benton MacKaye Trail 2020
+                      </Link>
+                    </li>
+                    <li className="main-menu__item">
+                      <Link
+                        to="/hikes/cdt-2021"
+                        title="Hike Reports: Continental Divide Trail 2021"
+                        className="main-menu__link main-menu__link--continental-divide-trail-2021"
+                      >
+                        Continental Divide Trail 2021
                       </Link>
                     </li>
                   </ul>

@@ -5,6 +5,12 @@ const Filter = () => (
   <div className="secondary-menu">
     <ul className="secondary-menu__list">
       <li className="secondary-menu__item">
+        <Link to="/hikes/cdt-2021">Continental Divide Trail 2021</Link>
+      </li>
+      <li className="secondary-menu__item">
+        <Link to="/hikes/bmt-2020">Benton MacKaye Trail 2020</Link>
+      </li>
+      <li className="secondary-menu__item">
         <Link to="/hikes/pct-2019">Pacific Crest Trail 2019</Link>
       </li>
       <li className="secondary-menu__item">
@@ -14,7 +20,7 @@ const Filter = () => (
         <Link to="/hikes/frozen-head">Frozen Head State Park</Link>
       </li>
       <li className="secondary-menu__item">
-          <Link to="/hikes">All</Link>
+        <Link to="/hikes">All</Link>
       </li>
     </ul>
   </div>
