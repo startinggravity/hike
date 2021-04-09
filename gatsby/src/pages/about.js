@@ -49,7 +49,10 @@ const About = ({ data }) => (
     </div>
     <div className="main__content">
       <div className="body-text">
-        <p>Here is a little information about me, this site, and some of the trails I have hiked.</p>
+        <p>
+          Here is a little information about me, this site, and some of the
+          trails I have hiked.
+        </p>
       </div>
       <div className="container">
         <ul className="hike-list">
@@ -61,7 +64,6 @@ const About = ({ data }) => (
               </div>
               <div className="hike-list__image">
                 <Img
-                  fluid={data.gravityImage.cis.f}
                   alt="Gravity on the AT"
                   fluid={{ ...data.gravityImage.cis.f, aspectRatio: 1 / 1 }}
                 />
@@ -76,7 +78,6 @@ const About = ({ data }) => (
               </div>
               <div className="hike-list__image">
                 <Img
-                  fluid={data.gravityTrailImage.cis.f}
                   alt="Gravity hiking in Frozen Head State Park"
                   fluid={{
                     ...data.gravityTrailImage.cis.f,
@@ -94,8 +95,7 @@ const About = ({ data }) => (
               </div>
               <div className="hike-list__image">
                 <Img
-                  fluid={data.gravityLogo.cis.f}
-                  alt="Hike with Gravity logo"
+                  alt="Hike with Gravity code"
                   fluid={{
                     ...data.gravityLogo.cis.f,
                     aspectRatio: 1 / 1,
@@ -115,14 +115,13 @@ const About = ({ data }) => (
               </div>
               <div className="hike-list__image">
                 <Img
-                  fluid={data.atImage.cis.f}
                   alt="A rock with the Appalachian Trail emblem painted on it"
                   fluid={{ ...data.atImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
           </li>
-          {/* Cooking & Filtration */}
+          {/* The PCT */}
           <li className="hike-list__item">
             <Link
               to="/about/the-pacific-crest-trail"
@@ -133,9 +132,42 @@ const About = ({ data }) => (
               </div>
               <div className="hike-list__image">
                 <Img
-                  fluid={data.pctImage.cis.f}
                   alt="Goat Rocks on the PCT"
                   fluid={{ ...data.pctImage.cis.f, aspectRatio: 1 / 1 }}
+                />
+              </div>
+            </Link>
+          </li>
+          {/* The CDT */}
+          <li className="hike-list__item">
+            <Link
+              to="/about/the-continental-divide-trail"
+              title="About the Continental Divide Trail"
+            >
+              <div className="hike-list__text">
+                <h2>The Continental Divide Trail</h2>
+              </div>
+              <div className="hike-list__image">
+                <Img
+                  alt="Wind River Range, Wyoming"
+                  fluid={{ ...data.cdtImage.cis.f, aspectRatio: 1 / 1 }}
+                />
+              </div>
+            </Link>
+          </li>
+          {/* The BMT */}
+          <li className="hike-list__item">
+            <Link
+              to="/about/the-benton-mackaye-trail"
+              title="About the Benton MacKaye Trail"
+            >
+              <div className="hike-list__text">
+                <h2>The Benton MacKaye Trail</h2>
+              </div>
+              <div className="hike-list__image">
+                <Img
+                  alt="Davis Creek on the BMT"
+                  fluid={{ ...data.bmtImage.cis.f, aspectRatio: 1 / 1 }}
                 />
               </div>
             </Link>
@@ -159,50 +191,49 @@ export const query = graphql`
     }
     gravityImage: file(relativePath: { eq: "gravity_teaser.jpg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     gravityTrailImage: file(relativePath: { eq: "gravity-trail_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     gravityLogo: file(relativePath: { eq: "about-site_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     atImage: file(relativePath: { eq: "at_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     pctImage: file(relativePath: { eq: "pct_teaser.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(
-          maxWidth: 500
-          grayscale: true
-        ) {
+        f: fluid(maxWidth: 500, grayscale: true) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    cdtImage: file(relativePath: { eq: "cdt_teaser.jpeg" }) {
+      cis: childImageSharp {
+        f: fluid(maxWidth: 500, grayscale: true) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    bmtImage: file(relativePath: { eq: "bmt_teaser.jpeg" }) {
+      cis: childImageSharp {
+        f: fluid(maxWidth: 500, grayscale: true) {
           ...GatsbyImageSharpFluid
         }
       }

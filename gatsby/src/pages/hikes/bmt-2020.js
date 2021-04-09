@@ -204,7 +204,7 @@ export const hikeQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: "bmt_header.jpeg" }) {
+    file(relativePath: { eq: "bmt_header-1.jpeg" }) {
       cis: childImageSharp {
         f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
           ...GatsbyImageSharpFluid_withWebp
