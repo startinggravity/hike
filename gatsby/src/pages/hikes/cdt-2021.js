@@ -69,7 +69,7 @@ class Hikes extends Component {
         <SEO
           title="Hikes: Continental Divide Trail 2021"
           description="I hiked the Continental Divide Trail in 2021, starting from from the
-          U.S. border with Mexico on April 13."
+          U.S. border with Mexico on April 13 and finishing at the Canadian border on September 18."
           keywords={[
             `Continental Divide Trail`,
             `San Juan Mountains`,
@@ -104,17 +104,17 @@ class Hikes extends Component {
           <Filter />
           <div className="body-text">
             <p>
-              I am currently attempting to thru-hike the{" "}
+              I successfully completed a thru-hike of the{" "}
               <Link to="/about/the-continental-divide-trail">
                 Continental Divide Trail
               </Link>
-              . I started my hike on April 13 and hope to hike all of it this
-              year.
+              {" "} on September 18, 2021.
             </p>
             <p>
-              I am not blogging while I hike, so there are no posts yet to
-              read. I will begin blogging about my hike shortly after I return
-              home.
+              As soon as I complete the trail reports from my <Link to="/hikes/bmt-2020">
+                Benton MacKaye Trail thru-hike
+              </Link>
+              , I will begin writing about this hike.
             </p>
           </div>
 

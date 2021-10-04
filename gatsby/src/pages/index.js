@@ -49,11 +49,12 @@ class IndexPage extends Component {
       <Layout>
         <SEO
           title="Home | Hike with Gravity"
-          description="This site is the trail journal of Jim 'Gravity' Smith, who thru-hiked the Appalachian Trail in 2017 and the Pacific Crest Trail in 2019."
+          description="This site is the trail journal of Jim 'Gravity' Smith, a Triple Crown long distance hiker."
           keywords={[
             `Pacific Crest Trail`,
             `Appalachian Trail`,
             `Continental Divide Trail`,
+            `Benton MacKaye Trail`,
             `Mojave Desert`,
             `Sierra Nevada`,
             `Great Smoky Mountains`,
@@ -78,23 +79,22 @@ class IndexPage extends Component {
         <div className="main__content">
           <div className="body-text">
             <p>
-              Hello! I'm a long distance hiker, and as you might have already
-              guessed, my trail name is Gravity. I thru-hiked the{" "}
+              Hello! I'm a Triple Crown long distance hiker, and as you might
+              have already guessed, my trail name is Gravity. I thru-hiked the{" "}
               <Link to="/hikes/at-2017">Appalachian Trail in 2017</Link> and the{" "}
               <Link to="/hikes/pct-2019">Pacific Crest Trail in 2019</Link>. You
-              can find daily reports about those hikes on this site. A little more 
-              information about me and the trails I've hiked can be found on{" "}
-              <Link to="/about">my About page</Link>.
+              can find daily reports about those hikes on this site.
             </p>
             <p>
-              I also completed a thru-hike of the Benton MacKaye Trail in 2020,
-              and I'm now attempting to thru-hike the Continental Divide Trail. I
-              will be writing trail reports about those hikes once I return from
-              the CDT. Although I'm not live-blogging, I will be posting from
-              time to time on{" "}
-              <a href="https://twitter.com/hikewithgravity">Twitter</a>,{" "}
-              <a href="https://www.instagram.com/hikewithgravity/">Instagram</a>
-              , and <a href="https://www.facebook.com/jim.smith">Facebook</a>.
+              I also completed a thru-hike of the{" "}
+              <Link to="/hikes/at-2017">Benton MacKaye Trail</Link> in 2020, and
+              the <Link to="/hikes/cdt-2021">Continental Divide Trail</Link> in
+              2021. I am now writing trail reports about those hikes, so please
+              check back regularly to find new posts.
+            </p>
+            <p>
+              A little more information about me and the trails I've hiked can
+              be found on <Link to="/about">my About page</Link>.
             </p>
             <h2 className="centered-heading">Latest Reports from the Trail</h2>
           </div>

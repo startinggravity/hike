@@ -68,8 +68,7 @@ class Hikes extends Component {
       <Layout>
         <SEO
           title="Hikes: Benton MacKaye Trail 2020"
-          description="I hiked the Benton MacKaye Trail in 2020, starting from from the
-          U.S. border with Mexico on April 13."
+          description="I hiked the Benton MacKaye Trail in 2020."
           keywords={[
             `Benton MacKaye Trail`,
             `Appalachian Trail`,
@@ -109,19 +108,12 @@ class Hikes extends Component {
                 Benton MacKaye Trail
               </Link>{" "}
               in 2020. I was joined by hiking friends from previous thru-hikes.
-              We started from Springer Mountain on October 22. We arrived at the
+              We started from Springer Mountain on October 22 and arrived at the
               northern terminus in Great Smoky Mountains National Park on
               November 13.
             </p>
             <p>
-              Unfortunately, because I needed time to finish blogging about my{" "}
-              <Link to="/hikes/pct-2019">2019 thru-hike</Link> of the{" "}
-              <Link to="/about/the-pacific-crest-trail">
-                Pacific Crest Trail
-              </Link>
-              , I was unable to write about my BMT hike before leaving to hike
-              the Continental Divide Trail. I intend to post about this hike
-              when I return from the CDT.
+              Trip reports from this thru-hike are coming soon.
             </p>
           </div>
 
