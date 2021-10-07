@@ -68,8 +68,9 @@ class Hikes extends Component {
       <Layout>
         <SEO
           title="Hikes: All Trail Reports"
-          description="I hiked the every mile of the Appalachian Trail in 2017 and the
-          every mile of the Pacific Crest Trail in 2019."
+          description="I thru-hiked the Appalachian Trail in 2017, the Pacific Crest Trail 
+             in 2019, the Benton MacKaye Trail in 2020, and the Continental Divide Trail
+             in 2021."
           keywords={[
             `Pacific Crest Trail`,
             `Appalachian Trail`,
@@ -177,7 +178,7 @@ export const hikeQuery = graphql`
       filter: {
         relationships: {
           field_blog_category: {
-            drupal_internal__tid: { in: [5, 6, 7, 8, 16, 17] }
+            drupal_internal__tid: { in: [5, 6, 7, 8, 16, 17, 18] }
           }
         }
       }
