@@ -177,7 +177,7 @@ export const hikeQuery = graphql`
       filter: {
         relationships: {
           field_blog_category: {
-            drupal_internal__tid: { in: [5, 6, 7, 8, 16] }
+            drupal_internal__tid: { in: [5, 6, 7, 8, 16, 17] }
           }
         }
       }
