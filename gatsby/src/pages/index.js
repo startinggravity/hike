@@ -87,7 +87,7 @@ class IndexPage extends Component {
             </p>
             <p>
               I also completed a thru-hike of the{" "}
-              <Link to="/hikes/at-2017">Benton MacKaye Trail</Link> in 2020, and
+              <Link to="/hikes/bmt-2020">Benton MacKaye Trail</Link> in 2020, and
               the <Link to="/hikes/cdt-2021">Continental Divide Trail</Link> in
               2021. I am now writing trail reports about those hikes, so please
               check back regularly to find new posts.
