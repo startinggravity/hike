@@ -113,7 +113,7 @@ class Hikes extends Component {
               November 13.
             </p>
             <p>
-              Trip reports from this thru-hike are coming soon.
+              More trip reports from this thru-hike are coming soon.
             </p>
           </div>
 
