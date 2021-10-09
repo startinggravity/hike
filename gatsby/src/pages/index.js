@@ -119,7 +119,7 @@ export const hikeQuery = graphql`
       sort: { fields: [created], order: [DESC] }
       filter: {
         relationships: {
-          field_blog_category: { drupal_internal__tid: { in: [16] } }
+          field_blog_category: { drupal_internal__tid: { in: [16, 17, 18] } }
         }
       }
     ) {
