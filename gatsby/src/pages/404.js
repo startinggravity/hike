@@ -46,7 +46,7 @@ export const query = graphql`
   query {
     semiHero: file(relativePath: { eq: "404-marmot.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+        f: fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

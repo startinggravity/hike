@@ -159,7 +159,7 @@ export const query = graphql`
       relativePath: { eq: "weminunche-wilderness_chicago-basin.jpeg" }
     ) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+        f: fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

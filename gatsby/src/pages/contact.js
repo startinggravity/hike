@@ -124,7 +124,7 @@ export const query = graphql`
       relativePath: { eq: "wind-river-range_cirque-of-towers.jpeg" }
     ) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+        f: fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

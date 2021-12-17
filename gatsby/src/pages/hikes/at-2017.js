@@ -194,7 +194,7 @@ export const hikeQuery = graphql`
     }
     file(relativePath: { eq: "appalachian-trail_mcafee-knob.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+        f: fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

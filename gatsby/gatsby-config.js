@@ -202,7 +202,14 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: "https://dev-hike-with-gravity.pantheonsite.io/",
-        concurrentFileRequests: 50,
+        concurrentFileRequests: 5,
+        fastBuilds: true,
+        disallowedLinkTypes: [
+          `self`,
+          `describedby`,
+          `contact_message--feedback`,
+          `contact_message--personal`,
+        ],
       },
     },
     {

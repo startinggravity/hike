@@ -196,7 +196,7 @@ export const hikeQuery = graphql`
     }
     file(relativePath: { eq: "frozen-head-state-park-trail.jpeg" }) {
       cis: childImageSharp {
-        f: fluid(srcSetBreakpoints: [480, 640, 960, 1280, 2560]) {
+        f: fluid {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
