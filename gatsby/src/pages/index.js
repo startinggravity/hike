@@ -79,18 +79,17 @@ class IndexPage extends Component {
         <div className="main__content">
           <div className="body-text">
             <p>
-              Hello! I'm a Triple Crown long distance hiker, and as you might
+              Hello! I'm a Triple Crown long distance hiker, and as you might{" "}
               have already guessed, my trail name is Gravity. I thru-hiked the{" "}
               <Link to="/hikes/at-2017">Appalachian Trail in 2017</Link> and the{" "}
-              <Link to="/hikes/pct-2019">Pacific Crest Trail in 2019</Link>. You
-              can find daily reports about those hikes on this site.
+              <Link to="/hikes/pct-2019">Pacific Crest Trail in 2019</Link>. You{" "}
+              can find daily reports about those hikes and others on this site.
             </p>
             <p>
-              I also completed a thru-hike of the{" "}
-              <Link to="/hikes/bmt-2020">Benton MacKaye Trail</Link> in 2020, and
-              the <Link to="/hikes/cdt-2021">Continental Divide Trail</Link> in
-              2021. I am now writing trail reports about those hikes, so please
-              check back regularly to find new posts.
+              I am currently writing about the{" "}
+              <Link to="/hikes/cdt-2021">Continental Divide Trail</Link>, which{" "}
+              I succesffully completed hiking in 2021. New posts are added regularly,{" "}
+              so please check back to find the latest.
             </p>
             <p>
               A little more information about me and the trails I've hiked can
