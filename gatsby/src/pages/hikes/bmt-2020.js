@@ -112,9 +112,6 @@ class Hikes extends Component {
               northern terminus in Great Smoky Mountains National Park on
               November 13.
             </p>
-            <p>
-              More trip reports from this thru-hike are coming soon.
-            </p>
           </div>
 
           <div className="container">
