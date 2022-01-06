@@ -107,14 +107,13 @@ class Hikes extends Component {
               I successfully completed a thru-hike of the{" "}
               <Link to="/about/the-continental-divide-trail">
                 Continental Divide Trail
-              </Link>
-              {" "} on September 18, 2021.
+              </Link>{" "} 
+              in 2021. The hike began at the U.S. border with Mexico{" "}
+            on April 13 and finished at the Canadian border on September 18.
             </p>
             <p>
-              As soon as I complete the trail reports from my <Link to="/hikes/bmt-2020">
-                Benton MacKaye Trail thru-hike
-              </Link>
-              , I will begin writing about this hike.
+              I am currently writing the trail reports about this hike,{" "}
+              so please return regularly for the latest.
             </p>
           </div>
 
