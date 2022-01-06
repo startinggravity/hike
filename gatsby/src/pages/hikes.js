@@ -122,9 +122,9 @@ class Hikes extends Component {
               in 2021. You will find daily reports of those hikes and others on this page.
             </p>
             <p>
-              The links to the posts of my hikes appear here in reverse{* *}
-              chronological order as they're written. If you prefer to read about
-              one of those hikes from the beginning of the trip, select one of the{* *}
+              The links to the posts of my hikes appear here in reverse{" "}
+              chronological order as they're written. If you prefer to read about{" "}
+              one of those hikes from the beginning of the trip, select one of the{" "}
               links above.
             </p>
           </div>
