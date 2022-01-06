@@ -88,7 +88,7 @@ class IndexPage extends Component {
             <p>
               I am currently writing about the{" "}
               <Link to="/hikes/cdt-2021">Continental Divide Trail</Link>, which{" "}
-              I succesffully completed hiking in 2021. New posts are added regularly,{" "}
+              I successfully completed hiking in 2021. New posts are added regularly,{" "}
               so please check back to find the latest.
             </p>
             <p>
