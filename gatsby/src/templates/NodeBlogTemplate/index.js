@@ -146,7 +146,7 @@ const NodeBlogTemplate = ({ data, pageContext }) => {
             <p className="comments__quote">
               "Nothing to tell now. Let the words be yours, I'm done with mine."
               <span>
-                <a href="https://youtu.be/3aMBIeD0ThU?t=16s">ref.</a>
+                <a href="https://youtu.be/dBFwuXXOSPE">ref.</a>
               </span>
             </p>
             <HyvorTalk.Embed websiteId={1614} id={path.alias} loadMode="scroll" />
