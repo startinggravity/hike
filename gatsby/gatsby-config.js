@@ -204,6 +204,7 @@ module.exports = {
         baseUrl: "https://dev-hike-with-gravity.pantheonsite.io/",
         concurrentFileRequests: 5,
         fastBuilds: true,
+        apiBase: `jsonapi`,
         disallowedLinkTypes: [
           `self`,
           `describedby`,
