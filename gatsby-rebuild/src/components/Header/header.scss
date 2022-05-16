@@ -1,0 +1,45 @@
+.header__wrapper {
+  z-index: 1;
+  position: fixed;
+  height: 4em;
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-image: url(../assets/images/grunge_bg.svg);
+  transition: all $transition-fast;
+  -webkit-filter: none;
+  filter: none;
+}
+
+.header__inner {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 1.45rem 1.0875rem;
+}
+
+.content--scroll .header__wrapper {
+  background-image: url(../assets/images/grunge_bg_scroll.svg);
+  transition: all $transition-fast;
+  
+  @include shadow;
+}
+
+.site-header__menu-button {
+  position: fixed;
+  top: 0.1em;
+  left: 1em;
+
+  @include small-large {
+    left: 10%;
+  }
+}
+
+.site-header__search-button {
+  position: fixed;
+  top: 0.1em;
+  right: 1em;
+
+  @include small-large {
+    right: 10%;
+  }
+}

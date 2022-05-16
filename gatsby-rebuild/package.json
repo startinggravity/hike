@@ -1,0 +1,45 @@
+{
+  "name": "hike-with-gravity",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hike with Gravity blog, created in Drupal and GatsbyJS",
+  "author": "Jim Smith",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.2",
+    "autoprefixer": "^10.4.2",
+    "classnames": "^2.3.1",
+    "dom-parser": "^0.1.6",
+    "dotenv": "^16.0.0",
+    "gatsby": "^4.9.0",
+    "gatsby-plugin-google-analytics": "^4.13.0",
+    "gatsby-plugin-image": "^2.13.0",
+    "gatsby-plugin-manifest": "^4.13.0",
+    "gatsby-plugin-offline": "^5.13.0",
+    "gatsby-plugin-postcss": "^5.9.0",
+    "gatsby-plugin-purgecss": "^6.1.2",
+    "gatsby-plugin-react-helmet": "^5.9.0",
+    "gatsby-plugin-sharp": "^4.9.0",
+    "gatsby-source-drupal": "^5.9.0",
+    "gatsby-source-drupal-menu-links": "^3.0.1",
+    "gatsby-source-filesystem": "^4.13.0",
+    "gatsby-transformer-sharp": "^4.13.0",
+    "postcss": "^8.4.7",
+    "react": "^17.0.2",
+    "react-code-blocks": "^0.0.9-0",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-html-parser": "^2.0.2",
+    "react-uuid": "^1.0.2",
+    "tailwindcss": "^3.0.23"
+  }
+}
