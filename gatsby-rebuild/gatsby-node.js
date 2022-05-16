@@ -140,3 +140,49 @@ exports.onCreateNode = ({ node, actions }) => {
     value: slug,
   })
 }
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  deletePage(page)
+  return graphql(
+    `
+      {
+        allNodeBlog(
+          filter: { status: { eq: true } }
+          sort: { fields: [created], order: [ASC] }
+        ) {
+          edges {
+            node {
+              title
+              status
+              nid: drupal_internal__nid
+              path {
+                alias
+              }
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
+
+    const posts = result.data.allNodeBlog.edges
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
+      createPage({
+        ...page,
+        context: {
+          ...page.context,
+          foo: post.node.fields.slug,
+        },
+      })
+    })
+  })
+}
