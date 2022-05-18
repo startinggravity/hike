@@ -1,7 +1,5 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -10,6 +8,15 @@ module.exports = {
         "accent-7": "#333",
         success: "#0070f3",
         cyan: "#79FFE1",
+        gravGreen: "#8eb48c", //Logo and footer
+        gravDkGray: "#273246", 
+        gravDkGrayFade: "rgba(39,50,70,.05)", 
+        gravRedBrown: "#984a2d",
+        gravYellow: "#f8b238",
+        gravTan: "#c8ad90",
+        gravDkGreen: "#0E513F",
+        gravRed: "#731527",
+        gravBlack: "#2b2b2b",
       },
       spacing: {
         28: "7rem",
@@ -33,4 +40,4 @@ module.exports = {
     },
   },
   plugins: [require("@tailwindcss/typography")],
-};
+}

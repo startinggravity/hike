@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 // import "./style.css"
-// import FooterLogo from "../FooterLogo"
 import footerLogo from "./footer_logo.svg"
 import ccLogo from "./creative_commons.svg"
 

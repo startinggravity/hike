@@ -39,6 +39,11 @@ export const ParagraphHorizontalImage = graphql`
     field_image {
       alt
     }
+    relationships {
+      field_image {
+        gatsbyImage(width: 1024)
+      }
+    }
   }
 `
 
@@ -49,6 +54,11 @@ export const ParagraphVerticalImage = graphql`
     }
     field_image {
       alt
+    }
+    relationships {
+      field_image {
+        gatsbyImage(width: 900)
+      }
     }
   }
 `

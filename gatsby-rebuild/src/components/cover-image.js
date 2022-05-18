@@ -1,27 +1,14 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
-import cn from "classnames";
+import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-export default function CoverImage({ title, fluid, slug }) {
-  const image = (
-    <GatsbyImage
-      image={fluid}
-      alt={`Cover Image: ${title}`}
-      className={cn("shadow-small", {
-        "hover:shadow-medium transition-shadow duration-200": slug,
-      })}
-    />
-  );
+export default function CoverImage({ image, alt }) {
   return (
-    <div className="-mx-5 sm:mx-0">
-      {slug ? (
-        <Link to={slug} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
+    <div className="w-full">
+      <GatsbyImage
+        alt={alt}
+        image={getImage(image)}
+        className="cover-img h-screen"
+      />
     </div>
-  );
+  )
 }

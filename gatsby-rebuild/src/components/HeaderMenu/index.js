@@ -2,8 +2,8 @@ import React from "react"
 // import PropTypes from "prop-types"
 import Logo from "../Logo"
 import { Link } from "gatsby"
-
-class Header extends React.Component {
+// import "./style.css"
+class HeaderMenu extends React.Component {
   state = { showMenu: false, showSearch: false }
 
   toggleMenu = () => {
@@ -27,11 +27,14 @@ class Header extends React.Component {
                   <Link
                     to="/hikes"
                     title="Hike Reports"
-                    className="main-menu__link main-menu__link--hikes"
+                    className="main-menu__link main-menu__link--hikes text-3xl"
                   >
                     Hikes
                   </Link>
-                  <ul className="menu main-menu__submenu">
+                  <ul
+                    className="menu main-menu__submenu"
+                    style={{ borderTop: "1px solid #999" }}
+                  >
                     <li className="main-menu__item">
                       <Link
                         to="/hikes/at-2017"
@@ -74,7 +77,7 @@ class Header extends React.Component {
                   <Link
                     to="/gear"
                     title="Gear"
-                    className="main-menu__link main-menu__link--gear"
+                    className="main-menu__link main-menu__link--gear text-3xl"
                   >
                     Gear
                   </Link>
@@ -83,7 +86,7 @@ class Header extends React.Component {
                   <Link
                     to="/about"
                     title="About Gravity and this site"
-                    className="main-menu__link main-menu__link--about"
+                    className="main-menu__link main-menu__link--about text-3xl"
                   >
                     About
                   </Link>
@@ -92,7 +95,7 @@ class Header extends React.Component {
                   <Link
                     to="/contact"
                     title="Contact Gravity"
-                    className="main-menu__link main-menu__link--contact"
+                    className="main-menu__link main-menu__link--contact text-3xl"
                   >
                     Contact
                   </Link>
@@ -101,8 +104,7 @@ class Header extends React.Component {
                   <Link
                     to="/subscribe"
                     title="Sign up to receive email updates"
-                    className="main-menu__link main-menu__link--subscribe {
-                      "
+                    className="main-menu__link main-menu__link--subscribe text-xl"
                   >
                     Sign up to receive email updates
                   </Link>
@@ -112,7 +114,7 @@ class Header extends React.Component {
           </div>
 
           <div className="header__wrapper">
-            <div className="header__inner">
+            <div className="header__inner flex flex-row justify-between items-start">
               <div className="site-header__menu-button">
                 <button
                   className="menu-button__toggle js-toggle__menu"
@@ -143,4 +145,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header
+export default HeaderMenu

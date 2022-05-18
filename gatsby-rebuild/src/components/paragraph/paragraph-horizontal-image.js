@@ -1,18 +1,14 @@
-import React from "react";
-// import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export default function ParagraphHorizontalImage({ text, image, alt }) {
-
   return (
-    <div className="py-16">
-      {/* <GatsbyImage
-        image={image}
-        alt={alt}
-      /> */}
-        
-      <div className="mt-6 text-2xl prose max-w-6xl text-gray-500 mx-auto">
+    <div className="py-0">
+      <GatsbyImage alt={alt} image={getImage(image)} />
+
+      <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 text-gravBlack ">
         <div dangerouslySetInnerHTML={{ __html: text }} />
       </div>
     </div>
-  );
+  )
 }

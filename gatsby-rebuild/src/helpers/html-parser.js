@@ -15,7 +15,7 @@ export const htmlParser = (content, inlineImages = []) => {
                     return (
                         <GatsbyImage
                             image={inlineImage.localFile.childImageSharp.gatsbyImageData}
-                            className='mx-auto'
+                            className=''
                         />
                     );
                 }

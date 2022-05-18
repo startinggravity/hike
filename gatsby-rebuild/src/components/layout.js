@@ -1,44 +1,37 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+// import { useStaticQuery, graphql } from "gatsby"
+import HeaderMenu from "./HeaderMenu"
+import SocialMedia from "./SocialMedia"
+import Footer from "./Footer"
+import Trigger from "./Trigger.js"
+// import "./index.scss"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Trigger />
+      <HeaderMenu />
+      <main className="main overflow-hidden">
+        {children}
+        <div className="py-0 bg-white">
+          <div className="main__social mt-6 mx-auto max-w-3xl px-5">
+            <SocialMedia />
+          </div>
+        </div>
+      </main>
+
+      <Footer />
     </>
   )
 }

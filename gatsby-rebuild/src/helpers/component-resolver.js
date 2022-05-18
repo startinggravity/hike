@@ -31,7 +31,7 @@ const resolve = (component) => {
       return (
         <ParagraphHorizontalImage 
           text={component.field_body_image_caption.processed}
-          // image={component.relationships.field_image.localFile.childImageSharp.gatsbyImageData}
+          image={component.relationships.field_image.gatsbyImage}
           alt={component.field_image.alt}
         />
       )
@@ -40,7 +40,7 @@ const resolve = (component) => {
       return (
         <ParagraphVerticalImage 
           text={component.field_body_image_caption.processed}
-          // image={component.relationships.field_image.localFile.childImageSharp.gatsbyImageData}
+          image={component.relationships.field_image.gatsbyImage}
           alt={component.field_image.alt}
         />
       )
