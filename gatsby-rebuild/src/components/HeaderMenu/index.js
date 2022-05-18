@@ -1,8 +1,7 @@
 import React from "react"
-// import PropTypes from "prop-types"
 import Logo from "../Logo"
 import { Link } from "gatsby"
-// import "./style.css"
+
 class HeaderMenu extends React.Component {
   state = { showMenu: false, showSearch: false }
 

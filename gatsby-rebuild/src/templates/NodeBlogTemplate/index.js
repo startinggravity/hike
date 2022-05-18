@@ -7,8 +7,6 @@ import { componentResolver } from "../../helpers/component-resolver"
 import Cover from "../../components/cover"
 import Body from "../../components/field/body"
 import PropTypes from "prop-types"
-// import Img from "gatsby-image"
-// import SEO from "../../components/seo"
 import { Embed } from "hyvor-talk-react"
 
 // // Layout
