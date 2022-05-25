@@ -22,8 +22,8 @@ a:visited {
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  .visually-hidden {
+
+.visually-hidden {
     position: absolute !important;
     clip: rect(1px, 1px, 1px, 1px);
     overflow: hidden;
@@ -825,7 +825,7 @@ a:visited {
     }
   }
   .gear-list-page .list-page .heading-container h1,
-  .heading-container h1 {
+  .list-page .heading-container h1 {
     padding-bottom: 0.5em;
     font-size: 4rem;
     font-weight: 900;
@@ -1170,132 +1170,3 @@ a:visited {
   input.contact__button:hover {
     background-color: #273246;
   }
-  .prose h2,
-  .prose h3 {
-    margin: 0;
-  }
-  .prose .ais-SearchBox-submitIcon,
-  .prose .ais-SearchBox-resetIcon {
-    fill: white;
-    height: 1.5em;
-    width: 1.5em;
-  }
-  .prose .ais-SearchBox-reset[hidden=""] {
-    display: none;
-  }
-  .prose .ais-SearchBox-input {
-    border: 1px solid #666;
-    margin-bottom: 2em;
-    padding: 0.6em;
-  }
-  .prose .ais-SearchBox-input:focus {
-    border-color: #984a2d;
-    outline: 2px solid #984a2d;
-  }
-  .prose .ais-SearchBox-submit,
-  .prose .ais-SearchBox-reset {
-    position: relative;
-    top: 0.35em;
-    margin-left: 0.25em;
-    padding: 0.65em 0.65em;
-    background-color: #984a2d;
-    border: none;
-    color: white;
-    cursor: pointer;
-    line-height: 1em;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  .prose .ais-SearchBox-submit:hover,
-  .search-results-page .ais-SearchBox-reset:hover {
-    background-color: #273246;
-  }
-  .prose .ais-SearchBox-submitIcon svg {
-    fill: white;
-  }
-  .prose mark.ais-Snippet-highlighted,
-  .prose mark.ais-Highlight-highlighted {
-    font-style: italic;
-    font-weight: bold;
-    background-color: transparent;
-  }
-  .prose ul.ais-Hits-list {
-    margin: 0 0 1em 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  .prose li.ais-Hits-item {
-    margin-bottom: 1.5em;
-    padding: 0;
-  }
-  .prose li.ais-Hits-item p {
-    line-height: 1.2;
-  }
-  .prose .ais-PoweredBy {
-    padding: 0 1em;
-    margin-bottom: 3em;
-  }
-  .prose .ais-PoweredBy a {
-    display: inline-block;
-    text-decoration: none;
-    position: relative;
-    top: 0.25em;
-    text-decoration: none;
-    border: none;
-  }
-  .prose .ais-PoweredBy:hover {
-    background-color: transparent;
-  }
-  .prose .ais-PoweredBy span {
-    display: inline-block;
-    padding: 0 0.15em 0 0;
-  }
-  .prose .ais-Pagination {
-    margin: 0.5em 0.1em;
-    list-style: none;
-    text-align: center;
-    padding: 1.5em 0;
-  }
-  .prose .ais-Pagination-list {
-    padding: 0;
-    margin: 0;
-  }
-  .prose .ais-Pagination-item {
-    display: inline-block;
-    margin: 0 0.5em;
-    padding: 0.3em;
-    width: 2em;
-    height: 2em;
-    cursor: pointer;
-    display: inline-block;
-    background-color: transparent;
-    border: none;
-  }
-  .prose a.ais-Pagination-link {
-    display: inline-block;
-    margin: 0 0.5em;
-    padding: 0.3em;
-    width: 2em;
-    height: 2em;
-    cursor: pointer;
-    border: none;
-  }
-  .prose a.ais-Pagination-link:hover {
-    border: none;
-  }
-  .prose .ais-Pagination-link--selected.ais-Pagination-link--selected {
-    color: #984a2d;
-  }
-  .prose .ais-Pagination-item--firstPage .ais-Pagination-link,
-  .prose
-    .ais-Pagination-item.ais-Pagination-item--nextPage
-    .ais-Pagination-link,
-  .prose .ais-Pagination-item--previousPage .ais-Pagination-link {
-    font-weight: bold;
-  }
-  .prose .ais-Pagination-item--disabled {
-    display: none;
-  }
-}

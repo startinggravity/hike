@@ -14,6 +14,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import PostPreview from "../components/post-preview"
 import Title from "../components/field/title"
+import "../styles/search.css"
 
 const searchClient = algoliasearch(
   "GRBKEZ1C17",
