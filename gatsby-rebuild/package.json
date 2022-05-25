@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.7",
     "classnames": "^2.3.1",
     "dom-parser": "^0.1.6",
     "dotenv": "^16.0.0",
@@ -30,7 +30,7 @@
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^4.13.0",
     "gatsby-plugin-offline": "^5.13.0",
-    "gatsby-plugin-postcss": "^5.9.0",
+    "gatsby-plugin-postcss": "^5.15.0",
     "gatsby-plugin-purgecss": "^6.1.2",
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sharp": "^4.14.1",
@@ -39,7 +39,7 @@
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-transformer-sharp": "^4.14.0",
     "hyvor-talk-react": "^2.0.0",
-    "postcss": "^8.4.7",
+    "postcss": "^8.4.14",
     "react": "^17.0.2",
     "react-code-blocks": "^0.0.9-0",
     "react-dom": "^17.0.2",
@@ -48,6 +48,6 @@
     "react-instantsearch-dom": "^6.26.0",
     "react-uuid": "^1.0.2",
     "striptags": "^3.2.0",
-    "tailwindcss": "^3.0.23"
+    "tailwindcss": "^3.0.24"
   }
 }

@@ -748,13 +748,12 @@ a:visited {
     border: 2px solid #273246;
     transition: all 0.3s ease-in;
   }
-  /* Social Media styles. */
   .main__social {
     max-width: 960px;
     margin: 0 auto;
     padding: 1em 1em 2em 1em;
   }
-  .social-media {
+  /* .social-media {
     margin: 0 0 3em 0;
     padding: 0 6em;
   }
@@ -763,7 +762,7 @@ a:visited {
       margin: 0;
       padding: 0 0 3.5em 0;
     }
-  }
+  } */
   ul.social-media__list {
     margin: 0;
     padding: 0;
@@ -1256,16 +1255,16 @@ a:visited {
     font-weight: bold;
     background-color: transparent;
   }
-  .search-results-page .ais-Hits-list {
+  .search-results-page ul.ais-Hits-list {
     margin: 0 0 1em 0;
     padding: 0;
     list-style-type: none;
   }
-  .search-results-page .ais-Hits-item {
+  .search-results-page li.ais-Hits-item {
     margin-bottom: 1.5em;
     padding: 0;
   }
-  .search-results-page .ais-Hits-item p {
+  .search-results-page li.ais-Hits-item p {
     line-height: 1.2;
   }
   .search-results-page .ais-PoweredBy {
