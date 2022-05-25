@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import HeaderMenu from "./HeaderMenu"
 import SocialMedia from "./SocialMedia"
 import Footer from "./Footer"
-import Trigger from "./trigger"
+import Trigger from "../helpers/trigger"
 
 
 const Layout = ({ children }) => {
