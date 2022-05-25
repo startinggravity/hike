@@ -937,10 +937,15 @@ a:visited {
     transform: translate(-50%, -50%);
     padding: 0.5em;
     line-height: 1.1;
-    font-size: 160%;
+    font-size: 120%;
     color: white;
     text-shadow: 0 0 10px #000;
     border: none;
+  }
+  @media (min-width: 768px) {
+    .hike-list__text h3 {
+      font-size: 160%;
+    }
   }
   .hike-list-triple .hike-list__text h3 {
     font-size: 200%;
@@ -1319,11 +1324,14 @@ a:visited {
   .search-results-page .prose a.ais-Pagination-link:hover {
     border: none;
   }
-  .search-results-page .ais-Pagination-link--selected.ais-Pagination-link--selected {
+  .search-results-page
+    .ais-Pagination-link--selected.ais-Pagination-link--selected {
     color: #984a2d;
   }
   .search-results-page .ais-Pagination-item--firstPage .ais-Pagination-link,
-  .search-results-page .ais-Pagination-item.ais-Pagination-item--nextPage .ais-Pagination-link,
+  .search-results-page
+    .ais-Pagination-item.ais-Pagination-item--nextPage
+    .ais-Pagination-link,
   .search-results-page .ais-Pagination-item--previousPage .ais-Pagination-link {
     font-weight: bold;
   }
