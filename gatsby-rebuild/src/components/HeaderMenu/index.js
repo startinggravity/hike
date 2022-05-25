@@ -70,6 +70,15 @@ class HeaderMenu extends React.Component {
                         Continental Divide Trail 2021
                       </Link>
                     </li>
+                    <li className="main-menu__item">
+                      <Link
+                        to="/hikes/pt-2022"
+                        title="Hike Reports: Pinhoti Trail 2022"
+                        className="main-menu__link main-menu__link--continental-divide-trail-2021"
+                      >
+                        Pinhoti Trail 2022
+                      </Link>
+                    </li>
                   </ul>
                 </li>
                 <li className="main-menu__item main-menu__item--active-trail">

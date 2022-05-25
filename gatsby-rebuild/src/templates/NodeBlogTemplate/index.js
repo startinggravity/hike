@@ -1,30 +1,39 @@
 import React from "react"
 import { graphql } from "gatsby"
-// import { Helmet } from "react-helmet"
-// import Parser from "html-react-parser"
+import { getSrc } from "gatsby-plugin-image"
 import uuid from "react-uuid"
 import { componentResolver } from "../../helpers/component-resolver"
 import Cover from "../../components/cover"
 import Body from "../../components/field/body"
 import PropTypes from "prop-types"
 import { Embed } from "hyvor-talk-react"
-
-// // Layout
+import Seo from "../../components/seo"
 import Layout from "../../components/layout"
-
-// // Fields
-// import Content from "../../components/fields/Content"
-// import GearMenu from "../../components/fields/GearMenu"
+import GearMenu from "../../components/gear-menu"
 
 const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
   const { title, subtitle } = node
   const components = componentResolver(node?.relationships?.field_body_elements)
-  // let media = r.main.localFile.cis.f
-  // let imageClass = "hero__image-img"
-  let subTitle = subtitle
-  let fullTitle = node.rel.cat.name + ": " + title
+  let subTitle = ""
+  let fullTitle = ""
   // let gearTitle = title + ": " + subtitle
-  let blogType = 1
+  const blogType = node.type.tid
+  const socialImageSrc = getSrc(node.relationships.social.gatsbyImage)
+  let contentType = ""
+
+  if (node.type.tid === 1) {
+    contentType = "main-content hike-blog-page"
+    fullTitle = node.rel.cat.name + ": " + title
+    subTitle = subtitle
+  } else if (node.type.tid === 2) {
+    contentType = "main-content gear-blog-page"
+    fullTitle = subtitle
+    subTitle = title
+  } else {
+    contentType = "main-content about-blog-page"
+    fullTitle = node.rel.cat.name + ": " + title
+    subTitle = subtitle
+  }
 
   // For previous article.
   const prev = pageContext.prev
@@ -43,7 +52,7 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
 
   const PrevNextLinks = () => {
     return (
-      <div className="prev-next mt-6">
+      <nav className="prev-next mt-6">
         <div className="prev-next__prev">
           {prev && (
             <a
@@ -72,45 +81,62 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
             </a>
           )}
         </div>
-      </div>
+      </nav>
     )
   }
 
   return (
-    <Layout>
-      <div className="main__content">
-        <Cover
-          className="bg-center bg-fixed bg-no-repeat bg-center bg-cover h-screen relative"
-          title={fullTitle}
-          subtitle={subTitle}
-          alt={node.alt.alt}
-          image={node.relationships.field_main_image.gatsbyImage}
-        />
-        <div className="w-screen py-2.5 bg-white">
-          <article className="mx-auto max-w-5xl">
-            <Body content={node?.intro?.processed} />
-            {components &&
-              components.map(item => {
-                return <React.Fragment key={uuid()}>{item}</React.Fragment>
-              })}
+    <>
+      <Seo
+        title={fullTitle}
+        description={
+          `A collection of blog posts from Gravity's ` +
+          subTitle +
+          ` thru-hike.`
+        }
+        nodePath={node.path.alias}
+        nodeImage={socialImageSrc}
+      />
+      <Layout>
+        <div className={contentType}>
+          <Cover
+            title={fullTitle}
+            subtitle={subTitle}
+            alt={node.alt.alt}
+            image={node.relationships.cover.gatsbyImage}
+            type={node.type.tid}
+          />
+          <div className="w-screen py-2.5 bg-white">
+            <article className="mx-auto max-w-5xl">
+              {blogType === 2 ? <GearMenu /> : ""}
+              <Body content={node?.intro?.processed} />
+              {components &&
+                components.map(item => {
+                  return <React.Fragment key={uuid()}>{item}</React.Fragment>
+                })}
 
-            <div className="comments mt-6 text-2xl prose mx-auto max-w-3xl px-5 text-gravBlack">
-              <h3 className="comments__header">Comments</h3>
-              <p className="comments__quote">
-                "Nothing to tell now. Let the words be yours, I'm done with
-                mine."
-                <span>
-                  <a href="https://youtu.be/dBFwuXXOSPE">ref.</a>
-                </span>
-              </p>
-              <Embed websiteId={1614} id={node.path.alias} loadMode="scroll" />
-            </div>
+              <div className="comments mt-6 text-2xl prose mx-auto max-w-3xl px-5 text-gravBlack">
+                <h3 className="comments__header">Comments</h3>
+                <p className="comments__quote">
+                  "Nothing to tell now. Let the words be yours, I'm done with
+                  mine."
+                  <span>
+                    <a href="https://youtu.be/dBFwuXXOSPE">ref.</a>
+                  </span>
+                </p>
+                <Embed
+                  websiteId={1614}
+                  id={node.path.alias}
+                  loadMode="scroll"
+                />
+              </div>
 
-            {blogType === 1 ? <PrevNextLinks /> : ""}
-          </article>
+              {blogType === 1 ? <PrevNextLinks /> : ""}
+            </article>
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
@@ -140,8 +166,11 @@ export const query = graphql`
         alt
       }
       relationships {
-        field_main_image {
-          gatsbyImage(width: 2048)
+        cover: field_main_image {
+          gatsbyImage(width: 2048, aspectRatio: 1.778)
+        }
+        social: field_main_image {
+          gatsbyImage(layout: FIXED, width: 600, height: 338, formats: JPG)
         }
         field_body_elements {
           __typename

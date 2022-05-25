@@ -1,3 +1,4 @@
+const { paginate } = require("gatsby-awesome-pagination")
 const path = require(`path`)
 
 exports.createPages = ({ actions, graphql }) => {
@@ -51,6 +52,46 @@ exports.createPages = ({ actions, graphql }) => {
             },
           })
         })
+        // AT teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/at-2017",
+          component: path.resolve("src/templates/hikes/blog-archive_at.js"),
+        })
+        // PCT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/pct-2019",
+          component: path.resolve("src/templates/hikes/blog-archive_pct.js"),
+        })
+        // CDT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/cdt-2021",
+          component: path.resolve("src/templates/hikes/blog-archive_cdt.js"),
+        })
+        // BMT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/bmt-2020",
+          component: path.resolve("src/templates/hikes/blog-archive_bmt.js"),
+        })
+        // PT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/pt-2022",
+          component: path.resolve("src/templates/hikes/blog-archive_pt.js"),
+        })
       })
     )
   })
@@ -59,7 +100,7 @@ exports.createPages = ({ actions, graphql }) => {
 exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions
   if (node.internal.type === `node__blog`) {
-    const slug = `${node.nid}`
+    const slug = `${node.drupal_internal__nid}`
     createNodeField({
       node,
       name: `slug`,

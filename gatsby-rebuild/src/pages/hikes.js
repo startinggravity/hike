@@ -1,211 +1,176 @@
-import React, { Component } from "react"
-import { Link, graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from "react"
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import Layout from "../components/layout"
-// import Filter from "../components/fields/Filter"
+import Title from "../components/field/title"
+import SubTitle from "../components/field/subtitle"
 
-class Hikes extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      hikes: this.props.data.posts.edges,
-      currentPage: 1,
-      ItemsPerPage: 30,
-      pageNumbers: null,
-    }
-    this.handleClickPagination = this.handleClickPagination.bind(this)
-  }
-
-  componentDidMount() {
-    let numberOfPages = calcpagenumbers(
-      this.state.hikes,
-      this.state.ItemsPerPage
-    )
-    numberOfPages !== null &&
-      this.setState({
-        pageNumbers: numberOfPages,
-      })
-  }
-
-  handleClickPagination(event) {
-    this.setState({
-      currentPage: Number(event.target.id),
-    })
-    document.body.scrollTop = document.documentElement.scrollTop = 0
-  }
-
-  render() {
-    const { hikes, currentPage, ItemsPerPage, pageNumbers } = this.state
-
-    const indexOfLastItem = currentPage * ItemsPerPage
-    const indexOfFirstItem = indexOfLastItem - ItemsPerPage
-    const currentItems = hikes.slice(indexOfFirstItem, indexOfLastItem)
-
-    const renderContent = currentItems.map(hike => {
-      let media = hike.node.relationships.field_main_image.gatsbyImage
-
-      return (
-        <li className="hike-list__item" key={hike.node.nid}>
-          <Link to={hike.node.path.alias}>
-            <div className="hike-list__text">
-              <h2>{hike.node.title}</h2>
+const Hikes = () => {
+  const fullTitle = "Hike Reports:"
+  const subTitle = "All Hikes"
+  const coverImage = "../images/sun-trees-appalachian-trail.jpeg"
+  const socialImage = "/all-hikes.jpeg"
+  const thisPath = "/hikes"
+  return (
+    <Layout>
+      <Seo
+        title={subTitle}
+        description="All of the daily reports about Gravity's long-distance hikes."
+        keywords={[
+          `Pacific Crest Trail`,
+          `Appalachian Trail`,
+          `Continental Divide Trail`,
+          `Mojave Desert`,
+          `Sierra Nevada`,
+          `Great Smoky Mountains`,
+          `White Mountains`,
+          `Springer Mountain`,
+          `Mount Katahdin`,
+          "Benton MacKaye",
+          "Pinhoti",
+          `AT`,
+          `PCT`,
+          `CDT`,
+          `thru-hiking`,
+          `thru-gear`,
+          `Triple Crown`,
+          `backpacking`,
+          `hiking`,
+          `trail`,
+          `long distance hiking`,
+          `blog`,
+          `Gravity`,
+          "Hike with Gravity",
+        ]}
+        nodePath={thisPath}
+        nodeImage={socialImage}
+      />
+      <div className="main__content">
+        <div className="h-screen relative max-h-96 list-page">
+          <div className="heading-container absolute flex justify-center items-center bottom-20 w-full">
+            <div className="mx-2 text-center w-9/12 cover-text">
+              <Title>{fullTitle}</Title>
+              <SubTitle>{subTitle}</SubTitle>
             </div>
-            <div className="hike-list__image">
-              <GatsbyImage
-                image={getImage(media)}
-                alt={hike.node.alt.alt}
-                // fluid={{ ...media, aspectRatio: 1 / 1 }}
-              />
-            </div>
-          </Link>
-        </li>
-      )
-    })
-
-    return (
-      <Layout>
-        <Seo
-          title="Hikes: All Trail Reports"
-          description="I thru-hiked the Appalachian Trail in 2017, the Pacific Crest Trail 
-             in 2019, the Benton MacKaye Trail in 2020, and the Continental Divide Trail
-             in 2021."
-          keywords={[
-            `Pacific Crest Trail`,
-            `Appalachian Trail`,
-            `Continental Divide Trail`,
-            `Mojave Desert`,
-            `Sierra Nevada`,
-            `Great Smoky Mountains`,
-            `White Mountains`,
-            `Springer Mountain`,
-            `Mount Katahdin`,
-            `AT`,
-            `PCT`,
-            `CDT`,
-            `thru-hiking`,
-            `thru-hike`,
-            `Triple Crown`,
-            `backpacking`,
-            `hiking`,
-            `trail`,
-            `long distance hiking`,
-            `blog`,
-          ]}
-        />
-        <div className="semi-hero">
-          <div className="semi-hero__image">
-            {/* <GatsbyImage
-              className="semi-hero__image-img"
-              image={getImage(image)}
-              alt="Sun filters through trees in Maine on the Appalachian Trail"
-              // fluid={{ ...this.props.data.file.cis.f, aspectRatio: 32 / 9 }}
-            /> */}
           </div>
-          <div className="semi-hero__text">
-            <h1>Trail Reports</h1>
-            <h2>All Hikes</h2>
+
+          <div className="fixed -z-10 cover-image h-screen max-h-96">
+            <StaticImage
+              alt={`A photo from ` + subTitle}
+              src={coverImage}
+              className="h-screen max-h-96"
+            />
           </div>
         </div>
-        <div className="main__content">
-          {/* <Filter /> */}
-          <div className="body-text">
-            <p>
-              I thru-hiked the{" "}
-              <Link to="/about/the-appalachian-trail">Appalachian Trail</Link>{" "}
-              in 2017, the{" "}
-              <Link to="/about/the-pacific-crest-trail">
-                Pacific Crest Trail
-              </Link>{" "}
-              in 2019, and the{" "}
-              <Link to="/about/the-continental-divide-trail">
-                Continental Divide Trail
-              </Link>{" "}
-              in 2021. You will find daily reports of those hikes and others on
-              this page.
-            </p>
-            <p>
-              The links to the posts of my hikes appear here in reverse{" "}
-              chronological order as they're written. If you prefer to read
-              about one of those hikes from the beginning of the trip, select
-              one of the links above.
-            </p>
+        <div className="relative z-0 bg-white">
+          <div className="mx-auto max-w-5xl">
+            <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
+              <p>
+                I kept detailed notes during my long-distance hikes. Then after
+                returning home, I wrote reports about each day. You can find
+                these by following the links below.
+              </p>
+            </div>
           </div>
-          <div className="container">
-            <ul className="hike-list">{renderContent}</ul>
-            <div className="pager">
-              <ul className="pager-list">
-                {this.state.pageNumbers !== null &&
-                  this.state.pageNumbers.map(number => {
-                    return (
-                      <li>
-                        <button className="magicHelper">
-                          key={number}
-                          id={number}
-                          className=
-                          {number === this.state.currentPage
-                            ? "pager-list__item pager-list__item--active"
-                            : "pager-list__item"}
-                          onClick={this.handleClickPagination}>{number}
-                        </button>
-                      </li>
-                    )
-                  })}
-              </ul>
+          <div className="mx-auto max-w-5xl py-2.5">
+            <h2 className="gravBlack text-center font-bold text-2xl md:text-3xl lg:text-4xl my-4">
+              The Triple Crown of Long-distance Hiking
+            </h2>
+            <div className="hike-list-triple">
+              <article className="hike-list__item">
+                <Link to={"/hikes/at-2017"}>
+                  <div className="hike-list__text">
+                    <h3>Appalachian Trail 2017</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Appalachian Trail 2017"
+                      src="../images/appalachian-trail_mcafee-knob.jpeg"
+                      width="1024"
+                      aspectRatio={6}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
+              <article className="hike-list__item">
+                <Link to={"/hikes/pct-2019"}>
+                  <div className="hike-list__text">
+                    <h3>Pacific Crest Trail 2019</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Pacific Crest Trail 2019"
+                      src="../images/pacific-crest-trail_goat-rocks.jpeg"
+                      width="1024"
+                      aspectRatio={6}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
+              <article className="hike-list__item">
+                <Link to={"/hikes/pct-2019"}>
+                  <div className="hike-list__text">
+                    <h3>Continental Divide Trail 2021</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Continental Divide Trail 2021"
+                      src="../images/cdt_header.jpeg"
+                      width="1024"
+                      aspectRatio={6}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
+            </div>
+          </div>
+          <div className="mx-auto max-w-5xl pt-2.5 pb-6">
+            <h2 className="gravBlack text-center font-bold text-2xl md:text-3xl lg:text-4xl my-4">
+              Other Hikes
+            </h2>
+            <div className="hike-list">
+              <article className="hike-list__item">
+                <Link to={"/hikes/bmt-2020"}>
+                  <div className="hike-list__text">
+                    <h3>Benton MacKaye Trail 2020</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Benton MacKaye Trail 2020"
+                      src="../images/bmt_teaser.jpeg"
+                      width="330"
+                      aspectRatio={1}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
+              <article className="hike-list__item">
+                <Link to={"/hikes/pt-2022"}>
+                  <div className="hike-list__text">
+                    <h3>Pinhoti Trail 2022</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Pinhoti Trail 2022"
+                      src="../images/pt_teaser.jpeg"
+                      width="330"
+                      aspectRatio={1}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
             </div>
           </div>
         </div>
-      </Layout>
-    )
-  }
+      </div>
+    </Layout>
+  )
 }
 
 export default Hikes
-
-const calcpagenumbers = (items, itemsPerPage) => {
-  const pageNumbers = []
-  for (let i = 1; i <= Math.ceil(items.length / itemsPerPage); i++) {
-    pageNumbers.push(i)
-  }
-  return pageNumbers
-}
-
-export const hikeQuery = graphql`
-  {
-    posts: allNodeBlog(
-      sort: { fields: [created], order: [DESC] }
-      filter: {
-        relationships: {
-          field_blog_category: {
-            drupal_internal__tid: { in: [5, 6, 7, 8, 16, 17, 18] }
-          }
-        }
-      }
-      limit: 200
-    ) {
-      edges {
-        node {
-          title
-          nid: drupal_internal__nid
-          path {
-            alias
-          }
-          created
-          relationships {
-            field_main_image {
-              gatsbyImage(width: 300)
-            }
-          }
-          field_main_image {
-            alt
-          }
-        }
-      }
-    }
-  }
-`
-
-// file(relativePath: { eq: "sun-trees-appalachian-trail.jpeg" }) {
-//       gatsbyImage(width: 2048)
-//       }
-//     }

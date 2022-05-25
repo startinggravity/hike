@@ -4,8 +4,8 @@ import PropTypes from "prop-types"
 import HeaderMenu from "./HeaderMenu"
 import SocialMedia from "./SocialMedia"
 import Footer from "./Footer"
-import Trigger from "./Trigger.js"
-// import "./index.scss"
+import Trigger from "./trigger"
+
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -30,7 +30,6 @@ const Layout = ({ children }) => {
           </div>
         </div>
       </main>
-
       <Footer />
     </>
   )
