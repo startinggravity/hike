@@ -113,6 +113,15 @@ module.exports = {
         printRejected: false,
         develop: false,
         tailwind: true,
+        purgeCSSOptions: {
+          safelist: [
+            "search-results-page",
+            "ais-SearchBox-submitIcon",
+            "ais-SearchBox-resetIcon",
+            "ais-SearchBox-input",
+            "ais-SearchBox-submit",
+          ], // Don't remove this selector
+        },
       },
     },
     {
