@@ -10,7 +10,6 @@ export default function Cover({ title, subtitle, alt, image, type }) {
    } else {
      blogTypeClasses = "h-screen max-h-96"
    }
-   console.log(type)
   return (
     <div className={`relative ${blogTypeClasses}`}>
       <div className="heading-container absolute flex justify-center items-center bottom-20 w-full">

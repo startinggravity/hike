@@ -17,11 +17,13 @@ const resolve = (component) => {
     }
 
     if (component.__typename.includes(`paragraph__quotation`)) {
+      const linkTitle = component.link ? component.link.title : ""
+      const linkUri = component.link ? component.link.uri : ""
       return (
-        <ParagraphQuotation 
+        <ParagraphQuotation
           quote={component.text.processed}
-          linkTitle={component.link.title}
-          linkUrl={component.link.uri}
+          linkTitle={linkTitle}
+          linkUrl={linkUri}
           type={component.type}
         />
       )
