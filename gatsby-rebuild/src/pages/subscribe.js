@@ -6,14 +6,13 @@ import Title from "../components/field/title"
 import SubTitle from "../components/field/subtitle"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 
-const fullTitle = "Contact"
-const subTitle = "Gravity"
+const fullTitle = "Subscribe"
+const subTitle = "to Follow Gravity"
 const coverImage = "../images/wind-river-range_cirque-of-towers.jpeg"
 const socialImage = "/gear-page.jpeg"
 const thisPath = "/contact"
 
 export default class Subscribe extends React.Component {
-   
   state = {
     fname: null,
     lname: null,
@@ -42,9 +41,8 @@ export default class Subscribe extends React.Component {
         console.log("err", err)
         alert(err)
       })
-      
   }
-  
+
   render() {
     return (
       <Layout>
@@ -105,7 +103,8 @@ export default class Subscribe extends React.Component {
                 <p>
                   Following me on the trail is easy! Just leave your email
                   address here. I'll let you know when I have made new hiking
-                  plans.
+                  plans. Emails are sent infrequently, so you don't have to
+                  worry about being spammed.
                 </p>
                 <div className="contact">
                   <form
