@@ -470,6 +470,11 @@ a.site-header__logo-link {
     width: 230px;
   }
 }
+@media (min-width: 41em) {
+  .site-header__logo-img img {
+    padding-left: 4px;
+  }
+}
 .content--scroll .site-header__logo-link {
   margin-top: -55px;
   background: none;
