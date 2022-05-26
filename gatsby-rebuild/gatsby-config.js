@@ -72,6 +72,88 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allNodeBlog } }) =>
+              allNodeBlog.edges.map(edge =>
+                Object.assign({}, edge.node.id, {
+                  id: edge.node.id,
+                  description:
+                    edge.node.field_summary.processed +
+                    '<p>Continue reading at <a href="' +
+                    site.siteMetadata.siteUrl +
+                    edge.node.path.alias +
+                    '">' +
+                    site.siteMetadata.siteUrl +
+                    edge.node.path.alias +
+                    "</a></p>",
+                  title: edge.node.title,
+                  url: site.siteMetadata.siteUrl + edge.node.path.alias,
+                  enclosure: getSrc(
+                    edge.node.relationships.feedimg.gatsbyImage
+                  ) && {
+                    url:
+                      site.siteMetadata.siteUrl +
+                      getSrc(edge.node.relationships.feedimg.gatsbyImage),
+                  },
+                  guid: site.siteMetadata.siteUrl + edge.node.path.alias,
+                  custom_elements: [
+                    { pubDate: edge.node.created + " " + "GMT" },
+                  ],
+                })
+              ),
+            query: `
+              {
+                allNodeBlog(
+                  filter: { status: { eq: true } }
+                  sort: { fields: [created], order: [DESC] }
+                  limit: 10
+                ) {
+                  edges {
+                    node {
+                      id
+                      title
+                      status
+                      created(formatString: "ddd, DD MMM YYYY hh:mm:ss")
+                      nid: drupal_internal__nid
+                      path {
+                        alias
+                      }
+                      field_summary {
+                        processed
+                      }
+                      relationships {
+                        feedimg: field_main_image {
+                          gatsbyImage(layout: FIXED, width: 600, height: 338, formats: JPG)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/hikes.xml",
+            title: "Hike with Gravity",
+            link: "https://hikewithgravity.com/hikes.xml",
+            match: "^/hikes/",
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
