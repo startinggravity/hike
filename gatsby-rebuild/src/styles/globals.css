@@ -171,6 +171,9 @@ a:visited {
 .gear-blog-page .cover-img {
   max-height: 24rem;
 }
+.hike-blog-page .gatsby-image-wrapper.gatsby-image-wrapper-constrained.cover-img {
+  height: 70vh;
+}
 .content--scroll .cover-img {
   filter: blur(8px);
   transition: filter 0.3s ease-in;
