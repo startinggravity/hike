@@ -1,5 +1,3 @@
-import { getSrc } from "gatsby-plugin-image"
-
 module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
@@ -104,12 +102,10 @@ module.exports = {
                     "</a></p>",
                   title: edge.node.title,
                   url: site.siteMetadata.siteUrl + edge.node.path.alias,
-                  enclosure: getSrc(
-                    edge.node.relationships.feedimg.gatsbyImage
-                  ) && {
+                  enclosure: edge.node.relationships.feedimg.publicUrl && {
                     url:
                       site.siteMetadata.siteUrl +
-                      getSrc(edge.node.relationships.feedimg.gatsbyImage),
+                      edge.node.relationships.feedimg.publicUrl,
                   },
                   guid: site.siteMetadata.siteUrl + edge.node.path.alias,
                   custom_elements: [
@@ -140,6 +136,7 @@ module.exports = {
                       relationships {
                         feedimg: field_main_image {
                           gatsbyImage(layout: FIXED, width: 600, height: 338, formats: JPG)
+                          publicUrl
                         }
                       }
                     }
