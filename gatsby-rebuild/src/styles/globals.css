@@ -59,14 +59,26 @@ a:visited {
 .quote-wrapper--music {
   background-image: url("../assets/images/music.svg");
   background-repeat: no-repeat;
-  background-size: 90px 90px;
-  background-position: 1.5em 1.5em;
+  background-size: 65px 65px;
+  background-position: 0.3em 1.2em;
+}
+@media (min-width: 950px) {
+  .quote-wrapper--music {
+    background-size: 90px 90px;
+    background-position: 1.5em 1.5em;
+  }
 }
 .quote-wrapper--text {
   background-image: url("../assets/images/quotation.svg");
   background-repeat: no-repeat;
-  background-position: 2.2em 1.7em;
-  background-size: 80px 80px;
+  background-size: 65px 65px;
+  background-position: 0.3em 1.2em;
+}
+@media (min-width: 950px) {
+  .quote-wrapper--text {
+    background-position: 2.2em 1.7em;
+    background-size: 80px 80px;
+  }
 }
 .blog-details {
   width: 100%;
@@ -171,7 +183,8 @@ a:visited {
 .gear-blog-page .cover-img {
   max-height: 24rem;
 }
-.hike-blog-page .gatsby-image-wrapper.gatsby-image-wrapper-constrained.cover-img {
+.hike-blog-page
+  .gatsby-image-wrapper.gatsby-image-wrapper-constrained.cover-img {
   height: 70vh;
 }
 .content--scroll .cover-img {
