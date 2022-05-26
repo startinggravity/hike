@@ -53,15 +53,7 @@ const IndexPage = ({
         <h1 className="visually-hidden">Hike with Gravity</h1>
         <div className="welcome-outer relative overflow-hidden">
           <div className="heading-container absolute welcome w-full h-full">
-            <div className="mx-auto max-w-5xl relative h-full">
-              <div className="welcome__photo h-full">
-                <StaticImage
-                  src="../images/gravity.jpeg"
-                  alt="Gravity"
-                  placeholder="blurred"
-                  className="grav-photo"
-                />
-              </div>
+            <div className="mx-auto max-w-5xl relative h-full grid grid-cols-4 grid-rows-3 content-center items-center">
               <div className="welcome__text text-2xl prose mx-auto max-w-3xl text-gravBlack">
                 <h2>Hello, I'm Gravity.</h2>
                 <p>
@@ -70,6 +62,14 @@ const IndexPage = ({
                   well as a few other trails. This site shares my experiences on
                   those hikes.
                 </p>
+              </div>
+              <div className="welcome__photo">
+                <StaticImage
+                  src="../images/gravity.jpeg"
+                  alt="Gravity"
+                  placeholder="blurred"
+                  className="grav-photo"
+                />
               </div>
             </div>
           </div>

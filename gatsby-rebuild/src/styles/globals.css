@@ -932,108 +932,59 @@ a:hover .hike-list__image:before {
 .gear-blog-page h1 {
   padding-bottom: 10px;
 }
+.welcome-outer {
+  z-index: -1;
+}
 .welcome-outer,
 .welcome,
 .welcome-bg,
 .welcome-bg__img {
   height: 70vh;
 }
-@media (min-height: 1024px) {
-  .welcome-outer,
-  .welcome,
-  .welcome-bg,
-  .welcome-bg__img {
-    height: 100%;
+.welcome__photo {
+  grid-area: photo;
+  grid-column: 1 / span 4;
+  grid-row: 1 / span 5;
+  position: relative;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .welcome__photo {
+    grid-area: photo;
+    grid-column: 2 / span 3;
+    grid-row: 1 / span 3;
   }
 }
 .welcome__text {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  right: auto;
-  z-index: 0;
-  width: 33%;
-  padding: 0.5em;
+  position: relative;
+  z-index: 1;
+  grid-area: text;
+  grid-column: 1 / span 4;
+  grid-row: 5;
+  padding: 1em;
   font-size: 80%;
   line-height: 1.1;
   background-color: white;
 }
-@media (min-width: 26em) {
-  .welcome__text {
-    width: 40%;
-    padding: 0.75em;
-    font-size: 120%;
-  }
-}
 @media (min-width: 768px) {
   .welcome__text {
-    padding: 0.75em;
-    width: 33%;
-    font-size: 150%;
-  }
-}
-@media (min-width: 900px) {
-  .welcome__text {
-    margin-top: 4em;
-  }
-}
-@media (min-width: 960px) {
-  .welcome__text {
-    width: 40%;
-  }
-}
-@media (min-width: 1024px) {
-  .welcome__text {
-    margin-top: 6em;
+    grid-area: text;
+    grid-column: 1;
+    grid-row: 2;
+    margin-right: -3em;
+    padding: 1em;
+    font-size: 120%;
   }
 }
 .welcome__text h2 {
   margin-bottom: 0.25em;
-}
-.welcome__photo {
-  position: relative;
-  z-index: 0;
-  margin-top: 4.5em;
-  margin-left: 5em;
-  object-fit: cover;
-}
-@media (min-width: 26em) {
-  .welcome__photo {
-    margin-top: 10em;
-    margin-left: 15em;
-  }
-}
-@media (min-width: 768px) {
-  .welcome__photo {
-    margin-top: -1em;
-    margin-left: 12em;
-  }
-}
-@media (min-width: 900px) {
-  .welcome__photo {
-    margin-top: -8em;
-  }
-}
-@media (min-width: 960px) {
-  .welcome__photo {
-    margin-top: -6em;
-    margin-left: 20em;
-  }
-}
-@media (min-width: 1024px) {
-  .welcome__photo {
-    margin-top: -3em;
-  }
 }
 .welcome-bg {
   position: relative;
   top: 0;
   bottom: 0;
   z-index: -1;
-}
-.welcome-bg__img {
-  background-color: #8eb48c;
 }
 .gear-blog-page .secondary-menu {
   margin: 1.5em auto 1.5em auto;
