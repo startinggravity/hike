@@ -122,6 +122,7 @@ module.exports = {
             "ais-SearchBox-resetIcon",
             "ais-SearchBox-input",
             "ais-SearchBox-submit",
+            "ais-SearchBox-reset",
             "ais-Hits",
             "ais-Hits-list",
             "ais-Hits-item",
