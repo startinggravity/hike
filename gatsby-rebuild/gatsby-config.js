@@ -25,6 +25,7 @@ module.exports = {
   },
   trailingSlash: "always",
   plugins: [
+    `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-source-drupal`,
       options: {

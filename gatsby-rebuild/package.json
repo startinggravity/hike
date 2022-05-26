@@ -26,6 +26,7 @@
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.15.0",
+    "gatsby-plugin-gatsby-cloud": "^4.15.0",
     "gatsby-plugin-google-gtag": "^4.15.0",
     "gatsby-plugin-image": "^2.14.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
