@@ -7,7 +7,7 @@ export default function CoverImage({ image, alt }) {
       <GatsbyImage
         alt={alt}
         image={getImage(image)}
-        className="cover-img h-screen w-full"
+        className="cover-img w-full"
       />
     </div>
   )

@@ -6,13 +6,13 @@ import SubTitle from "./field/subtitle"
 export default function Cover({ title, subtitle, alt, image, type }) {
    let blogTypeClasses = ""
    if (type === 1 || type === 3) {
-     blogTypeClasses = "h-screen"
+     blogTypeClasses = "h-screen blog-cover"
    } else {
      blogTypeClasses = "h-screen max-h-96"
    }
   return (
     <div className={`relative ${blogTypeClasses}`}>
-      <div className="heading-container absolute flex justify-center items-center bottom-20 w-full">
+      <div className="heading-container absolute flex justify-center items-center bottom-10 w-full">
         <div className="mx-2 text-center w-9/12 cover-text">
           <Title>{title}</Title>
           <SubTitle>{subtitle}</SubTitle>

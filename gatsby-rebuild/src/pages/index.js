@@ -51,10 +51,10 @@ const IndexPage = ({
       />
       <div className="main__content">
         <h1 className="visually-hidden">Hike with Gravity</h1>
-        <div className="welcome-outer h-screen relative">
-          <div className="heading-container absolute welcome w-full h-screen">
-            <div className="mx-auto max-w-5xl relative">
-              <div className="welcome__photo">
+        <div className="welcome-outer relative overflow-hidden">
+          <div className="heading-container absolute welcome w-full h-full">
+            <div className="mx-auto max-w-5xl relative h-full">
+              <div className="welcome__photo h-full">
                 <StaticImage
                   src="../images/gravity.jpeg"
                   alt="Gravity"
@@ -62,7 +62,7 @@ const IndexPage = ({
                   className="grav-photo"
                 />
               </div>
-              <div className="welcome__text text-2xl prose mx-auto max-w-3xl px-5 text-gravBlack">
+              <div className="welcome__text text-2xl prose mx-auto max-w-3xl text-gravBlack">
                 <h2>Hello, I'm Gravity.</h2>
                 <p>
                   I'm a long-distance hiker who has completed the Appalachian
@@ -71,37 +71,6 @@ const IndexPage = ({
                   those hikes.
                 </p>
               </div>
-              <nav className="secondary-menu welcome__links">
-                <ul className="secondary-menu__list">
-                  <li className="secondary-menu__item">
-                    <Link
-                      to={"/hikes"}
-                      title="My Hikes"
-                      className="welcome__links--hikes"
-                    >
-                      My Hikes
-                    </Link>
-                  </li>
-                  <li className="secondary-menu__item">
-                    <Link
-                      to={"/gear"}
-                      title="My Gear"
-                      className="welcome__links--gear"
-                    >
-                      My Gear
-                    </Link>
-                  </li>
-                  <li className="secondary-menu__item">
-                    <Link
-                      to={"/about"}
-                      title="About Me"
-                      className="welcome__links--about"
-                    >
-                      About Me
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
           <div className="welcome-bg fixed -z-10 cover-image">
@@ -109,13 +78,44 @@ const IndexPage = ({
               src="../images/blog_loop_first_frame.jpg"
               alt="Trees"
               placeholder="blurred"
-              className="welcome-bg__img h-screen"
+              className="welcome-bg__img"
             />
           </div>
         </div>
         <div className="mx-auto max-w-5xl py-2.5 mb-8">
           <div className="text-2xl prose text-gravBlack py-2">
-            <h2 className="text-center">My Latest Trail Reports</h2>
+            <nav className="secondary-menu welcome__links">
+              <ul className="secondary-menu__list">
+                <li className="secondary-menu__item">
+                  <Link
+                    to={"/hikes"}
+                    title="My Hikes"
+                    className="welcome__links--hikes"
+                  >
+                    My Hikes
+                  </Link>
+                </li>
+                <li className="secondary-menu__item">
+                  <Link
+                    to={"/gear"}
+                    title="My Gear"
+                    className="welcome__links--gear"
+                  >
+                    My Gear
+                  </Link>
+                </li>
+                <li className="secondary-menu__item">
+                  <Link
+                    to={"/about"}
+                    title="About Me"
+                    className="welcome__links--about"
+                  >
+                    About Me
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            <h2 className="text-center mt-6">My Latest Trail Reports</h2>
           </div>
           <div className="hike-list">{Posts}</div>
         </div>

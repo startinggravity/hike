@@ -932,54 +932,98 @@ a:hover .hike-list__image:before {
 .gear-blog-page h1 {
   padding-bottom: 10px;
 }
+.welcome-outer,
+.welcome,
+.welcome-bg,
+.welcome-bg__img {
+  height: 70vh;
+}
+@media (min-height: 1024px) {
+  .welcome-outer,
+  .welcome,
+  .welcome-bg,
+  .welcome-bg__img {
+    height: 100%;
+  }
+}
 .welcome__text {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: auto;
   z-index: 0;
-  width: 100%;
-  margin-top: -2em;
-  padding: 1em 0.5em 1em 1em;
+  width: 33%;
+  padding: 0.5em;
+  font-size: 80%;
+  line-height: 1.1;
   background-color: white;
 }
-@media (min-width: 600px) {
+@media (min-width: 26em) {
   .welcome__text {
-    width: 77%;
-    margin-top: -6em;
+    width: 40%;
+    padding: 0.75em;
+    font-size: 120%;
   }
 }
 @media (min-width: 768px) {
   .welcome__text {
-    margin-top: -9em;
+    padding: 0.75em;
+    width: 33%;
+    font-size: 150%;
+  }
+}
+@media (min-width: 900px) {
+  .welcome__text {
+    margin-top: 4em;
+  }
+}
+@media (min-width: 960px) {
+  .welcome__text {
+    width: 40%;
   }
 }
 @media (min-width: 1024px) {
   .welcome__text {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    right: auto;
-    z-index: 0;
-    width: 38%;
-    margin-top: 0;
+    margin-top: 6em;
   }
 }
 .welcome__text h2 {
   margin-bottom: 0.25em;
 }
 .welcome__photo {
-  max-width: 70%;
-  margin: 0 auto;
-  aspect-ratio: 3 /4;
   position: relative;
   z-index: 0;
+  margin-top: 4.5em;
+  margin-left: 5em;
   object-fit: cover;
+}
+@media (min-width: 26em) {
+  .welcome__photo {
+    margin-top: 10em;
+    margin-left: 15em;
+  }
+}
+@media (min-width: 768px) {
+  .welcome__photo {
+    margin-top: -1em;
+    margin-left: 12em;
+  }
+}
+@media (min-width: 900px) {
+  .welcome__photo {
+    margin-top: -8em;
+  }
+}
+@media (min-width: 960px) {
+  .welcome__photo {
+    margin-top: -6em;
+    margin-left: 20em;
+  }
 }
 @media (min-width: 1024px) {
   .welcome__photo {
-    max-height: 90vh;
-    position: relative;
-    z-index: 0;
-    margin-left: 20em;
-    object-fit: cover;
+    margin-top: -3em;
   }
 }
 .welcome-bg {
@@ -988,7 +1032,7 @@ a:hover .hike-list__image:before {
   bottom: 0;
   z-index: -1;
 }
-.welcome-bg__imge {
+.welcome-bg__img {
   background-color: #8eb48c;
 }
 .gear-blog-page .secondary-menu {
@@ -996,17 +1040,10 @@ a:hover .hike-list__image:before {
   max-width: 48rem;
 }
 .welcome__links {
-  margin: 2em 0 0 0;
+  margin: 0.5em 0 0 0;
 }
-@media (min-width: 768px) {
-  .welcome__links {
-    margin: 1em 0 2em 0;
-  }
-}
-@media (min-width: 1024px) {
-  .welcome__links {
-    margin: 0 0 2em 0;
-  }
+.blog-cover {
+  height: 70vh;
 }
 .secondary-menu__list {
   display: flex;
@@ -1020,17 +1057,18 @@ a:hover .hike-list__image:before {
   margin: 0.5em;
 }
 .welcome__links .secondary-menu__item {
-  font-size: 160%;
+  margin: 0.8em 0.2em;
 }
 .secondary-menu__item a {
   padding: 0.2em 0.5em;
   color: #984a2d;
-  background: transparent;
   border: 1px solid #984a2d;
   transition: all 0.3s ease-in;
 }
 .welcome__links .secondary-menu__item a {
   color: white;
+  background-color: #984a2d;
+  border: 2px solid #984a2d;
 }
 .secondary-menu__item a:hover {
   color: #273246;
@@ -1038,8 +1076,9 @@ a:hover .hike-list__image:before {
   transition: all 0.3s ease-in;
 }
 .welcome__links .secondary-menu__item a:hover {
-  color: #c8ad90;
-  border: 1px solid #273246;
+  color: white;
+  background-color: #273246;
+  border: 2px solid #273246;
 }
 .secondary-menu__item a[aria-current="page"] {
   color: white;
@@ -1055,7 +1094,7 @@ a.welcome__links--hikes:hover {
   background-image: url(../assets/images/hike_map-hover.svg);
 }
 a.welcome__links--about {
-  padding: 0.5em 2.5em 0.5em 3.7em;
+  padding: 0.5em 2.5em 0.5em 4em;
   background-image: url(../assets/images/about_gravity.svg);
   background-position: 2.5em center;
   background-repeat: no-repeat;
