@@ -184,6 +184,8 @@ a:visited {
   max-height: 24rem;
 }
 .hike-blog-page
+  .gatsby-image-wrapper.gatsby-image-wrapper-constrained.cover-img,
+.about-blog-page
   .gatsby-image-wrapper.gatsby-image-wrapper-constrained.cover-img {
   height: 70vh;
 }

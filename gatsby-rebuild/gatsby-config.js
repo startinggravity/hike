@@ -227,6 +227,7 @@ module.exports = {
             "gear-disclaimer",
             "aria-current",
             "hike-blog-page",
+            "about-blog-page",
             "gatsby-image-wrapper",
             "gatsby-image-wrapper-constrained",
             "cover-img",
