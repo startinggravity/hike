@@ -1,3 +1,5 @@
+import { getSrc } from "gatsby-plugin-image"
+
 module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
