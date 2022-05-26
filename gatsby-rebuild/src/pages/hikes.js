@@ -111,7 +111,7 @@ const Hikes = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/hikes/pct-2019"}>
+                <Link to={"/hikes/cdt-2021"}>
                   <div className="hike-list__text">
                     <h3>Continental Divide Trail 2021</h3>
                   </div>
