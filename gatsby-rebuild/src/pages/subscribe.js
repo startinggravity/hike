@@ -9,8 +9,8 @@ import addToMailchimp from "gatsby-plugin-mailchimp"
 const fullTitle = "Subscribe"
 const subTitle = "to Follow Gravity"
 const coverImage = "../images/wind-river-range_cirque-of-towers.jpeg"
-const socialImage = "/gear-page.jpeg"
-const thisPath = "/contact"
+const socialImage = "/subscribe_page.jpeg"
+const thisPath = "/subscribe"
 
 export default class Subscribe extends React.Component {
   state = {

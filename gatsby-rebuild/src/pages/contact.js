@@ -8,8 +8,8 @@ import SubTitle from "../components/field/subtitle"
 const Contact = () => {
   const fullTitle = "Contact"
   const subTitle = "Gravity"
-  const coverImage = "../images/wind-river-range_cirque-of-towers.jpeg"
-  const socialImage = "/gear-page.jpeg"
+  const coverImage = "../images/contact_header.jpeg"
+  const socialImage = "/contact_social.jpeg"
   const thisPath = "/contact"
   return (
     <Layout>

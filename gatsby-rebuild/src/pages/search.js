@@ -25,7 +25,7 @@ class BlogIndex extends React.Component {
   render() {
     const fullTitle = "Search"
     const coverImage = "../images/weminunche-wilderness_chicago-basin.jpeg"
-    const socialImage = "/gear-page.jpeg"
+    const socialImage = "/search_page.jpeg"
     const thisPath = "/search"
 
     const HitCount = connectStateResults(({ searchResults }) => {
