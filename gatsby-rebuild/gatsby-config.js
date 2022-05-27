@@ -58,8 +58,8 @@ module.exports = {
         name: `Hike with Gravity`,
         short_name: `Gravity`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#8eb48c`,
+        theme_color: `#8eb48c`,
         display: `minimal-ui`,
         icon: `src/assets/images/hike_with_gravity.png`, // This path is relative to the root of the site.
       },
