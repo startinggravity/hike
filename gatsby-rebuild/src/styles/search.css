@@ -81,10 +81,9 @@
   padding: 0 0.15em 0 0;
 }
 .search-results-page .ais-Pagination {
-  margin: 0.5em 0.1em;
   list-style: none;
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1em 0 2em 0;
 }
 .search-results-page .ais-Pagination-list {
   padding: 0;
@@ -93,7 +92,6 @@
 .search-results-page .ais-Pagination-item {
   display: inline-block;
   margin: 0 0.5em;
-  padding: 0.3em;
   width: 2em;
   height: 2em;
   cursor: pointer;
@@ -103,7 +101,7 @@
 }
 .search-results-page a.ais-Pagination-link {
   display: inline-block;
-  margin: 0 0.5em;
+  margin: 0 0.25em;
   padding: 0.3em;
   width: 2em;
   height: 2em;
