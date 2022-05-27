@@ -32,22 +32,22 @@ a:visited {
 }
 .link-underline {
   text-decoration: none;
-  border-bottom: 2px dashed #984a2d;
+  border-bottom: 1px dashed #984a2d;
 }
 .link-hover-underline {
   text-decoration: none;
-  border-bottom: 2px solid #273246;
+  border-bottom: 1px solid #273246;
 }
 .prose a {
   color: #984a2d;
   text-decoration: none;
-  border-bottom: 2px dashed #984a2d;
+  border-bottom: 1px dashed #984a2d;
 }
 .prose a:hover {
   color: #273246;
   text-decoration: none;
   background-color: rgba(39, 50, 70, 0.05);
-  border-bottom: 2px solid #273246;
+  border-bottom: 1px solid #273246;
 }
 .quote-wrapper {
   min-height: 8em;

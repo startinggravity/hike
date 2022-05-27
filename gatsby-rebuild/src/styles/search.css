@@ -122,6 +122,6 @@
 .search-results-page .ais-Pagination-item--previousPage .ais-Pagination-link {
   font-weight: bold;
 }
-.search-results-page .ais-Pagination-item--disabled {
+.search-results-page .prose .ais-Pagination-item--disabled {
   display: none;
 }
