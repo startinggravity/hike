@@ -1063,9 +1063,9 @@ a.welcome__links--hikes:hover {
   background-image: url(../assets/images/hike_map-hover.svg);
 }
 a.welcome__links--about {
-  padding: 0.5em 2.5em 0.5em 4em;
+  padding: 0.5em 2.5em 0.5em 3.5em;
   background-image: url(../assets/images/about_gravity.svg);
-  background-position: 2.5em center;
+  background-position: 2.2em center;
   background-repeat: no-repeat;
 }
 a.welcome__links--about:hover {
