@@ -1024,6 +1024,7 @@ a:hover .hike-list__image:before {
 }
 .secondary-menu__item {
   margin: 0.5em;
+  text-transform: uppercase;
 }
 .welcome__links .secondary-menu__item {
   margin: 0.8em 0.2em;
