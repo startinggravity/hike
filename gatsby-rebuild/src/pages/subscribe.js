@@ -48,7 +48,7 @@ export default class Subscribe extends React.Component {
       <Layout>
         <Seo
           title={fullTitle + ` ` + subTitle}
-          description="Contact me using the form on this page."
+          description="Share your email address and I'll let you know when I have made new hiking plans."
           keywords={[
             `Pacific Crest Trail`,
             `Appalachian Trail`,
