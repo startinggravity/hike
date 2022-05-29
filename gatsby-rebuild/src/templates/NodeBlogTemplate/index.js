@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 import uuid from "react-uuid"
 import { componentResolver } from "../../helpers/component-resolver"
 import Cover from "../../components/cover"
@@ -15,9 +16,8 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
   const components = componentResolver(node?.relationships?.field_body_elements)
   let subTitle = ""
   let fullTitle = ""
-  // let gearTitle = title + ": " + subtitle
+  const socialImageSrc = getSrc(node.relationships.social.gatsbyImage)
   const blogType = node.type.tid
-  const socialImageSrc = node.relationships.social.publicUrl
   let contentType = ""
 
   if (node.type.tid === 1) {
@@ -166,7 +166,6 @@ export const query = graphql`
         }
         social: field_main_image {
           gatsbyImage(layout: FIXED, width: 600, height: 338, formats: JPG)
-          publicUrl
         }
         field_body_elements {
           __typename
