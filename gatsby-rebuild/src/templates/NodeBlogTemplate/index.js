@@ -165,7 +165,7 @@ export const query = graphql`
           gatsbyImage(width: 2048, aspectRatio: 1.778)
         }
         social: field_main_image {
-          gatsbyImage(layout: FIXED, width: 1200, height: 630, formats: JPG)
+          gatsbyImage(layout: FIXED, width: 1200, height: 675, formats: JPG)
         }
         field_body_elements {
           __typename

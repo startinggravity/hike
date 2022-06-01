@@ -109,11 +109,11 @@ function SEO({
         },
         {
           name: `og:image:width`,
-          content: `600`,
+          content: `1200`,
         },
         {
           name: `og:image:height`,
-          content: `338`,
+          content: `675`,
         },
         {
           property: `article:author`,
