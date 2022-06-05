@@ -1,3 +1,5 @@
+const siteUrl = process.env.URL || `https://hikewithgravity.com`
+
 module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
@@ -238,6 +240,68 @@ module.exports = {
     {
       resolve: `gatsby-plugin-algolia`,
       options: require(`./gatsby-plugin-algolia-config.js`),
+    },
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        query: `
+            {
+                allNodeBlog {
+                    edges {
+                        node {
+                            created
+                            path {
+                              alias
+                            }
+                            fields {
+                              slug
+                            }
+                            changed
+                            relationships {
+                              field_main_image {
+                                publicUrl
+                              }
+                            }
+                        }
+                    }
+                }
+            }`,
+        output: "/sitemap.xml",
+        // mapping: {
+        //     // Each data type can be mapped to a predefined sitemap
+        //     // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
+        //     // The default sitemap - if none is passed - will be pages
+        //     allNodeBlog: {
+        //         sitemap: `posts`,
+        //         // Add a query level prefix to slugs, Don't get confused with global path prefix from Gatsby
+        //         // This will add a prefix to this particular sitemap only
+        //         prefix: 'your-prefix/',
+        //         // Custom Serializer
+        //         serializer: (edges) => {
+        //             return edges.map(({ node }) => {
+        //                 (...) // Custom logic to change final sitemap.
+        //             })
+        //         }
+        //     },
+        //     allGhostTag: {
+        //         sitemap: `tags`,
+        //     },
+        //     allGhostAuthor: {
+        //         sitemap: `authors`,
+        //     },
+        //     allGhostPage: {
+        //         sitemap: `pages`,
+        //     },
+        // },
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
+        createLinkInHead: true, // optional: create a link in the `<head>` of your site
+        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+      },
     },
   ],
 }
