@@ -182,8 +182,6 @@ module.exports = {
         },
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-plugin-postcss`,
@@ -237,6 +235,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-split-css`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: require(`./gatsby-plugin-algolia-config.js`),
@@ -267,40 +266,14 @@ module.exports = {
                 }
             }`,
         output: "/sitemap.xml",
-        // mapping: {
-        //     // Each data type can be mapped to a predefined sitemap
-        //     // Routes can be grouped in one of: posts, tags, authors, pages, or a custom name
-        //     // The default sitemap - if none is passed - will be pages
-        //     allNodeBlog: {
-        //         sitemap: `posts`,
-        //         // Add a query level prefix to slugs, Don't get confused with global path prefix from Gatsby
-        //         // This will add a prefix to this particular sitemap only
-        //         prefix: 'your-prefix/',
-        //         // Custom Serializer
-        //         serializer: (edges) => {
-        //             return edges.map(({ node }) => {
-        //                 (...) // Custom logic to change final sitemap.
-        //             })
-        //         }
-        //     },
-        //     allGhostTag: {
-        //         sitemap: `tags`,
-        //     },
-        //     allGhostAuthor: {
-        //         sitemap: `authors`,
-        //     },
-        //     allGhostPage: {
-        //         sitemap: `pages`,
-        //     },
-        // },
         exclude: [
           `/dev-404-page`,
           `/404`,
           `/404.html`,
           `/offline-plugin-app-shell-fallback`,
         ],
-        createLinkInHead: true, // optional: create a link in the `<head>` of your site
-        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
+        createLinkInHead: true, 
+        addUncaughtPages: true, 
       },
     },
   ],
