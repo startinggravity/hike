@@ -247,6 +247,15 @@ module.exports = {
       options: {
         query: `
           {
+            allNodePage {
+              edges {
+                node {
+                  path {
+                    alias
+                  }
+                }
+              }
+            }
             allNodeBlog {
               edges {
                 node {
@@ -265,6 +274,7 @@ module.exports = {
           }`,
         sitemapTree: {
           fileName: "sitemap.xml",
+          createLinkInHead: true,
           children: [
             {
               fileName: "sitemap-posts.xml",
@@ -275,6 +285,14 @@ module.exports = {
                   "image:loc":
                     siteUrl + edge.relationships.field_main_image.publicUrl,
                 },
+                lastmod: edge.changed,
+              }),
+            },
+            {
+              fileName: "sitemap-pages.xml",
+              queryName: "allNodePage",
+              serializer: edge => ({
+                loc: edge.path.alias,
                 lastmod: edge.changed,
               }),
             },
