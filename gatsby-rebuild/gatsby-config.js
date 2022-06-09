@@ -253,6 +253,7 @@ module.exports = {
                   path {
                     alias
                   }
+                  changed
                 }
               }
             }
@@ -262,7 +263,7 @@ module.exports = {
                   path {
                     alias
                   }
-                  changed(formatString: "YYYY-MM-DD")
+                  changed
                   relationships {
                     field_main_image {
                       publicUrl
