@@ -271,8 +271,8 @@ module.exports = {
               queryName: "allNodeBlog",
               serializer: edge => ({
                 loc: edge.path.alias,
-                "image:image" : {
-                  "image:loc" : edge.relationships.file_main_image.publicUrl,
+                "image:image": {
+                  "image:loc": edge.relationships.field_main_image.publicUrl,
                 },
                 lastmod: edge.changed,
               }),
