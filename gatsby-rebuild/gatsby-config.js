@@ -272,7 +272,8 @@ module.exports = {
               serializer: edge => ({
                 loc: edge.path.alias,
                 "image:image": {
-                  "image:loc": edge.relationships.field_main_image.publicUrl,
+                  "image:loc":
+                    siteUrl + edge.relationships.field_main_image.publicUrl,
                 },
                 lastmod: edge.changed,
               }),
