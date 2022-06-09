@@ -279,12 +279,13 @@ module.exports = {
             {
               fileName: "sitemap-posts.xml",
               queryName: "allNodeBlog",
+              urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
               serializer: edge => ({
                 loc: edge.path.alias,
-                // "image:image": {
-                //   "image:loc":
-                //     siteUrl + edge.relationships.field_main_image.publicUrl,
-                // },
+                "image:image": {
+                  "image:loc":
+                    siteUrl + edge.relationships.field_main_image.publicUrl,
+                },
                 lastmod: edge.changed,
               }),
             },
