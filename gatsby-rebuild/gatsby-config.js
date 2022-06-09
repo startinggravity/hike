@@ -272,9 +272,9 @@ module.exports = {
               }
             }
           }`,
+        createLinkInHead: true,
         sitemapTree: {
           fileName: "sitemap.xml",
-          createLinkInHead: true,
           children: [
             {
               fileName: "sitemap-posts.xml",
