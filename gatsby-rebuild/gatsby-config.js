@@ -1,4 +1,4 @@
-const siteUrl = process.env.URL || `https://hikewithgravity.com`
+const siteUrl = `https://hikewithgravity.com`
 
 module.exports = {
   siteMetadata: {
@@ -161,18 +161,20 @@ module.exports = {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           "UA-91337611-1", // Google Analytics / GA
+          "", // Google Ads / Adwords / AW
+          "", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
+          optimize_id: "",
           anonymize_ip: true,
           cookie_expires: 0,
         },
         // This object is used for configuration specific to this plugin
         pluginConfig: {
           // Puts tracking script in the head instead of the body
-          head: false,
+          head: true,
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
@@ -241,39 +243,42 @@ module.exports = {
       options: require(`./gatsby-plugin-algolia-config.js`),
     },
     {
-      resolve: `gatsby-plugin-advanced-sitemap`,
+      resolve: `gatsby-plugin-complex-sitemap-tree`,
       options: {
         query: `
-            {
-                allNodeBlog {
-                    edges {
-                        node {
-                            created
-                            path {
-                              alias
-                            }
-                            fields {
-                              slug
-                            }
-                            changed
-                            relationships {
-                              field_main_image {
-                                publicUrl
-                              }
-                            }
-                        }
+          {
+            allNodeBlog {
+              edges {
+                node {
+                  path {
+                    alias
+                  }
+                  changed(formatString: "YYYY-MM-DD")
+                  relationships {
+                    field_main_image {
+                      publicUrl
                     }
+                  }
                 }
-            }`,
-        output: "/sitemap.xml",
-        exclude: [
-          `/dev-404-page`,
-          `/404`,
-          `/404.html`,
-          `/offline-plugin-app-shell-fallback`,
-        ],
-        createLinkInHead: true, 
-        addUncaughtPages: true, 
+              }
+            }
+          }`,
+        sitemapTree: {
+          fileName: "sitemap.xml",
+          children: [
+            {
+              fileName: "sitemap-posts.xml",
+              queryName: "allNodeBlog",
+              serializer: edge => ({
+                loc: edge.node.path.alias,
+                "image:image" : {
+                  "image:loc" : edge.node.relationships.file_main_image.publicUrl,
+                },
+                lastmod: edge.node.changed,
+              }),
+            },
+          ],
+        },
       },
     },
   ],
