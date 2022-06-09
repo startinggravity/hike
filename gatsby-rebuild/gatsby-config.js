@@ -270,11 +270,11 @@ module.exports = {
               fileName: "sitemap-posts.xml",
               queryName: "allNodeBlog",
               serializer: edge => ({
-                loc: edge.node.path.alias,
+                loc: edge.path.alias,
                 "image:image" : {
-                  "image:loc" : edge.node.relationships.file_main_image.publicUrl,
+                  "image:loc" : edge.relationships.file_main_image.publicUrl,
                 },
-                lastmod: edge.node.changed,
+                lastmod: edge.changed,
               }),
             },
           ],
