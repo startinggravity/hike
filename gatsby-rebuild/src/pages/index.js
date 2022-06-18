@@ -83,7 +83,7 @@ const IndexPage = ({
           </div>
         </div>
         <div className="mx-auto max-w-5xl py-2.5 mb-8">
-          <div className="text-2xl prose text-gravBlack py-2">
+          <div className="text-2xl prose text-gravBlack py-2 mx-auto my-0">
             <nav className="secondary-menu welcome__links">
               <ul className="secondary-menu__list">
                 <li className="secondary-menu__item">
