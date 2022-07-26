@@ -5,11 +5,11 @@ import footerLogo from "./footer_logo.svg"
 import ccLogo from "./creative_commons.svg"
 
 function FooterLogo() {
-  return <img src={footerLogo} alt="Hike with Gravity Logo" />
+  return <img src={footerLogo} alt="Hike with Gravity Logo" loading="lazy"/>
 }
 
 function CreativeCommonsLogo() {
-  return <img src={ccLogo} alt="Creative Commons license Logo" />
+  return <img src={ccLogo} alt="Creative Commons license Logo" loading="lazy"/>
 }
 
 const Footer = () => (
