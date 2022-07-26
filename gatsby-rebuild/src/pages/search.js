@@ -92,6 +92,7 @@ class BlogIndex extends React.Component {
                   alt="Cirue of the Towers, Wind River Range, Wyoming"
                   src={coverImage}
                   className="h-screen max-h-96 cover-img"
+                  loading="eager"
                 />
               </div>
             </div>

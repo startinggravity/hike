@@ -93,6 +93,7 @@ export default class Subscribe extends React.Component {
                   alt="Cirue of the Towers, Wind River Range, Wyoming"
                   src={coverImage}
                   className="cover-img h-screen max-h-96"
+                  loading="eager"
                 />
               </div>
             </div>
