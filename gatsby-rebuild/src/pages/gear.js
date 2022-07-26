@@ -58,6 +58,7 @@ const Gear = () => {
                 alt="Gravity on the Pacific Crest Trail"
                 src={coverImage}
                 className="cover-img h-screen max-h-96"
+                loading="eager"
               />
             </div>
           </div>

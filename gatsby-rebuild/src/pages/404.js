@@ -57,6 +57,7 @@ const NotFoundPage = data => {
               alt="404: Page not found"
               src={coverImage}
               className="cover-img h-screen max-h-96"
+              loading="eager"
             />
           </div>
         </div>
