@@ -79,6 +79,7 @@ const IndexPage = ({
               alt="Trees"
               placeholder="blurred"
               className="welcome-bg__img"
+              loading="eager"
             />
           </div>
         </div>

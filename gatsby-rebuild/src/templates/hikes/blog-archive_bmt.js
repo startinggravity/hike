@@ -79,6 +79,7 @@ const BlogArchive = ({ data, pageContext }) => {
               alt={`A photo from ` + subTitle}
               src={coverImage}
               className="h-screen max-h-96"
+              loading="eager"
             />
           </div>
         </div>

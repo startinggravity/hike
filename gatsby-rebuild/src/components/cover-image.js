@@ -8,6 +8,7 @@ export default function CoverImage({ image, alt }) {
         alt={alt}
         image={getImage(image)}
         className="cover-img w-full"
+        loading="eager"
       />
     </div>
   )
