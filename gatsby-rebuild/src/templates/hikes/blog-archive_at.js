@@ -88,7 +88,7 @@ const BlogArchive = ({ data, pageContext }) => {
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
                 I thru-hiked the Appalachian Trail in 2017. Day-by-day reports
-                of my hike are found on these pages. Read more about the AT{" "}
+                of my hike are found below. Read more about the AT{" "}
                 <Link
                   to={"/about/the-appalachian-trail"}
                   title={"The Appalachian Trail"}

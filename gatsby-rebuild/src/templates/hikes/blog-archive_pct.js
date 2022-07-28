@@ -88,7 +88,7 @@ const BlogArchive = ({ data, pageContext }) => {
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
                 I thru-hiked the Pacific Crest Trail in 2019. Day-by-day reports
-                of my hike are found on these pages. Read more about the PCT{" "}
+                of my hike are found below. Read more about the PCT{" "}
                 <Link
                   to={"/about/the-pacific-crest-trail"}
                   title={"The Pacific Crest Trail"}

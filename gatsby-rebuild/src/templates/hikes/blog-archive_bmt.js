@@ -88,7 +88,7 @@ const BlogArchive = ({ data, pageContext }) => {
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
                 I thru-hiked the Benton MacKaye Trail in 2020. Day-by-day
-                reports of my hike are found here. Read more about the BMT{" "}
+                reports of my hike are found below. Read more about the BMT{" "}
                 <Link
                   to={"/about/the-benton-mackaye-trail"}
                   title={"The Benton MacKaye Trail"}
