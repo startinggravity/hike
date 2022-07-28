@@ -38,7 +38,7 @@
     "gatsby-plugin-react-helmet": "^5.9.0",
     "gatsby-plugin-sharp": "^4.14.1",
     "gatsby-plugin-split-css": "^2.0.2",
-    "gatsby-source-drupal": "^5.9.0",
+    "gatsby-source-drupal": "^5.20.0",
     "gatsby-source-drupal-menu-links": "^3.0.1",
     "gatsby-source-filesystem": "^4.13.0",
     "gatsby-transformer-sharp": "^4.14.0",
