@@ -4,8 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import('./src/styles/globals.css')
-
 export function shouldUpdateScroll(prevRouterProps, { location }) {
   window.scrollTo(0, 0)
   const body = document.getElementsByTagName("body")[0]

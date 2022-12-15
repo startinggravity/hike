@@ -5,7 +5,7 @@ import HeaderMenu from "./HeaderMenu"
 import SocialMedia from "./SocialMedia"
 import Footer from "./Footer"
 import Trigger from "../helpers/trigger"
-
+import "../styles/globals.css"
 
 const Layout = ({ children }) => {
 
