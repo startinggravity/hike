@@ -282,7 +282,7 @@ module.exports = {
               queryName: "allNodeBlog",
               urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
               serializer: edge => ({
-                loc: edge.path.alias,
+                loc: edge.path.alias + "/",
                 "image:image": {
                   "image:loc":
                     siteUrl + edge.relationships.field_main_image.publicUrl,
@@ -294,7 +294,7 @@ module.exports = {
               fileName: "sitemap-pages.xml",
               queryName: "allNodePage",
               serializer: edge => ({
-                loc: edge.path.alias,
+                loc: edge.path.alias + "/",
                 lastmod: edge.changed,
               }),
             },
