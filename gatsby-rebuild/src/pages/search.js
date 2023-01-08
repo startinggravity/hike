@@ -18,7 +18,7 @@ import "../styles/search.css"
 
 const searchClient = algoliasearch(
   "GRBKEZ1C17",
-  "db67d4305a01539b0d9b3e4fb1a0871a"
+  "108fc3ecd716a4c434ea81b52e149727"
 )
 
 class BlogIndex extends React.Component {

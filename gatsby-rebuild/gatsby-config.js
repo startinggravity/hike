@@ -276,6 +276,7 @@ module.exports = {
         createLinkInHead: true,
         sitemapTree: {
           fileName: "sitemap.xml",
+          urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"`,
           children: [
             {
               fileName: "sitemap-posts.xml",
@@ -292,6 +293,7 @@ module.exports = {
             },
             {
               fileName: "sitemap-pages.xml",
+              urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"`,
               queryName: "allNodePage",
               serializer: edge => ({
                 loc: edge.path.alias + "/",
