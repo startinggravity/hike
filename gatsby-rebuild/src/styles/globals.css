@@ -85,7 +85,7 @@ a:visited {
   float: none;
   margin-top: 0.5em;
   margin-bottom: 1.5em;
-  margin-left: 1em;
+  margin-left: 0;
   border-right: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
@@ -99,12 +99,14 @@ a:visited {
   .blog-details {
     width: 50%;
     float: right;
+    margin-left: 1em;
   }
 }
 @media (min-width: 768px) {
   .blog-details {
     width: 40%;
     float: right;
+    margin-left: 1em;
   }
 }
 .blog-details td {
