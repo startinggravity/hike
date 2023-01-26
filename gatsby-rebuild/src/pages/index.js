@@ -58,9 +58,9 @@ const IndexPage = ({
                 <h2>Hello, I'm Gravity.</h2>
                 <p>
                   I'm a long-distance hiker who has completed the Appalachian
-                  Trail, the Pacific Crest Trail, and the Continental Trail, as
-                  well as a few other trails. This site shares my experiences on
-                  those hikes.
+                  Trail, the Pacific Crest Trail, and the Continental Trail.
+                  This site shares my experiences on those and a few other
+                  trails.
                 </p>
               </div>
               <div className="welcome__photo">
