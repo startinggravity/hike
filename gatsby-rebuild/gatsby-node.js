@@ -89,8 +89,24 @@ exports.createPages = ({ actions, graphql }) => {
           createPage,
           items: result.data.allNodeBlog.edges,
           itemsPerPage: 24,
+          pathPrefix: "/hikes/alt-2021",
+          component: path.resolve("src/templates/hikes/blog-archive_alt.js"),
+        })
+        // PT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
           pathPrefix: "/hikes/pt-2022",
           component: path.resolve("src/templates/hikes/blog-archive_pt.js"),
+        })
+        // PT Teasers
+        paginate({
+          createPage,
+          items: result.data.allNodeBlog.edges,
+          itemsPerPage: 24,
+          pathPrefix: "/hikes/fht-bt-2022",
+          component: path.resolve("src/templates/hikes/blog-archive_fht-bt.js"),
         })
       })
     )

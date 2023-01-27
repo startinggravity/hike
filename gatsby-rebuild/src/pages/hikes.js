@@ -153,7 +153,7 @@ const Hikes = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                {/* <Link to={"/hikes/alt-2021/"}> */}
+                <Link to={"/hikes/alt-2021/"}>
                   <div className="hike-list__text">
                     <h3>
                       Art Loeb Trail 2021
@@ -170,10 +170,10 @@ const Hikes = () => {
                       className="blog-thumb"
                     />
                   </div>
-                {/* </Link> */}
+                </Link>
               </article>
               <article className="hike-list__item">
-                {/* <Link to={"/hikes/pt-2022/"}> */}
+                <Link to={"/hikes/pt-2022/"}>
                   <div className="hike-list__text">
                     <h3>
                       Pinhoti Trail 2022
@@ -190,10 +190,10 @@ const Hikes = () => {
                       className="blog-thumb"
                     />
                   </div>
-                {/* </Link> */}
+                </Link>
               </article>
               <article className="hike-list__item">
-                {/* <Link to={"/hikes/fht-bt-2022/"}> */}
+                <Link to={"/hikes/fht-bt-2022/"}>
                   <div className="hike-list__text">
                     <h3>
                       Foothills and Bartram trails 2022
@@ -210,7 +210,7 @@ const Hikes = () => {
                       className="blog-thumb"
                     />
                   </div>
-                {/* </Link> */}
+                </Link>
               </article>
             </div>
           </div>

@@ -13,7 +13,7 @@ export const pageQuery = graphql`
       sort: { fields: [created], order: [ASC] }
       filter: {
         relationships: {
-          field_blog_category: { drupal_internal__tid: { in: 20 } }
+          field_blog_category: { drupal_internal__tid: { in: 21 } }
         }
       }
       skip: $skip
@@ -94,7 +94,7 @@ const BlogArchive = ({ data, pageContext }) => {
             </div>
           </div>
           <div className="mx-auto max-w-5xl py-2.5">
-            {/* <div className="hike-list">
+            <div className="hike-list">
               {posts.map(({ node }) => {
                 const postTitle = node.title || node.fields.slug
                 const thumb = node.relationships.field_main_image.gatsbyImage
@@ -116,7 +116,7 @@ const BlogArchive = ({ data, pageContext }) => {
                   </article>
                 )
               })}
-            </div> */}
+            </div>
           </div>
           <div className="mx-auto max-w-5xl py-2.5">
             <Pager pageContext={pageContext} totalPosts={totalPosts} />

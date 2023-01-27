@@ -13,7 +13,7 @@ export const pageQuery = graphql`
       sort: { fields: [created], order: [ASC] }
       filter: {
         relationships: {
-          field_blog_category: { drupal_internal__tid: { in: 19 } }
+          field_blog_category: { drupal_internal__tid: { in: 20 } }
         }
       }
       skip: $skip
