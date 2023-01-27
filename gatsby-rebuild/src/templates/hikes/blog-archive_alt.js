@@ -49,10 +49,10 @@ const BlogArchive = ({ data, pageContext }) => {
   const posts = data.allNodeBlog.edges
   const totalPosts = data.allNodeBlog.totalCount
   const fullTitle = "Hike Reports:"
-  const subTitle = "Pinhoti Trail 2022"
-  const coverImage = "../../images/pt_header.jpeg"
-  const socialImage = "/pt_social.jpeg"
-  const thisPath = "/hikes/pt-2022"
+  const subTitle = "Art Loeb Trail 2021"
+  const coverImage = "../../images/alt_header.jpeg"
+  const socialImage = "/alt_social.jpeg"
+  const thisPath = "/hikes/alt-2021"
   return (
     <>
       <Seo
@@ -87,8 +87,9 @@ const BlogArchive = ({ data, pageContext }) => {
           <div className="mx-auto max-w-5xl">
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
-                I thru-hiked the Pinhoti Trail in the spring of 2022. Day-by-day reports will
-                be posted when I have time to catch up with my writing.
+                I thru-hiked the Art Loeb Trail in November 2021.
+                Day-by-day reports will be posted when I have time to catch up
+                with my writing.
                 {/* of my hike are found on these pages. Read more about the PT{" "}
               <Link
                 to={"/about/the-pinhoti-trail"}

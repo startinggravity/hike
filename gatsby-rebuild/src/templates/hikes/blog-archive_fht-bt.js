@@ -13,7 +13,7 @@ export const pageQuery = graphql`
       sort: { fields: [created], order: [ASC] }
       filter: {
         relationships: {
-          field_blog_category: { drupal_internal__tid: { in: 19 } }
+          field_blog_category: { drupal_internal__tid: { in: 20 } }
         }
       }
       skip: $skip
@@ -49,10 +49,10 @@ const BlogArchive = ({ data, pageContext }) => {
   const posts = data.allNodeBlog.edges
   const totalPosts = data.allNodeBlog.totalCount
   const fullTitle = "Hike Reports:"
-  const subTitle = "Pinhoti Trail 2022"
-  const coverImage = "../../images/pt_header.jpeg"
-  const socialImage = "/pt_social.jpeg"
-  const thisPath = "/hikes/pt-2022"
+  const subTitle = "Foothills and Bartram trails 2022"
+  const coverImage = "../../images/fht-bt_header.jpeg"
+  const socialImage = "/fht-bt_social.jpeg"
+  const thisPath = "/hikes/fht-bt-2022"
   return (
     <>
       <Seo
@@ -87,20 +87,14 @@ const BlogArchive = ({ data, pageContext }) => {
           <div className="mx-auto max-w-5xl">
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
-                I thru-hiked the Pinhoti Trail in the spring of 2022. Day-by-day reports will
-                be posted when I have time to catch up with my writing.
-                {/* of my hike are found on these pages. Read more about the PT{" "}
-              <Link
-                to={"/about/the-pinhoti-trail"}
-                title={"The Pinhoti Trail"}
-              >
-                here
-              </Link> */}
+                I thru-hiked the Foothills and Bartram trails in October,
+                2022. Day-by-day reports will be posted when I have a chance to
+                catch up on other writing.
               </p>
             </div>
           </div>
           <div className="mx-auto max-w-5xl py-2.5">
-            <div className="hike-list">
+            {/* <div className="hike-list">
               {posts.map(({ node }) => {
                 const postTitle = node.title || node.fields.slug
                 const thumb = node.relationships.field_main_image.gatsbyImage
@@ -122,7 +116,7 @@ const BlogArchive = ({ data, pageContext }) => {
                   </article>
                 )
               })}
-            </div>
+            </div> */}
           </div>
           <div className="mx-auto max-w-5xl py-2.5">
             <Pager pageContext={pageContext} totalPosts={totalPosts} />

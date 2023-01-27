@@ -27,8 +27,10 @@ const Hikes = () => {
           `White Mountains`,
           `Springer Mountain`,
           `Mount Katahdin`,
-          "Benton MacKaye",
-          "Pinhoti",
+          `Benton MacKaye`,
+          `Pinhoti`,
+          `Foothills Trail`,
+          `Bartram Trail`,
           `AT`,
           `PCT`,
           `CDT`,
@@ -41,7 +43,7 @@ const Hikes = () => {
           `long distance hiking`,
           `blog`,
           `Gravity`,
-          "Hike with Gravity",
+          `Hike with Gravity`,
         ]}
         nodePath={thisPath}
         nodeImage={socialImage}
@@ -80,7 +82,7 @@ const Hikes = () => {
             </h2>
             <div className="hike-list-triple">
               <article className="hike-list__item">
-                <Link to={"/hikes/at-2017"}>
+                <Link to={"/hikes/at-2017/"}>
                   <div className="hike-list__text">
                     <h3>Appalachian Trail 2017</h3>
                   </div>
@@ -96,7 +98,7 @@ const Hikes = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/hikes/pct-2019"}>
+                <Link to={"/hikes/pct-2019/"}>
                   <div className="hike-list__text">
                     <h3>Pacific Crest Trail 2019</h3>
                   </div>
@@ -112,7 +114,7 @@ const Hikes = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/hikes/cdt-2021"}>
+                <Link to={"/hikes/cdt-2021/"}>
                   <div className="hike-list__text">
                     <h3>Continental Divide Trail 2021</h3>
                   </div>
@@ -135,7 +137,7 @@ const Hikes = () => {
             </h2>
             <div className="hike-list">
               <article className="hike-list__item">
-                <Link to={"/hikes/bmt-2020"}>
+                <Link to={"/hikes/bmt-2020/"}>
                   <div className="hike-list__text">
                     <h3>Benton MacKaye Trail 2020</h3>
                   </div>
@@ -151,9 +153,33 @@ const Hikes = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/hikes/pt-2022"}>
+                {/* <Link to={"/hikes/alt-2021/"}> */}
                   <div className="hike-list__text">
-                    <h3>Pinhoti Trail 2022</h3>
+                    <h3>
+                      Art Loeb Trail 2021
+                      <br />
+                      <span>(reports coming soon)</span>
+                    </h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Art Loeb Trail 2021"
+                      src="../images/alt_teaser.jpeg"
+                      width="330"
+                      aspectRatio={1}
+                      className="blog-thumb"
+                    />
+                  </div>
+                {/* </Link> */}
+              </article>
+              <article className="hike-list__item">
+                {/* <Link to={"/hikes/pt-2022/"}> */}
+                  <div className="hike-list__text">
+                    <h3>
+                      Pinhoti Trail 2022
+                      <br />
+                      <span>(reports coming soon)</span>
+                    </h3>
                   </div>
                   <div className="hike-list__image">
                     <StaticImage
@@ -164,7 +190,27 @@ const Hikes = () => {
                       className="blog-thumb"
                     />
                   </div>
-                </Link>
+                {/* </Link> */}
+              </article>
+              <article className="hike-list__item">
+                {/* <Link to={"/hikes/fht-bt-2022/"}> */}
+                  <div className="hike-list__text">
+                    <h3>
+                      Foothills and Bartram trails 2022
+                      <br />
+                      <span>(reports coming soon)</span>
+                    </h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Foothills and Bartram trails 2022"
+                      src="../images/fht-bt_teaser.jpeg"
+                      width="330"
+                      aspectRatio={1}
+                      className="blog-thumb"
+                    />
+                  </div>
+                {/* </Link> */}
               </article>
             </div>
           </div>
