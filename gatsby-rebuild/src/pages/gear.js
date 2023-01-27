@@ -161,7 +161,7 @@ const Gear = () => {
               <article className="hike-list__item">
                 <Link to={"/gear/electronics"}>
                   <div className="hike-list__text">
-                    <h3>Eectronics</h3>
+                    <h3>Electronics</h3>
                   </div>
                   <div className="hike-list__image">
                     <StaticImage
