@@ -96,6 +96,10 @@ function SEO({
           content: `website`,
         },
         {
+          property: `og:locale`,
+          content: `en-US`,
+        },
+        {
           property: `og:image`,
           content: metaImage,
         },

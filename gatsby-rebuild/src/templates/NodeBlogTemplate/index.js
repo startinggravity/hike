@@ -16,6 +16,7 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
   const components = componentResolver(node?.relationships?.field_body_elements)
   let subTitle = ""
   let fullTitle = ""
+  let pageDescription = ""
   const socialImageSrc = getSrc(node.relationships.social.gatsbyImage)
   const blogType = node.type.tid
   let contentType = ""
@@ -24,14 +25,17 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
     contentType = "main-content hike-blog-page"
     fullTitle = node.rel.cat.name + ": " + title
     subTitle = subtitle
+    pageDescription = "'" + subTitle + "' , a blog post by Gravity, covering " + fullTitle + "."
   } else if (node.type.tid === 2) {
     contentType = "main-content gear-blog-page"
     fullTitle = subtitle
     subTitle = title
+    pageDescription = "A gear list for " + title + " carried by Gravity on his hikes."
   } else {
     contentType = "main-content about-blog-page"
     fullTitle = node.rel.cat.name + ": " + title
     subTitle = subtitle
+    pageDescription = "Information about " + title + "."
   }
 
   // For previous article.
@@ -88,7 +92,7 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
     <>
       <Seo
         title={fullTitle}
-        description={subTitle}
+        description={pageDescription}
         nodePath={node.path.alias}
         nodeImage={socialImageSrc}
       />
