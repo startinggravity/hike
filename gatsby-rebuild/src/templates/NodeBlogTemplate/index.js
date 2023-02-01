@@ -25,7 +25,7 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
     contentType = "main-content hike-blog-page"
     fullTitle = node.rel.cat.name + ": " + title
     subTitle = subtitle
-    pageDescription = "'" + subTitle + "' , a blog post by Gravity, covering " + fullTitle + "."
+    pageDescription = subtitle
   } else if (node.type.tid === 2) {
     contentType = "main-content gear-blog-page"
     fullTitle = subtitle
