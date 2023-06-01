@@ -273,7 +273,6 @@ module.exports = {
               }
             }
           }`,
-        createLinkInHead: true,
         sitemapTree: {
           fileName: "sitemap.xml",
           children: [
@@ -281,7 +280,7 @@ module.exports = {
               fileName: "sitemap-posts.xml",
               queryName: "allNodeBlog",
               urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
-              serializer: edge => ({
+              serializer: (edge) => ({
                 loc: edge.path.alias + "/",
                 "image:image": {
                   "image:loc":
@@ -293,7 +292,7 @@ module.exports = {
             {
               fileName: "sitemap-pages.xml",
               queryName: "allNodePage",
-              serializer: edge => ({
+              serializer: (edge) => ({
                 loc: edge.path.alias + "/",
                 lastmod: edge.changed,
               }),
