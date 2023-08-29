@@ -12,8 +12,11 @@ module.exports = {
     },
     keywords: [
       `Pacific Crest Trail`,
+      `PCT`,
       `Appalachian Trail`,
+      `AT`,
       `Continental Divide Trail`,
+      `CDT`,
       `Triple Crown`,
       `Benton MacKaye Trail`,
       `Pinhoti Trail`,
@@ -23,6 +26,7 @@ module.exports = {
       `thru-hiking`,
       `long distance hiking`,
       `blog`,
+      `Hike with Gravity`
     ],
   },
   trailingSlash: "always",
