@@ -9,7 +9,7 @@ exports.modules = {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 /* provided dependency */ var fetch = __webpack_require__(/*! ./node_modules/node-fetch/lib/index.js */ "./node_modules/node-fetch/lib/index.js");
-var g=Object.defineProperty;var j=Object.getOwnPropertyDescriptor;var L=Object.getOwnPropertyNames;var V=Object.prototype.hasOwnProperty;var Y=(e,r)=>{for(var t in r)g(e,t,{get:r[t],enumerable:!0})},K=(e,r,t,o)=>{if(r&&typeof r=="object"||typeof r=="function")for(let s of L(r))!V.call(e,s)&&s!==t&&g(e,s,{get:()=>r[s],enumerable:!(o=j(r,s))||o.enumerable});return e};var $=e=>K(g({},"__esModule",{value:!0}),e);var h=(e,r,t)=>new Promise((o,s)=>{var i=a=>{try{l(t.next(a))}catch(m){s(m)}},c=a=>{try{l(t.throw(a))}catch(m){s(m)}},l=a=>a.done?o(a.value):Promise.resolve(a.value).then(i,c);l((t=t.apply(e,r)).next())});var W={};Y(W,{SubmissionError:()=>p,appendExtraData:()=>E,createClient:()=>F,getDefaultClient:()=>U,isSubmissionError:()=>A});module.exports=$(W);var u="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",J=/^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;function I(e){e=String(e);for(var r,t,o,s,i="",c=0,l=e.length%3;c<e.length;){if((t=e.charCodeAt(c++))>255||(o=e.charCodeAt(c++))>255||(s=e.charCodeAt(c++))>255)throw new TypeError("Failed to execute 'btoa' on 'Window': The string to be encoded contains characters outside of the Latin1 range.");r=t<<16|o<<8|s,i+=u.charAt(r>>18&63)+u.charAt(r>>12&63)+u.charAt(r>>6&63)+u.charAt(r&63)}return l?i.slice(0,l-3)+"===".substring(l):i}function O(e){if(e=String(e).replace(/[\t\n\f\r ]+/g,""),!J.test(e))throw new TypeError("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");e+="==".slice(2-(e.length&3));for(var r,t="",o,s,i=0;i<e.length;)r=u.indexOf(e.charAt(i++))<<18|u.indexOf(e.charAt(i++))<<12|(o=u.indexOf(e.charAt(i++)))<<6|(s=u.indexOf(e.charAt(i++))),t+=o===64?String.fromCharCode(r>>16&255):s===64?String.fromCharCode(r>>16&255,r>>8&255):String.fromCharCode(r>>16&255,r>>8&255,r&255);return t}var G=()=>navigator.webdriver||!!document.documentElement.getAttribute(O("d2ViZHJpdmVy"))||!!window.callPhantom||!!window._phantom,y=class{constructor(){this.loadedAt=Date.now(),this.webdriver=G()}data(){return{loadedAt:this.loadedAt,webdriver:this.webdriver}}};var S=class{constructor(r){this.kind="success";this.next=r.next}};function w(e){return"next"in e&&typeof e.next=="string"}var b=class{constructor(r,t){this.paymentIntentClientSecret=r;this.resubmitKey=t;this.kind="stripePluginPending"}};function _(e){if("stripe"in e&&"resubmitKey"in e&&typeof e.resubmitKey=="string"){let{stripe:r}=e;return typeof r=="object"&&r!=null&&"paymentIntentClientSecret"in r&&typeof r.paymentIntentClientSecret=="string"}return!1}function A(e){return e.kind==="error"}var p=class{constructor(...r){this.kind="error";this.formErrors=[];this.fieldErrors=new Map;var t;for(let o of r){if(!o.field){this.formErrors.push({code:o.code&&z(o.code)?o.code:"UNSPECIFIED",message:o.message});continue}let s=(t=this.fieldErrors.get(o.field))!=null?t:[];s.push({code:o.code&&Q(o.code)?o.code:"UNSPECIFIED",message:o.message}),this.fieldErrors.set(o.field,s)}}getFormErrors(){return[...this.formErrors]}getFieldErrors(r){var t;return(t=this.fieldErrors.get(r))!=null?t:[]}getAllFieldErrors(){return Array.from(this.fieldErrors)}};function z(e){return e in B}var B={BLOCKED:"BLOCKED",EMPTY:"EMPTY",FILES_TOO_BIG:"FILES_TOO_BIG",FORM_NOT_FOUND:"FORM_NOT_FOUND",INACTIVE:"INACTIVE",NO_FILE_UPLOADS:"NO_FILE_UPLOADS",PROJECT_NOT_FOUND:"PROJECT_NOT_FOUND",TOO_MANY_FILES:"TOO_MANY_FILES"};function Q(e){return e in Z}var Z={REQUIRED_FIELD_EMPTY:"REQUIRED_FIELD_EMPTY",REQUIRED_FIELD_MISSING:"REQUIRED_FIELD_MISSING",STRIPE_CLIENT_ERROR:"STRIPE_CLIENT_ERROR",STRIPE_SCA_ERROR:"STRIPE_SCA_ERROR",TYPE_EMAIL:"TYPE_EMAIL",TYPE_NUMERIC:"TYPE_NUMERIC",TYPE_TEXT:"TYPE_TEXT"};function P(e){return"errors"in e&&Array.isArray(e.errors)&&e.errors.every(r=>typeof r.message=="string")||"error"in e&&typeof e.error=="string"}var D="3.0.1";var v=e=>I(JSON.stringify(e)),N=e=>{let r=`@formspree/core@${D}`;return e?`${e} ${r}`:r};function E(e,r,t){e instanceof FormData?e.append(r,t):e[r]=t}function M(e){return e!==null&&typeof e=="object"}var R=class{constructor(r={}){this.project=r.project,this.stripe=r.stripe,typeof window!="undefined"&&(this.session=new y)}submitForm(s,i){return h(this,arguments,function*(r,t,o={}){let c=o.endpoint||"https://formspree.io",l=this.project?`${c}/p/${this.project}/f/${r}`:`${c}/f/${r}`,a={Accept:"application/json","Formspree-Client":N(o.clientName)};this.session&&(a["Formspree-Session-Data"]=v(this.session.data())),t instanceof FormData||(a["Content-Type"]="application/json");function m(f){return h(this,null,function*(){try{let n=yield(yield fetch(l,{method:"POST",mode:"cors",body:f instanceof FormData?f:JSON.stringify(f),headers:a})).json();if(M(n)){if(P(n))return Array.isArray(n.errors)?new p(...n.errors):new p({message:n.error});if(_(n))return new b(n.stripe.paymentIntentClientSecret,n.resubmitKey);if(w(n))return new S({next:n.next})}return new p({message:"Unexpected response format"})}catch(d){let n=d instanceof Error?d.message:`Unknown error while posting to Formspree: ${JSON.stringify(d)}`;return new p({message:n})}})}if(this.stripe&&o.createPaymentMethod){let f=yield o.createPaymentMethod();if(f.error)return new p({code:"STRIPE_CLIENT_ERROR",field:"paymentMethod",message:"Error creating payment method"});E(t,"paymentMethod",f.paymentMethod.id);let d=yield m(t);if(d.kind==="error")return d;if(d.kind==="stripePluginPending"){let n=yield this.stripe.handleCardAction(d.paymentIntentClientSecret);if(n.error)return new p({code:"STRIPE_CLIENT_ERROR",field:"paymentMethod",message:"Stripe SCA error"});t instanceof FormData?t.delete("paymentMethod"):delete t.paymentMethod,E(t,"paymentIntent",n.paymentIntent.id),E(t,"resubmitKey",d.resubmitKey);let x=yield m(t);return k(x),x}return d}let T=yield m(t);return k(T),T})}};function k(e){let{kind:r}=e;if(r!=="success"&&r!=="error")throw new Error(`Unexpected submission result (kind: ${r})`)}var F=e=>new R(e),U=()=>(C||(C=F()),C),C;0&&(0);
+var g=Object.defineProperty;var j=Object.getOwnPropertyDescriptor;var L=Object.getOwnPropertyNames;var V=Object.prototype.hasOwnProperty;var Y=(e,r)=>{for(var t in r)g(e,t,{get:r[t],enumerable:!0})},K=(e,r,t,o)=>{if(r&&typeof r=="object"||typeof r=="function")for(let s of L(r))!V.call(e,s)&&s!==t&&g(e,s,{get:()=>r[s],enumerable:!(o=j(r,s))||o.enumerable});return e};var $=e=>K(g({},"__esModule",{value:!0}),e);var h=(e,r,t)=>new Promise((o,s)=>{var i=a=>{try{l(t.next(a))}catch(m){s(m)}},c=a=>{try{l(t.throw(a))}catch(m){s(m)}},l=a=>a.done?o(a.value):Promise.resolve(a.value).then(i,c);l((t=t.apply(e,r)).next())});var W={};Y(W,{SubmissionError:()=>p,appendExtraData:()=>E,createClient:()=>F,getDefaultClient:()=>U,isSubmissionError:()=>A});module.exports=$(W);var u="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",J=/^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;function I(e){e=String(e);for(var r,t,o,s,i="",c=0,l=e.length%3;c<e.length;){if((t=e.charCodeAt(c++))>255||(o=e.charCodeAt(c++))>255||(s=e.charCodeAt(c++))>255)throw new TypeError("Failed to execute 'btoa' on 'Window': The string to be encoded contains characters outside of the Latin1 range.");r=t<<16|o<<8|s,i+=u.charAt(r>>18&63)+u.charAt(r>>12&63)+u.charAt(r>>6&63)+u.charAt(r&63)}return l?i.slice(0,l-3)+"===".substring(l):i}function O(e){if(e=String(e).replace(/[\t\n\f\r ]+/g,""),!J.test(e))throw new TypeError("Failed to execute 'atob' on 'Window': The string to be decoded is not correctly encoded.");e+="==".slice(2-(e.length&3));for(var r,t="",o,s,i=0;i<e.length;)r=u.indexOf(e.charAt(i++))<<18|u.indexOf(e.charAt(i++))<<12|(o=u.indexOf(e.charAt(i++)))<<6|(s=u.indexOf(e.charAt(i++))),t+=o===64?String.fromCharCode(r>>16&255):s===64?String.fromCharCode(r>>16&255,r>>8&255):String.fromCharCode(r>>16&255,r>>8&255,r&255);return t}var G=()=>navigator.webdriver||!!document.documentElement.getAttribute(O("d2ViZHJpdmVy"))||!!window.callPhantom||!!window._phantom,y=class{constructor(){this.loadedAt=Date.now(),this.webdriver=G()}data(){return{loadedAt:this.loadedAt,webdriver:this.webdriver}}};var S=class{constructor(r){this.kind="success";this.next=r.next}};function w(e){return"next"in e&&typeof e.next=="string"}var b=class{constructor(r,t){this.paymentIntentClientSecret=r;this.resubmitKey=t;this.kind="stripePluginPending"}};function _(e){if("stripe"in e&&"resubmitKey"in e&&typeof e.resubmitKey=="string"){let{stripe:r}=e;return typeof r=="object"&&r!=null&&"paymentIntentClientSecret"in r&&typeof r.paymentIntentClientSecret=="string"}return!1}function A(e){return e.kind==="error"}var p=class{constructor(...r){this.kind="error";this.formErrors=[];this.fieldErrors=new Map;var t;for(let o of r){if(!o.field){this.formErrors.push({code:o.code&&z(o.code)?o.code:"UNSPECIFIED",message:o.message});continue}let s=(t=this.fieldErrors.get(o.field))!=null?t:[];s.push({code:o.code&&Q(o.code)?o.code:"UNSPECIFIED",message:o.message}),this.fieldErrors.set(o.field,s)}}getFormErrors(){return[...this.formErrors]}getFieldErrors(r){var t;return(t=this.fieldErrors.get(r))!=null?t:[]}getAllFieldErrors(){return Array.from(this.fieldErrors)}};function z(e){return e in B}var B={BLOCKED:"BLOCKED",EMPTY:"EMPTY",FILES_TOO_BIG:"FILES_TOO_BIG",FORM_NOT_FOUND:"FORM_NOT_FOUND",INACTIVE:"INACTIVE",NO_FILE_UPLOADS:"NO_FILE_UPLOADS",PROJECT_NOT_FOUND:"PROJECT_NOT_FOUND",TOO_MANY_FILES:"TOO_MANY_FILES"};function Q(e){return e in Z}var Z={REQUIRED_FIELD_EMPTY:"REQUIRED_FIELD_EMPTY",REQUIRED_FIELD_MISSING:"REQUIRED_FIELD_MISSING",STRIPE_CLIENT_ERROR:"STRIPE_CLIENT_ERROR",STRIPE_SCA_ERROR:"STRIPE_SCA_ERROR",TYPE_EMAIL:"TYPE_EMAIL",TYPE_NUMERIC:"TYPE_NUMERIC",TYPE_TEXT:"TYPE_TEXT"};function P(e){return"errors"in e&&Array.isArray(e.errors)&&e.errors.every(r=>typeof r.message=="string")||"error"in e&&typeof e.error=="string"}var D="3.0.0";var v=e=>I(JSON.stringify(e)),N=e=>{let r=`@formspree/core@${D}`;return e?`${e} ${r}`:r};function E(e,r,t){e instanceof FormData?e.append(r,t):e[r]=t}function M(e){return e!==null&&typeof e=="object"}var R=class{constructor(r={}){this.project=r.project,this.stripe=r.stripe,typeof window!="undefined"&&(this.session=new y)}submitForm(s,i){return h(this,arguments,function*(r,t,o={}){let c=o.endpoint||"https://formspree.io",l=this.project?`${c}/p/${this.project}/f/${r}`:`${c}/f/${r}`,a={Accept:"application/json","Formspree-Client":N(o.clientName)};this.session&&(a["Formspree-Session-Data"]=v(this.session.data())),t instanceof FormData||(a["Content-Type"]="application/json");function m(f){return h(this,null,function*(){try{let n=yield(yield fetch(l,{method:"POST",mode:"cors",body:f instanceof FormData?f:JSON.stringify(f),headers:a})).json();if(M(n)){if(P(n))return Array.isArray(n.errors)?new p(...n.errors):new p({message:n.error});if(_(n))return new b(n.stripe.paymentIntentClientSecret,n.resubmitKey);if(w(n))return new S({next:n.next})}return new p({message:"Unexpected response format"})}catch(d){let n=d instanceof Error?d.message:`Unknown error while posting to Formspree: ${JSON.stringify(d)}`;return new p({message:n})}})}if(this.stripe&&o.createPaymentMethod){let f=yield o.createPaymentMethod();if(f.error)return new p({code:"STRIPE_CLIENT_ERROR",field:"paymentMethod",message:"Error creating payment method"});E(t,"paymentMethod",f.paymentMethod.id);let d=yield m(t);if(d.kind==="error")return d;if(d.kind==="stripePluginPending"){let n=yield this.stripe.handleCardAction(d.paymentIntentClientSecret);if(n.error)return new p({code:"STRIPE_CLIENT_ERROR",field:"paymentMethod",message:"Stripe SCA error"});t instanceof FormData?t.delete("paymentMethod"):delete t.paymentMethod,E(t,"paymentIntent",n.paymentIntent.id),E(t,"resubmitKey",d.resubmitKey);let x=yield m(t);return k(x),x}return d}let T=yield m(t);return k(T),T})}};function k(e){let{kind:r}=e;if(r!=="success"&&r!=="error")throw new Error(`Unexpected submission result (kind: ${r})`)}var F=e=>new R(e),U=()=>(C||(C=F()),C),C;0&&(0);
 
 
 /***/ }),
@@ -1038,17 +1038,7 @@ module.exports = __webpack_require__(/*! ./dist/pure.js */ "./node_modules/@stri
 "use strict";
 
 
-const UPPERCASE = /[\p{Lu}]/u;
-const LOWERCASE = /[\p{Ll}]/u;
-const LEADING_CAPITAL = /^[\p{Lu}](?![\p{Lu}])/gu;
-const IDENTIFIER = /([\p{Alpha}\p{N}_]|$)/u;
-const SEPARATORS = /[_.\- ]+/;
-
-const LEADING_SEPARATORS = new RegExp('^' + SEPARATORS.source);
-const SEPARATORS_AND_IDENTIFIER = new RegExp(SEPARATORS.source + IDENTIFIER.source, 'gu');
-const NUMBERS_AND_IDENTIFIER = new RegExp('\\d+' + IDENTIFIER.source, 'gu');
-
-const preserveCamelCase = (string, toLowerCase, toUpperCase) => {
+const preserveCamelCase = string => {
 	let isLastCharLower = false;
 	let isLastCharUpper = false;
 	let isLastLastCharUpper = false;
@@ -1056,39 +1046,25 @@ const preserveCamelCase = (string, toLowerCase, toUpperCase) => {
 	for (let i = 0; i < string.length; i++) {
 		const character = string[i];
 
-		if (isLastCharLower && UPPERCASE.test(character)) {
+		if (isLastCharLower && /[a-zA-Z]/.test(character) && character.toUpperCase() === character) {
 			string = string.slice(0, i) + '-' + string.slice(i);
 			isLastCharLower = false;
 			isLastLastCharUpper = isLastCharUpper;
 			isLastCharUpper = true;
 			i++;
-		} else if (isLastCharUpper && isLastLastCharUpper && LOWERCASE.test(character)) {
+		} else if (isLastCharUpper && isLastLastCharUpper && /[a-zA-Z]/.test(character) && character.toLowerCase() === character) {
 			string = string.slice(0, i - 1) + '-' + string.slice(i - 1);
 			isLastLastCharUpper = isLastCharUpper;
 			isLastCharUpper = false;
 			isLastCharLower = true;
 		} else {
-			isLastCharLower = toLowerCase(character) === character && toUpperCase(character) !== character;
+			isLastCharLower = character.toLowerCase() === character && character.toUpperCase() !== character;
 			isLastLastCharUpper = isLastCharUpper;
-			isLastCharUpper = toUpperCase(character) === character && toLowerCase(character) !== character;
+			isLastCharUpper = character.toUpperCase() === character && character.toLowerCase() !== character;
 		}
 	}
 
 	return string;
-};
-
-const preserveConsecutiveUppercase = (input, toLowerCase) => {
-	LEADING_CAPITAL.lastIndex = 0;
-
-	return input.replace(LEADING_CAPITAL, m1 => toLowerCase(m1));
-};
-
-const postProcess = (input, toUpperCase) => {
-	SEPARATORS_AND_IDENTIFIER.lastIndex = 0;
-	NUMBERS_AND_IDENTIFIER.lastIndex = 0;
-
-	return input.replace(SEPARATORS_AND_IDENTIFIER, (_, identifier) => toUpperCase(identifier))
-		.replace(NUMBERS_AND_IDENTIFIER, m => toUpperCase(m));
 };
 
 const camelCase = (input, options) => {
@@ -1096,11 +1072,11 @@ const camelCase = (input, options) => {
 		throw new TypeError('Expected the input to be `string | string[]`');
 	}
 
-	options = {
-		pascalCase: false,
-		preserveConsecutiveUppercase: false,
-		...options
-	};
+	options = Object.assign({
+		pascalCase: false
+	}, options);
+
+	const postProcess = x => options.pascalCase ? x.charAt(0).toUpperCase() + x.slice(1) : x;
 
 	if (Array.isArray(input)) {
 		input = input.map(x => x.trim())
@@ -1114,36 +1090,23 @@ const camelCase = (input, options) => {
 		return '';
 	}
 
-	const toLowerCase = options.locale === false ?
-		string => string.toLowerCase() :
-		string => string.toLocaleLowerCase(options.locale);
-	const toUpperCase = options.locale === false ?
-		string => string.toUpperCase() :
-		string => string.toLocaleUpperCase(options.locale);
-
 	if (input.length === 1) {
-		return options.pascalCase ? toUpperCase(input) : toLowerCase(input);
+		return options.pascalCase ? input.toUpperCase() : input.toLowerCase();
 	}
 
-	const hasUpperCase = input !== toLowerCase(input);
+	const hasUpperCase = input !== input.toLowerCase();
 
 	if (hasUpperCase) {
-		input = preserveCamelCase(input, toLowerCase, toUpperCase);
+		input = preserveCamelCase(input);
 	}
 
-	input = input.replace(LEADING_SEPARATORS, '');
+	input = input
+		.replace(/^[_.\- ]+/, '')
+		.toLowerCase()
+		.replace(/[_.\- ]+(\w|$)/g, (_, p1) => p1.toUpperCase())
+		.replace(/\d+(\w|$)/g, m => m.toUpperCase());
 
-	if (options.preserveConsecutiveUppercase) {
-		input = preserveConsecutiveUppercase(input, toLowerCase);
-	} else {
-		input = toLowerCase(input);
-	}
-
-	if (options.pascalCase) {
-		input = toUpperCase(input.charAt(0)) + input.slice(1);
-	}
-
-	return postProcess(input, toUpperCase);
+	return postProcess(input);
 };
 
 module.exports = camelCase;
@@ -1162,17 +1125,17 @@ module.exports["default"] = camelCase;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   GatsbyImage: () => (/* binding */ X),
-/* harmony export */   MainImage: () => (/* binding */ D),
-/* harmony export */   Placeholder: () => (/* binding */ C),
-/* harmony export */   StaticImage: () => (/* binding */ Z),
-/* harmony export */   generateImageData: () => (/* binding */ b),
-/* harmony export */   getImage: () => (/* binding */ I),
-/* harmony export */   getImageData: () => (/* binding */ R),
-/* harmony export */   getLowResolutionImageURL: () => (/* binding */ y),
-/* harmony export */   getSrc: () => (/* binding */ W),
-/* harmony export */   getSrcSet: () => (/* binding */ j),
-/* harmony export */   withArtDirection: () => (/* binding */ _)
+/* harmony export */   GatsbyImage: () => (/* binding */ B),
+/* harmony export */   MainImage: () => (/* binding */ z),
+/* harmony export */   Placeholder: () => (/* binding */ T),
+/* harmony export */   StaticImage: () => (/* binding */ V),
+/* harmony export */   generateImageData: () => (/* binding */ f),
+/* harmony export */   getImage: () => (/* binding */ M),
+/* harmony export */   getImageData: () => (/* binding */ x),
+/* harmony export */   getLowResolutionImageURL: () => (/* binding */ m),
+/* harmony export */   getSrc: () => (/* binding */ S),
+/* harmony export */   getSrcSet: () => (/* binding */ N),
+/* harmony export */   withArtDirection: () => (/* binding */ I)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
@@ -1205,33 +1168,18 @@ function o(e, t) {
 var s = [.25, .5, 1, 2],
   l = [750, 1080, 1366, 1920],
   u = [320, 654, 768, 1024, 1366, 1600, 1920, 2048, 2560, 3440, 3840, 4096],
-  d = 800,
-  c = 800,
-  h = 4 / 3,
-  g = function (e) {
+  d = function (e) {
     return console.warn(e);
   },
-  p = function (e, t) {
+  c = function (e, t) {
     return e - t;
   },
-  m = function (e, t) {
-    switch (t) {
-      case "constrained":
-        return "(min-width: " + e + "px) " + e + "px, 100vw";
-      case "fixed":
-        return e + "px";
-      case "fullWidth":
-        return "100vw";
-      default:
-        return;
-    }
-  },
-  f = function (e) {
+  h = function (e) {
     return e.map(function (e) {
       return e.src + " " + e.width + "w";
     }).join(",\n");
   };
-function v(e) {
+function g(e) {
   var t = e.lastIndexOf(".");
   if (-1 !== t) {
     var a = e.slice(t + 1);
@@ -1239,7 +1187,7 @@ function v(e) {
     if (3 === a.length || 4 === a.length) return a;
   }
 }
-function w(e) {
+function p(e) {
   var t = e.layout,
     i = void 0 === t ? "constrained" : t,
     r = e.width,
@@ -1248,69 +1196,69 @@ function w(e) {
     l = e.breakpoints,
     u = e.aspectRatio,
     d = e.formats,
-    g = void 0 === d ? ["auto", "webp"] : d;
-  return g = g.map(function (e) {
+    c = void 0 === d ? ["auto", "webp"] : d;
+  return c = c.map(function (e) {
     return e.toLowerCase();
   }), i = camelcase__WEBPACK_IMPORTED_MODULE_1___default()(i), r && o ? n({}, e, {
-    formats: g,
+    formats: c,
     layout: i,
     aspectRatio: r / o
-  }) : (s.width && s.height && !u && (u = s.width / s.height), "fullWidth" === i ? (r = r || s.width || l[l.length - 1], o = o || Math.round(r / (u || h))) : (r || (r = o && u ? o * u : s.width ? s.width : o ? Math.round(o / h) : c), u && !o ? o = Math.round(r / u) : u || (u = r / o)), n({}, e, {
+  }) : (s.width && s.height && !u && (u = s.width / s.height), "fullWidth" === i ? (r = r || s.width || l[l.length - 1], o = o || Math.round(r / (u || 1.3333333333333333))) : (r || (r = o && u ? o * u : s.width ? s.width : o ? Math.round(o / 1.3333333333333333) : 800), u && !o ? o = Math.round(r / u) : u || (u = r / o)), n({}, e, {
     width: r,
     height: o,
     aspectRatio: u,
     layout: i,
-    formats: g
+    formats: c
   }));
 }
-function y(e, t) {
+function m(e, t) {
   var a;
-  return void 0 === t && (t = 20), null == (a = (0, (e = w(e)).generateImageSource)(e.filename, t, Math.round(t / e.aspectRatio), e.sourceMetadata.format || "jpg", e.fit, e.options)) ? void 0 : a.src;
+  return void 0 === t && (t = 20), null == (a = (0, (e = p(e)).generateImageSource)(e.filename, t, Math.round(t / e.aspectRatio), e.sourceMetadata.format || "jpg", e.fit, e.options)) ? void 0 : a.src;
 }
-function b(e) {
+function f(e) {
   var t,
-    a = (e = w(e)).pluginName,
+    a = (e = p(e)).pluginName,
     i = e.sourceMetadata,
     r = e.generateImageSource,
     o = e.layout,
     u = e.fit,
-    d = e.options,
-    h = e.width,
-    p = e.height,
-    y = e.filename,
-    b = e.reporter,
-    S = void 0 === b ? {
-      warn: g
-    } : b,
-    N = e.backgroundColor,
-    x = e.placeholderURL;
-  if (a || S.warn('[gatsby-plugin-image] "generateImageData" was not passed a plugin name'), "function" != typeof r) throw new Error("generateImageSource must be a function");
-  i && (i.width || i.height) ? i.format || (i.format = v(y)) : i = {
-    width: h,
-    height: p,
-    format: (null == (t = i) ? void 0 : t.format) || v(y) || "auto"
+    c = e.options,
+    m = e.width,
+    f = e.height,
+    b = e.filename,
+    k = e.reporter,
+    E = void 0 === k ? {
+      warn: d
+    } : k,
+    M = e.backgroundColor,
+    S = e.placeholderURL;
+  if (a || E.warn('[gatsby-plugin-image] "generateImageData" was not passed a plugin name'), "function" != typeof r) throw new Error("generateImageSource must be a function");
+  i && (i.width || i.height) ? i.format || (i.format = g(b)) : i = {
+    width: m,
+    height: f,
+    format: (null == (t = i) ? void 0 : t.format) || g(b) || "auto"
   };
-  var I = new Set(e.formats);
-  (0 === I.size || I.has("auto") || I.has("")) && (I.delete("auto"), I.delete(""), I.add(i.format)), I.has("jpg") && I.has("png") && (S.warn("[" + a + "] Specifying both 'jpg' and 'png' formats is not supported. Using 'auto' instead"), I.delete("jpg" === i.format ? "png" : "jpg"));
-  var W = function (e) {
+  var N = new Set(e.formats);
+  (0 === N.size || N.has("auto") || N.has("")) && (N.delete("auto"), N.delete(""), N.add(i.format)), N.has("jpg") && N.has("png") && (E.warn("[" + a + "] Specifying both 'jpg' and 'png' formats is not supported. Using 'auto' instead"), N.delete("jpg" === i.format ? "png" : "jpg"));
+  var x = function (e) {
       var t = e.filename,
         a = e.layout,
         i = void 0 === a ? "constrained" : a,
         r = e.sourceMetadata,
         o = e.reporter,
         u = void 0 === o ? {
-          warn: g
+          warn: d
         } : o,
-        d = e.breakpoints,
-        h = void 0 === d ? l : d,
-        p = Object.entries({
+        c = e.breakpoints,
+        h = void 0 === c ? l : c,
+        g = Object.entries({
           width: e.width,
           height: e.height
         }).filter(function (e) {
           var t = e[1];
           return "number" == typeof t && t < 1;
         });
-      if (p.length) throw new Error("Specified dimensions for images must be positive numbers (> 0). Problem dimensions you have are " + p.map(function (e) {
+      if (g.length) throw new Error("Specified dimensions for images must be positive numbers (> 0). Problem dimensions you have are " + g.map(function (e) {
         return e.join(": ");
       }).join(", "));
       return "fixed" === i ? function (e) {
@@ -1322,27 +1270,27 @@ function b(e) {
           o = void 0 === n ? "cover" : n,
           l = e.outputPixelDensities,
           u = e.reporter,
-          d = void 0 === u ? {
-            warn: g
+          c = void 0 === u ? {
+            warn: d
           } : u,
           h = a.width / a.height,
-          p = k(void 0 === l ? s : l);
+          g = v(void 0 === l ? s : l);
         if (i && r) {
-          var m = M(a, {
+          var p = y(a, {
             width: i,
             height: r,
             fit: o
           });
-          i = m.width, r = m.height, h = m.aspectRatio;
+          i = p.width, r = p.height, h = p.aspectRatio;
         }
-        i ? r || (r = Math.round(i / h)) : i = r ? Math.round(r * h) : c;
-        var f = i;
+        i ? r || (r = Math.round(i / h)) : i = r ? Math.round(r * h) : 800;
+        var m = i;
         if (a.width < i || a.height < r) {
-          var v = a.width < i ? "width" : "height";
-          d.warn("\nThe requested " + v + ' "' + ("width" === v ? i : r) + 'px" for the image ' + t + " was larger than the actual image " + v + " of " + a[v] + "px. If possible, replace the current image with a larger one."), "width" === v ? (i = a.width, r = Math.round(i / h)) : i = (r = a.height) * h;
+          var f = a.width < i ? "width" : "height";
+          c.warn("\nThe requested " + f + ' "' + ("width" === f ? i : r) + 'px" for the image ' + t + " was larger than the actual image " + f + " of " + a[f] + "px. If possible, replace the current image with a larger one."), "width" === f ? (i = a.width, r = Math.round(i / h)) : i = (r = a.height) * h;
         }
         return {
-          sizes: p.filter(function (e) {
+          sizes: g.filter(function (e) {
             return e >= 1;
           }).map(function (e) {
             return Math.round(e * i);
@@ -1350,11 +1298,11 @@ function b(e) {
             return e <= a.width;
           }),
           aspectRatio: h,
-          presentationWidth: f,
-          presentationHeight: Math.round(f / h),
+          presentationWidth: m,
+          presentationHeight: Math.round(m / h),
           unscaledWidth: i
         };
-      }(e) : "constrained" === i ? E(e) : "fullWidth" === i ? E(n({
+      }(e) : "constrained" === i ? w(e) : "fullWidth" === i ? w(n({
         breakpoints: h
       }, e)) : (u.warn("No valid layout was provided for the image at " + t + ". Valid image layouts are fixed, fullWidth, and constrained. Found " + i), {
         sizes: [r.width],
@@ -1366,57 +1314,68 @@ function b(e) {
     }(n({}, e, {
       sourceMetadata: i
     })),
-    j = {
+    I = {
       sources: []
     },
-    R = e.sizes;
-  R || (R = m(W.presentationWidth, o)), I.forEach(function (e) {
-    var t = W.sizes.map(function (t) {
-      var i = r(y, t, Math.round(t / W.aspectRatio), e, u, d);
+    W = e.sizes;
+  W || (W = function (e, t) {
+    switch (t) {
+      case "constrained":
+        return "(min-width: " + e + "px) " + e + "px, 100vw";
+      case "fixed":
+        return e + "px";
+      case "fullWidth":
+        return "100vw";
+      default:
+        return;
+    }
+  }(x.presentationWidth, o)), N.forEach(function (e) {
+    var t = x.sizes.map(function (t) {
+      var i = r(b, t, Math.round(t / x.aspectRatio), e, u, c);
       if (null != i && i.width && i.height && i.src && i.format) return i;
-      S.warn("[" + a + "] The resolver for image " + y + " returned an invalid value.");
+      E.warn("[" + a + "] The resolver for image " + b + " returned an invalid value.");
     }).filter(Boolean);
     if ("jpg" === e || "png" === e || "auto" === e) {
       var i = t.find(function (e) {
-        return e.width === W.unscaledWidth;
+        return e.width === x.unscaledWidth;
       }) || t[0];
-      i && (j.fallback = {
+      i && (I.fallback = {
         src: i.src,
-        srcSet: f(t),
-        sizes: R
+        srcSet: h(t),
+        sizes: W
       });
     } else {
       var n;
-      null == (n = j.sources) || n.push({
-        srcSet: f(t),
-        sizes: R,
+      null == (n = I.sources) || n.push({
+        srcSet: h(t),
+        sizes: W,
         type: "image/" + e
       });
     }
   });
-  var _ = {
-    images: j,
+  var j = {
+    images: I,
     layout: o,
-    backgroundColor: N
+    backgroundColor: M
   };
-  switch (x && (_.placeholder = {
-    fallback: x
+  switch (S && (j.placeholder = {
+    fallback: S
   }), o) {
     case "fixed":
-      _.width = W.presentationWidth, _.height = W.presentationHeight;
+      j.width = x.presentationWidth, j.height = x.presentationHeight;
       break;
     case "fullWidth":
-      _.width = 1, _.height = 1 / W.aspectRatio;
+      j.width = 1, j.height = 1 / x.aspectRatio;
       break;
     case "constrained":
-      _.width = e.width || W.presentationWidth || 1, _.height = (_.width || 1) / W.aspectRatio;
+      j.width = e.width || x.presentationWidth || 1, j.height = (j.width || 1) / x.aspectRatio;
   }
-  return _;
+  return j;
 }
-var k = function (e) {
-  return Array.from(new Set([1].concat(e))).sort(p);
+var v = function (e) {
+  return Array.from(new Set([1].concat(e))).sort(c);
 };
-function E(e) {
+function w(e) {
   var t,
     a = e.sourceMetadata,
     i = e.width,
@@ -1425,34 +1384,34 @@ function E(e) {
     o = void 0 === n ? "cover" : n,
     l = e.outputPixelDensities,
     u = e.breakpoints,
-    c = e.layout,
+    d = e.layout,
     h = a.width / a.height,
-    g = k(void 0 === l ? s : l);
+    g = v(void 0 === l ? s : l);
   if (i && r) {
-    var m = M(a, {
+    var p = y(a, {
       width: i,
       height: r,
       fit: o
     });
-    i = m.width, r = m.height, h = m.aspectRatio;
+    i = p.width, r = p.height, h = p.aspectRatio;
   }
-  i = i && Math.min(i, a.width), r = r && Math.min(r, a.height), i || r || (r = (i = Math.min(d, a.width)) / h), i || (i = r * h);
-  var f = i;
+  i = i && Math.min(i, a.width), r = r && Math.min(r, a.height), i || r || (r = (i = Math.min(800, a.width)) / h), i || (i = r * h);
+  var m = i;
   return (a.width < i || a.height < r) && (i = a.width, r = a.height), i = Math.round(i), (null == u ? void 0 : u.length) > 0 ? (t = u.filter(function (e) {
     return e <= a.width;
   })).length < u.length && !t.includes(a.width) && t.push(a.width) : t = (t = g.map(function (e) {
     return Math.round(e * i);
   })).filter(function (e) {
     return e <= a.width;
-  }), "constrained" !== c || t.includes(i) || t.push(i), {
-    sizes: t = t.sort(p),
+  }), "constrained" !== d || t.includes(i) || t.push(i), {
+    sizes: t = t.sort(c),
     aspectRatio: h,
-    presentationWidth: f,
-    presentationHeight: Math.round(f / h),
+    presentationWidth: m,
+    presentationHeight: Math.round(m / h),
     unscaledWidth: i
   };
 }
-function M(e, t) {
+function y(e, t) {
   var a = e.width / e.height,
     i = t.width,
     r = t.height;
@@ -1479,12 +1438,12 @@ function M(e, t) {
     aspectRatio: i / r
   };
 }
-var S = ["baseUrl", "urlBuilder", "sourceWidth", "sourceHeight", "pluginName", "formats", "breakpoints", "options"],
-  N = ["images", "placeholder"];
-function x() {
+var b = ["baseUrl", "urlBuilder", "sourceWidth", "sourceHeight", "pluginName", "formats", "breakpoints", "options"],
+  k = ["images", "placeholder"];
+function E() {
   return "undefined" != typeof GATSBY___IMAGE && GATSBY___IMAGE;
 }
-var I = function (e) {
+var M = function (e) {
     var t;
     return function (e) {
       var t, a;
@@ -1495,15 +1454,15 @@ var I = function (e) {
       return Boolean(null == e ? void 0 : e.gatsbyImage);
     }(e) ? e.gatsbyImage : null == e || null == (t = e.childImageSharp) ? void 0 : t.gatsbyImageData;
   },
-  W = function (e) {
+  S = function (e) {
     var t, a, i;
-    return null == (t = I(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.src;
+    return null == (t = M(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.src;
   },
-  j = function (e) {
+  N = function (e) {
     var t, a, i;
-    return null == (t = I(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.srcSet;
+    return null == (t = M(e)) || null == (a = t.images) || null == (i = a.fallback) ? void 0 : i.srcSet;
   };
-function R(e) {
+function x(e) {
   var t,
     a = e.baseUrl,
     i = e.urlBuilder,
@@ -1515,8 +1474,8 @@ function R(e) {
     h = void 0 === c ? ["auto"] : c,
     g = e.breakpoints,
     p = e.options,
-    m = o(e, S);
-  return null != (t = g) && t.length || "fullWidth" !== m.layout && "FULL_WIDTH" !== m.layout || (g = u), b(n({}, m, {
+    m = o(e, b);
+  return null != (t = g) && t.length || "fullWidth" !== m.layout && "FULL_WIDTH" !== m.layout || (g = u), f(n({}, m, {
     pluginName: d,
     generateImageSource: function (e, t, a, r) {
       return {
@@ -1542,13 +1501,13 @@ function R(e) {
     }
   }));
 }
-function _(e, t) {
+function I(e, t) {
   var a,
     i,
     r,
     s = e.images,
     l = e.placeholder,
-    u = n({}, o(e, N), {
+    u = n({}, o(e, k), {
       images: n({}, s, {
         sources: []
       }),
@@ -1573,17 +1532,17 @@ function _(e, t) {
     })) :  true && console.warn("[gatsby-plugin-image] All art-directed images passed to must have a value set for `media`. Skipping.");
   }), (a = u.images.sources).push.apply(a, s.sources), null != l && l.sources && (null == (i = u.placeholder) || (r = i.sources).push.apply(r, l.sources)), u;
 }
-var A,
-  O = ["src", "srcSet", "loading", "alt", "shouldLoad"],
-  T = ["fallback", "sources", "shouldLoad"],
-  z = function (t) {
+var W,
+  j = ["src", "srcSet", "loading", "alt", "shouldLoad"],
+  R = ["fallback", "sources", "shouldLoad"],
+  _ = function (t) {
     var a = t.src,
       i = t.srcSet,
       r = t.loading,
       s = t.alt,
       l = void 0 === s ? "" : s,
       u = t.shouldLoad,
-      d = o(t, O);
+      d = o(t, j);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", n({}, d, {
       decoding: "async",
       loading: r,
@@ -1594,15 +1553,15 @@ var A,
       alt: l
     }));
   },
-  L = function (t) {
+  A = function (t) {
     var a = t.fallback,
       i = t.sources,
       r = void 0 === i ? [] : i,
       s = t.shouldLoad,
       l = void 0 === s || s,
-      u = o(t, T),
+      u = o(t, R),
       d = u.sizes || (null == a ? void 0 : a.sizes),
-      c = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(z, n({}, u, a, {
+      c = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_, n({}, u, a, {
         sizes: d,
         shouldLoad: l
       }));
@@ -1620,13 +1579,13 @@ var A,
       });
     }), c) : c;
   };
-z.propTypes = {
+_.propTypes = {
   src: prop_types__WEBPACK_IMPORTED_MODULE_2__.string.isRequired,
   alt: prop_types__WEBPACK_IMPORTED_MODULE_2__.string.isRequired,
   sizes: prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
   srcSet: prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
   shouldLoad: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool
-}, L.displayName = "Picture", L.propTypes = {
+}, A.displayName = "Picture", A.propTypes = {
   alt: prop_types__WEBPACK_IMPORTED_MODULE_2__.string.isRequired,
   shouldLoad: prop_types__WEBPACK_IMPORTED_MODULE_2__.bool,
   fallback: prop_types__WEBPACK_IMPORTED_MODULE_2__.exact({
@@ -1646,11 +1605,11 @@ z.propTypes = {
     srcSet: prop_types__WEBPACK_IMPORTED_MODULE_2__.string.isRequired
   })]))
 };
-var q = ["fallback"],
-  C = function (t) {
+var O = ["fallback"],
+  T = function (t) {
     var a = t.fallback,
-      i = o(t, q);
-    return a ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(L, n({}, i, {
+      i = o(t, O);
+    return a ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(A, n({}, i, {
       fallback: {
         src: a
       },
@@ -1658,21 +1617,21 @@ var q = ["fallback"],
       alt: ""
     })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", n({}, i));
   };
-C.displayName = "Placeholder", C.propTypes = {
+T.displayName = "Placeholder", T.propTypes = {
   fallback: prop_types__WEBPACK_IMPORTED_MODULE_2__.string,
-  sources: null == (A = L.propTypes) ? void 0 : A.sources,
+  sources: null == (W = A.propTypes) ? void 0 : W.sources,
   alt: function (e, t, a) {
     return e[t] ? new Error("Invalid prop `" + t + "` supplied to `" + a + "`. Validation failed.") : null;
   }
 };
-var D = function (t) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(L, n({}, t)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("noscript", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(L, n({}, t, {
+var z = function (t) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(A, n({}, t)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("noscript", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(A, n({}, t, {
     shouldLoad: !0
   }))));
 };
-D.displayName = "MainImage", D.propTypes = L.propTypes;
-var P = ["children"],
-  H = function () {
+z.displayName = "MainImage", z.propTypes = A.propTypes;
+var L = ["children"],
+  q = function () {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("script", {
       type: "module",
       dangerouslySetInnerHTML: {
@@ -1680,7 +1639,7 @@ var P = ["children"],
       }
     });
   },
-  F = function (t) {
+  C = function (t) {
     var a = t.layout,
       i = t.width,
       r = t.height;
@@ -1698,7 +1657,7 @@ var P = ["children"],
       alt: "",
       role: "presentation",
       "aria-hidden": "true",
-      src: "data:image/svg+xml;charset=utf-8,%3Csvg%20height='" + r + "'%20width='" + i + "'%20xmlns='http://www.w3.org/2000/svg'%20version='1.1'%3E%3C/svg%3E",
+      src: "data:image/svg+xml;charset=utf-8,%3Csvg height='" + r + "' width='" + i + "' xmlns='http://www.w3.org/2000/svg' version='1.1'%3E%3C/svg%3E",
       style: {
         maxWidth: "100%",
         display: "block",
@@ -1706,17 +1665,17 @@ var P = ["children"],
       }
     })) : null;
   },
-  B = function (a) {
+  D = function (a) {
     var i = a.children,
-      r = o(a, P);
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(F, n({}, r)), i, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(H, null));
+      r = o(a, L);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(C, n({}, r)), i, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(q, null));
   },
-  G = ["as", "className", "class", "style", "image", "loading", "imgClassName", "imgStyle", "backgroundColor", "objectFit", "objectPosition"],
-  V = ["style", "className"],
-  U = function (e) {
+  P = ["as", "className", "class", "style", "image", "loading", "imgClassName", "imgStyle", "backgroundColor", "objectFit", "objectPosition"],
+  H = ["style", "className"],
+  F = function (e) {
     return e.replace(/\n/g, "");
   },
-  X = function (t) {
+  B = function (t) {
     var a = t.as,
       i = void 0 === a ? "div" : a,
       r = t.className,
@@ -1730,7 +1689,7 @@ var P = ["children"],
       p = t.backgroundColor,
       m = t.objectFit,
       f = t.objectPosition,
-      v = o(t, G);
+      v = o(t, P);
     if (!u) return console.warn("[gatsby-plugin-image] Missing image prop"), null;
     s && (r = s), g = n({
       objectFit: m,
@@ -1741,40 +1700,40 @@ var P = ["children"],
       y = u.height,
       b = u.layout,
       k = u.images,
-      E = u.placeholder,
-      M = u.backgroundColor,
-      S = function (e, t, a) {
+      M = u.placeholder,
+      S = u.backgroundColor,
+      N = function (e, t, a) {
         var i = {},
           r = "gatsby-image-wrapper";
-        return x() || (i.position = "relative", i.overflow = "hidden"), "fixed" === a ? (i.width = e, i.height = t) : "constrained" === a && (x() || (i.display = "inline-block", i.verticalAlign = "top"), r = "gatsby-image-wrapper gatsby-image-wrapper-constrained"), {
+        return E() || (i.position = "relative", i.overflow = "hidden"), "fixed" === a ? (i.width = e, i.height = t) : "constrained" === a && (E() || (i.display = "inline-block", i.verticalAlign = "top"), r = "gatsby-image-wrapper gatsby-image-wrapper-constrained"), {
           className: r,
           "data-gatsby-image-wrapper": "",
           style: i
         };
       }(w, y, b),
-      N = S.style,
-      I = S.className,
-      W = o(S, V),
+      x = N.style,
+      I = N.className,
+      W = o(N, H),
       j = {
         fallback: void 0,
         sources: []
       };
     return k.fallback && (j.fallback = n({}, k.fallback, {
-      srcSet: k.fallback.srcSet ? U(k.fallback.srcSet) : void 0
+      srcSet: k.fallback.srcSet ? F(k.fallback.srcSet) : void 0
     })), k.sources && (j.sources = k.sources.map(function (e) {
       return n({}, e, {
-        srcSet: U(e.srcSet)
+        srcSet: F(e.srcSet)
       });
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(i, n({}, W, {
-      style: n({}, N, l, {
+      style: n({}, x, l, {
         backgroundColor: p
       }),
       className: I + (r ? " " + r : "")
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(B, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(D, {
       layout: b,
       width: w,
       height: y
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(C, n({}, function (e, t, a, i, r, o, s, l) {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(T, n({}, function (e, t, a, i, r, o, s, l) {
       var u = {};
       o && (u.backgroundColor = o, "fixed" === a ? (u.width = i, u.height = r, u.backgroundColor = o, u.position = "relative") : ("constrained" === a || "fullWidth" === a) && (u.position = "absolute", u.top = 0, u.left = 0, u.bottom = 0, u.right = 0)), s && (u.objectFit = s), l && (u.objectPosition = l);
       var d = n({}, e, {
@@ -1785,18 +1744,18 @@ var P = ["children"],
           transition: "opacity 500ms linear"
         }, u)
       });
-      return x() || (d.style = {
+      return E() || (d.style = {
         height: "100%",
         left: 0,
         position: "absolute",
         top: 0,
         width: "100%"
       }), d;
-    }(E, 0, b, w, y, M, m, f))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(D, n({
+    }(M, 0, b, w, y, S, m, f))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(z, n({
       "data-gatsby-image-ssr": "",
       className: h
     }, v, function (e, t, a, i, r) {
-      return void 0 === r && (r = {}), x() || (r = n({
+      return void 0 === r && (r = {}), E() || (r = n({
         height: "100%",
         left: 0,
         position: "absolute",
@@ -1815,35 +1774,35 @@ var P = ["children"],
       });
     }("eager" === c, 0, j, c, g)))));
   },
-  Y = ["src", "__imageData", "__error", "width", "height", "aspectRatio", "tracedSVGOptions", "placeholder", "formats", "quality", "transformOptions", "jpgOptions", "pngOptions", "webpOptions", "avifOptions", "blurredOptions", "breakpoints", "outputPixelDensities"],
-  Z = function (t) {
+  G = ["src", "__imageData", "__error", "width", "height", "aspectRatio", "tracedSVGOptions", "placeholder", "formats", "quality", "transformOptions", "jpgOptions", "pngOptions", "webpOptions", "avifOptions", "blurredOptions", "breakpoints", "outputPixelDensities"],
+  V = function (t) {
     return function (a) {
       var i = a.src,
         r = a.__imageData,
         s = a.__error,
-        l = o(a, Y);
+        l = o(a, G);
       return s && console.warn(s), r ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(t, n({
         image: r
       }, l)) : (console.warn("Image not loaded", i), s || "development" !== "development" || console.warn('Please ensure that "gatsby-plugin-image" is included in the plugins array in gatsby-config.js, and that your version of gatsby is at least 2.24.78'), null);
     };
-  }(X),
-  J = function (e, t) {
+  }(B),
+  U = function (e, t) {
     return "fullWidth" !== e.layout || "width" !== t && "height" !== t || !e[t] ? prop_types__WEBPACK_IMPORTED_MODULE_2___default().number.apply((prop_types__WEBPACK_IMPORTED_MODULE_2___default()), [e, t].concat([].slice.call(arguments, 2))) : new Error('"' + t + '" ' + e[t] + " may not be passed when layout is fullWidth.");
   },
-  K = new Set(["fixed", "fullWidth", "constrained"]),
-  Q = {
+  X = new Set(["fixed", "fullWidth", "constrained"]),
+  Y = {
     src: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string).isRequired,
     alt: function (e, t, a) {
       return e.alt || "" === e.alt ? prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.apply((prop_types__WEBPACK_IMPORTED_MODULE_2___default()), [e, t, a].concat([].slice.call(arguments, 3))) : new Error('The "alt" prop is required in ' + a + '. If the image is purely presentational then pass an empty string: e.g. alt="". Learn more: https://a11y-style-guide.com/style-guide/section-media.html');
     },
-    width: J,
-    height: J,
+    width: U,
+    height: U,
     sizes: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string),
     layout: function (e) {
-      if (void 0 !== e.layout && !K.has(e.layout)) return new Error("Invalid value " + e.layout + '" provided for prop "layout". Defaulting to "constrained". Valid values are "fixed", "fullWidth" or "constrained".');
+      if (void 0 !== e.layout && !X.has(e.layout)) return new Error("Invalid value " + e.layout + '" provided for prop "layout". Defaulting to "constrained". Valid values are "fixed", "fullWidth" or "constrained".');
     }
   };
-Z.displayName = "StaticImage", Z.propTypes = Q;
+V.displayName = "StaticImage", V.propTypes = Y;
 
 
 /***/ }),
@@ -2650,7 +2609,7 @@ function App() {
     src: coverImage,
     className: "cover-img h-screen max-h-96",
     loading: "eager",
-    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/1132522832.json */ "./.cache/caches/gatsby-plugin-image/1132522832.json")
+    __imageData: __webpack_require__(/*! ./.cache/caches/gatsby-plugin-image/545214392.json */ "./.cache/caches/gatsby-plugin-image/545214392.json")
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "relative z-0 bg-white"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -4043,6 +4002,10 @@ function getNodeRequestOptions(request) {
 		agent = agent(parsedURL);
 	}
 
+	if (!headers.has('Connection') && !agent) {
+		headers.set('Connection', 'close');
+	}
+
 	// HTTP-network fetch step 4.2
 	// chunked encoding is handled by Node.js
 
@@ -4462,7 +4425,6 @@ exports.Headers = Headers;
 exports.Request = Request;
 exports.Response = Response;
 exports.FetchError = FetchError;
-exports.AbortError = AbortError;
 
 
 /***/ }),
@@ -6740,15 +6702,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var _formspree_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @formspree/core */ "./node_modules/@formspree/core/dist/index.js");
 /* harmony import */ var _stripe_stripe_js_pure_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @stripe/stripe-js/pure.js */ "./node_modules/@stripe/stripe-js/pure.js");
-function T(e){let{prefix:t,field:s,errors:r,...i}=e;if(r==null)return null;let a=s?r.getFieldErrors(s):r.getFormErrors();return a.length===0?null:react__WEBPACK_IMPORTED_MODULE_1__.createElement("div",{...i},t?`${t} `:null,a.map(l=>l.message).join(", "))}var v=react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);function _(e){let{children:t,project:s,stripePK:r}=e,[i,a]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)((0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({project:s})),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>r?(0,_stripe_stripe_js_pure_js__WEBPACK_IMPORTED_MODULE_2__.loadStripe)(r):null,[r]);return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{let n=!0;return n&&a(o=>o.project!==s?(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({...o,project:s}):o),()=>{n=!1}},[s]),(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{let n=!0;return l?.then(o=>{n&&o&&a(m=>(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({...m,stripe:o}))}),()=>{n=!1}},[l]),react__WEBPACK_IMPORTED_MODULE_1__.createElement(v.Provider,{value:{client:i}},l?react__WEBPACK_IMPORTED_MODULE_1__.createElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_0__.Elements,{stripe:l},t):t)}function F(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(v)??{client:(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.getDefaultClient)()}}var P="2.5.1";var N=`@formspree/react@${P}`;function x(e,t={}){let s=F(),{client:r=s.client,extraData:i,onError:a,onSuccess:l,origin:n}=t,{stripe:o}=r,m=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>o?.elements().getElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_0__.CardElement),[o]);return async function(p){let u=O(p)?U(p):p;if(typeof i=="object")for(let[h,y]of Object.entries(i)){let c;typeof y=="function"?c=await y():c=y,c!==void 0&&(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.appendExtraData)(u,h,c)}let f=await r.submitForm(e,u,{endpoint:n,clientName:N,createPaymentMethod:o&&m?()=>o.createPaymentMethod({type:"card",card:m,billing_details:z(u)}):void 0});(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.isSubmissionError)(f)?a?.(f):l?.(f)}}function O(e){return"preventDefault"in e&&typeof e.preventDefault=="function"}function U(e){e.preventDefault();let t=e.currentTarget;if(t.tagName!="FORM")throw new Error("submit was triggered for a non-form element");return new FormData(t)}function z(e){let t={address:I(e)};for(let s of["name","email","phone"]){let r=e instanceof FormData?e.get(s):e[s];r&&typeof r=="string"&&(t[s]=r)}return t}function I(e){let t={};for(let[s,r]of[["address_line1","line1"],["address_line2","line2"],["address_city","city"],["address_country","country"],["address_state","state"],["address_postal_code","postal_code"]]){let i=e instanceof FormData?e.get(s):e[s];i&&typeof i=="string"&&(t[r]=i)}return t}function W(e,t={}){let[s,r]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),[i,a]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),[l,n]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1),[o,m]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1);if(!e)throw new Error('You must provide a form key or hashid (e.g. useForm("myForm") or useForm("123xyz")');let S=x(e,{client:t.client,extraData:t.data,onError(p){r(p),n(!1),m(!1)},onSuccess(p){r(null),a(p),n(!1),m(!0)},origin:t.endpoint});return[{errors:s,result:i,submitting:l,succeeded:o},async function(u){n(!0),await S(u)},function(){r(null),a(null),n(!1),m(!1)}]}
+function T(e){let{prefix:t,field:s,errors:r,...i}=e;if(r==null)return null;let a=s?r.getFieldErrors(s):r.getFormErrors();return a.length===0?null:react__WEBPACK_IMPORTED_MODULE_1__.createElement("div",{...i},t?`${t} `:null,a.map(l=>l.message).join(", "))}var v=react__WEBPACK_IMPORTED_MODULE_1__.createContext(null);function _(e){let{children:t,project:s,stripePK:r}=e,[i,a]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)((0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({project:s})),l=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>r?(0,_stripe_stripe_js_pure_js__WEBPACK_IMPORTED_MODULE_2__.loadStripe)(r):null,[r]);return (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{let n=!0;return n&&a(o=>o.project!==s?(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({...o,project:s}):o),()=>{n=!1}},[s]),(0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{let n=!0;return l?.then(o=>{n&&o&&a(m=>(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.createClient)({...m,stripe:o}))}),()=>{n=!1}},[l]),react__WEBPACK_IMPORTED_MODULE_1__.createElement(v.Provider,{value:{client:i}},l?react__WEBPACK_IMPORTED_MODULE_1__.createElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_0__.Elements,{stripe:l},t):t)}function F(){return (0,react__WEBPACK_IMPORTED_MODULE_1__.useContext)(v)??{client:(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.getDefaultClient)()}}var P="2.5.0";var N=`@formspree/react@${P}`;function x(e,t={}){let s=F(),{client:r=s.client,extraData:i,onError:a,onSuccess:l,origin:n}=t,{stripe:o}=r,m=(0,react__WEBPACK_IMPORTED_MODULE_1__.useMemo)(()=>o?.elements().getElement(_stripe_react_stripe_js__WEBPACK_IMPORTED_MODULE_0__.CardElement),[o]);return async function(p){let u=O(p)?U(p):p;if(typeof i=="object")for(let[h,y]of Object.entries(i)){let c;typeof y=="function"?c=await y():c=y,c!==void 0&&(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.appendExtraData)(u,h,c)}let f=await r.submitForm(e,u,{endpoint:n,clientName:N,createPaymentMethod:o&&m?()=>o.createPaymentMethod({type:"card",card:m,billing_details:z(u)}):void 0});(0,_formspree_core__WEBPACK_IMPORTED_MODULE_3__.isSubmissionError)(f)?a?.(f):l?.(f)}}function O(e){return"preventDefault"in e&&typeof e.preventDefault=="function"}function U(e){e.preventDefault();let t=e.currentTarget;if(t.tagName!="FORM")throw new Error("submit was triggered for a non-form element");return new FormData(t)}function z(e){let t={address:I(e)};for(let s of["name","email","phone"]){let r=e instanceof FormData?e.get(s):e[s];r&&typeof r=="string"&&(t[s]=r)}return t}function I(e){let t={};for(let[s,r]of[["address_line1","line1"],["address_line2","line2"],["address_city","city"],["address_country","country"],["address_state","state"],["address_postal_code","postal_code"]]){let i=e instanceof FormData?e.get(s):e[s];i&&typeof i=="string"&&(t[r]=i)}return t}function W(e,t={}){let[s,r]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),[i,a]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null),[l,n]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1),[o,m]=(0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(!1);if(!e)throw new Error('You must provide a form key or hashid (e.g. useForm("myForm") or useForm("123xyz")');let S=x(e,{client:t.client,extraData:t.data,onError(p){r(p),n(!1),m(!1)},onSuccess(p){r(null),a(p),n(!1),m(!0)},origin:t.endpoint});return[{errors:s,result:i,submitting:l,succeeded:o},async function(u){n(!0),await S(u)},function(){r(null),a(null),n(!1),m(!1)}]}
 
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-image/1132522832.json":
-/*!***********************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-image/1132522832.json ***!
-  \***********************************************************/
+/***/ "./.cache/caches/gatsby-plugin-image/545214392.json":
+/*!**********************************************************!*\
+  !*** ./.cache/caches/gatsby-plugin-image/545214392.json ***!
+  \**********************************************************/
 /***/ ((module) => {
 
 "use strict";
