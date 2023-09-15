@@ -27,7 +27,7 @@ module.exports = {
   },
   trailingSlash: "always",
   plugins: [
-    `gatsby-plugin-gatsby-cloud`,
+    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-drupal`,
       options: {
@@ -161,13 +161,13 @@ module.exports = {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
           "UA-91337611-1", // Google Analytics / GA
-          "", // Google Ads / Adwords / AW
-          "", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
+          // "", // Google Ads / Adwords / AW
+          // "", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "",
+          // optimize_id: "",
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -280,7 +280,7 @@ module.exports = {
               fileName: "sitemap-posts.xml",
               queryName: "allNodeBlog",
               urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
-              serializer: (edge) => ({
+              serializer: edge => ({
                 loc: edge.path.alias + "/",
                 "image:image": {
                   "image:loc":
@@ -292,7 +292,7 @@ module.exports = {
             {
               fileName: "sitemap-pages.xml",
               queryName: "allNodePage",
-              serializer: (edge) => ({
+              serializer: edge => ({
                 loc: edge.path.alias + "/",
                 lastmod: edge.changed,
               }),
