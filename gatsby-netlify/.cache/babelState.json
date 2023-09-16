@@ -7,27 +7,27 @@
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -48,27 +48,27 @@
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -89,27 +89,27 @@
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -130,27 +130,27 @@
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
           "options": {
-            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/.cache/caches/gatsby-plugin-image"
+            "cacheDir": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/.cache/caches/gatsby-plugin-image"
           }
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-rebuild/node_modules/@babel/preset-typescript/lib/index.js",
+          "name": "/Users/startinggravity/Documents/Development/Sites/hike_blog/github/gatsby-netlify/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
             "allExtensions": false,
@@ -166,7 +166,7 @@
     }
   },
   "browserslist": [
-    ">0.25%",
-    "not dead"
+    ">0.25% and supports es6-module",
+    "not dead and supports es6-module"
   ]
 }
