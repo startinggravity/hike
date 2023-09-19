@@ -124,7 +124,7 @@ export default BlogIndex
 export const pageQuery = graphql`
   query {
     allNodeBlog(
-      sort: { fields: [created], order: [DESC] }
+      sort: { created: DESC }
       filter: {
         relationships: {
           field_blog_category: {

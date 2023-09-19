@@ -119,8 +119,8 @@ module.exports = {
             query: `
               {
                 allNodeBlog(
-                  filter: { status: { eq: true } }
-                  sort: { fields: [created], order: [DESC] }
+                  filter: {status: {eq: true}}
+                  sort: {drupal_internal__nid: ASC}
                   limit: 10
                 ) {
                   edges {
@@ -272,32 +272,32 @@ module.exports = {
     //           }
     //         }
     //       }`,
-        // sitemapTree: {
-        //   fileName: "sitemap.xml",
-        //   children: [
-        //     {
-        //       fileName: "sitemap-posts.xml",
-        //       queryName: "allNodeBlog",
-        //       urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
-        //       serializer: edge => ({
-        //         loc: edge.path.alias + "/",
-        //         "image:image": {
-        //           "image:loc":
-        //             siteUrl + edge.relationships.field_main_image.publicUrl,
-        //         },
-        //         lastmod: edge.changed,
-        //       }),
-        //     },
-        //     {
-        //       fileName: "sitemap-pages.xml",
-        //       queryName: "allNodePage",
-        //       serializer: edge => ({
-        //         loc: edge.path.alias + "/",
-        //         lastmod: edge.changed,
-        //       }),
-        //     },
-        //   ],
-        // },
+    // sitemapTree: {
+    //   fileName: "sitemap.xml",
+    //   children: [
+    //     {
+    //       fileName: "sitemap-posts.xml",
+    //       queryName: "allNodeBlog",
+    //       urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
+    //       serializer: edge => ({
+    //         loc: edge.path.alias + "/",
+    //         "image:image": {
+    //           "image:loc":
+    //             siteUrl + edge.relationships.field_main_image.publicUrl,
+    //         },
+    //         lastmod: edge.changed,
+    //       }),
+    //     },
+    //     {
+    //       fileName: "sitemap-pages.xml",
+    //       queryName: "allNodePage",
+    //       serializer: edge => ({
+    //         loc: edge.path.alias + "/",
+    //         lastmod: edge.changed,
+    //       }),
+    //     },
+    //   ],
+    // },
     //   },
     // },
   ],

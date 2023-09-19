@@ -9,16 +9,12 @@ import Seo from "../../components/seo"
 
 export const pageQuery = graphql`
   query ($skip: Int!, $limit: Int!) {
-    allNodeBlog(
-      sort: { fields: [created], order: [ASC] }
-      filter: {
-        relationships: {
-          field_blog_category: { drupal_internal__tid: { in: 20 } }
-        }
-      }
-      skip: $skip
-      limit: $limit
-    ) {
+   allNodeBlog(
+     sort: {created: ASC}
+     filter: {relationships: {field_blog_category: {drupal_internal__tid: {in: 20}}}}
+     skip: $skip
+     limit: $limit
+   ) {
       edges {
         node {
           title

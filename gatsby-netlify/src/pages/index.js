@@ -129,7 +129,7 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allNodeBlog(sort: { fields: [created], order: [DESC] }, limit: 12) {
+    allNodeBlog(sort: { created: DESC }, limit: 12) {
       edges {
         node {
           title

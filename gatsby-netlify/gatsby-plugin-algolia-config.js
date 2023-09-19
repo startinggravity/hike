@@ -7,8 +7,8 @@ const striptags = require("striptags")
 
 const blogQuery = `{
         posts: allNodeBlog(
-          filter: { status: { eq: true } }
-          sort: { fields: [drupal_internal__nid], order: [ASC] }
+         filter: {status: {eq: true}}
+         sort: {drupal_internal__nid: ASC}
         ) {
           edges {
             node {

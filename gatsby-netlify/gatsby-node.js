@@ -13,7 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
           {
             allNodeBlog(
               filter: { status: { eq: true } }
-              sort: { fields: [created], order: [ASC] }
+              sort: { created: ASC }
             ) {
               edges {
                 node {
