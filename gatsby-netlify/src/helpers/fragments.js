@@ -41,7 +41,7 @@ export const ParagraphHorizontalImage = graphql`
     }
     relationships {
       field_image {
-        gatsbyImage(width: 1024, aspectRatio: 1.778, formats: AUTO,WEBP)
+        gatsbyImage(width: 1024, aspectRatio: 1.778, formats: [AUTO,WEBP])
       }
     }
   }
@@ -57,7 +57,7 @@ export const ParagraphVerticalImage = graphql`
     }
     relationships {
       field_image {
-        gatsbyImage(width: 900, aspectRatio: 0.5625 formats: AUTO,WEBP)
+        gatsbyImage(width: 900, aspectRatio: 0.5625 formats: [AUTO,WEBP])
       }
     }
   }
