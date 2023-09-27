@@ -15,6 +15,9 @@ const blogQuery = `{
               title
               status
               objectID: drupal_internal__nid
+              internal {
+                contentDigest
+              }
               path {
                 alias
               }
