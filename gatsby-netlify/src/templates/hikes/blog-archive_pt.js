@@ -8,16 +8,15 @@ import SubTitle from "../../components/field/subtitle"
 import Seo from "../../components/seo"
 
 export const pageQuery = graphql`
-  query ($skip: Int!, $limit: Int!) {
+  query {
     allNodeBlog(
       sort: { created: ASC }
       filter: {
+        moderation_state: { eq: "published" }
         relationships: {
           field_blog_category: { drupal_internal__tid: { in: 19 } }
         }
       }
-      skip: $skip
-      limit: $limit
     ) {
       edges {
         node {
@@ -38,6 +37,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          moderation_state
         }
       }
       totalCount

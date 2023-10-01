@@ -129,7 +129,11 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
-    allNodeBlog(sort: { created: DESC }, limit: 12) {
+    allNodeBlog(
+      sort: { created: DESC }
+      limit: 12
+      filter: { moderation_state: { eq: "published" } }
+    ) {
       edges {
         node {
           title
@@ -149,6 +153,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          moderation_state
         }
       }
       totalCount
