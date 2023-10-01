@@ -81,7 +81,6 @@ const queries = [
           },
         }) => {
           let text = striptags(field_summary.processed.toString())
-          let digest = internal.contentDigest
           let url = path.alias.toString()
           let date = relationships.field_body_elements[0].field_hike_date
           let paragraphs = Object.values(
@@ -96,7 +95,7 @@ const queries = [
             url,
             date,
             elements,
-            digest,
+            digest: internal.contentDigest,
           }
         }
       ),
