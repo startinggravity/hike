@@ -257,64 +257,29 @@ module.exports = {
       resolve: `gatsby-plugin-algolia`,
       options: require(`./gatsby-plugin-algolia-config.js`),
     },
-    // {
-    //   resolve: `gatsby-plugin-complex-sitemap-tree`,
-    //   options: {
-    //     query: `
-    //       {
-    //         allNodePage {
-    //           edges {
-    //             node {
-    //               path {
-    //                 alias
-    //               }
-    //               changed
-    //             }
-    //           }
-    //         }
-    //         allNodeBlog {
-    //           edges {
-    //             node {
-    //               path {
-    //                 alias
-    //               }
-    //               changed
-    //               relationships {
-    //                 field_main_image {
-    //                   publicUrl
-    //                 }
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }`,
-    // sitemapTree: {
-    //   fileName: "sitemap.xml",
-    //   children: [
-    //     {
-    //       fileName: "sitemap-posts.xml",
-    //       queryName: "allNodeBlog",
-    //       urlsetAnchorAttributes: `xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"`,
-    //       serializer: edge => ({
-    //         loc: edge.path.alias + "/",
-    //         "image:image": {
-    //           "image:loc":
-    //             siteUrl + edge.relationships.field_main_image.publicUrl,
-    //         },
-    //         lastmod: edge.changed,
-    //       }),
-    //     },
-    //     {
-    //       fileName: "sitemap-pages.xml",
-    //       queryName: "allNodePage",
-    //       serializer: edge => ({
-    //         loc: edge.path.alias + "/",
-    //         lastmod: edge.changed,
-    //       }),
-    //     },
-    //   ],
-    // },
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          allNodeBlog {
+            edges {
+              node {
+                changed
+                path {
+                  alias
+                }
+              }
+            }
+          }
+        `,
+        serialize: ({ query: { node } }) => {
+          return {
+            url: "https://hikewithgravity.com" + node.path.alias + '/',
+            lastmod: node.changed,
+          }
+        },
+      },
+    },
   ],
 }
