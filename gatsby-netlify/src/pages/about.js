@@ -110,6 +110,22 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
+                <Link to={"/about/my-triple-crown-hikes"}>
+                  <div className="hike-list__text">
+                    <h3>My Triple Crown Hikes</h3>
+                  </div>
+                  <div className="hike-list__image">
+                    <StaticImage
+                      alt="Gravity walking in Oregon on the PCT"
+                      src="../images/gravity-triple_teaser.jpg"
+                      width="330"
+                      aspectRatio={1}
+                      className="blog-thumb"
+                    />
+                  </div>
+                </Link>
+              </article>
+              <article className="hike-list__item">
                 <Link to={"/about/this-site"}>
                   <div className="hike-list__text">
                     <h3>This Site</h3>
