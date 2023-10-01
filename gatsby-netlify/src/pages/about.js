@@ -110,7 +110,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/my-triple-crown-hikes"}>
+                <Link to={"/hikes/about/my-triple-crown-hikes/"}>
                   <div className="hike-list__text">
                     <h3>My Triple Crown Hikes</h3>
                   </div>
