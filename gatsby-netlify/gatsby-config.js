@@ -272,10 +272,10 @@ module.exports = {
               }
             }
           }
-        `,
+        }`,
         serialize: ({ query: { node } }) => {
           return {
-            url: "https://hikewithgravity.com" + node.path.alias + '/',
+            url: 'https://hikewithgravity.com' + node.path.alias + '/',
             lastmod: node.changed,
           }
         },
