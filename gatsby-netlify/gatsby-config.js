@@ -275,7 +275,7 @@ module.exports = {
         }`,
         serialize: ({ query: { node } }) => {
           return {
-            url: 'https://hikewithgravity.com' + node.path.alias + '/',
+            url: siteUrl + node.path.alias + '/',
             lastmod: node.changed,
           }
         },
