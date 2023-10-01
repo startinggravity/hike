@@ -95,7 +95,7 @@ const queries = [
             url,
             date,
             elements,
-            digest: internal.contentDigest,
+            internal,
           }
         }
       ),
