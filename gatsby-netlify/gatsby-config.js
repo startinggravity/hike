@@ -270,13 +270,12 @@ module.exports = {
           allNodeBlog(
             sort: {changed: DESC}
             filter: {moderation_state: {eq: "published"}}
-            ) {
-              edges {
-                node {
-                  changed
-                  path {
-                    alias
-                  }
+          ) {
+            edges {
+              node {
+                changed
+                path {
+                  alias
                 }
               }
             }
