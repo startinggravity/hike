@@ -284,11 +284,11 @@ module.exports = {
             siteMetadata: { url },
           },
         }) => url,
-        resolvePages: ({ allNodeBlog: { edges: post } }) => {
-          const posts = post.node.map(node => {
+        resolvePages: ({ allNodeBlog }) => {
+          const posts = edges.map(edge => {
             return {
-              path: node.path.alias,
-              lastmod: node.changed,
+              path: edge.node.path.alias,
+              lastmod: edge.node.changed,
             }
           })
 
