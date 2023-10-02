@@ -285,7 +285,7 @@ module.exports = {
           },
         }) => url,
         resolvePages: ({ allNodeBlog }) => {
-          const posts = edges.map(edge => {
+          const posts = allNodeBlog.edges.map(edge => {
             return {
               path: edge.node.path.alias,
               lastmod: edge.node.changed,
