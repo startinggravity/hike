@@ -8,13 +8,16 @@ import SubTitle from "../../components/field/subtitle"
 import Seo from "../../components/seo"
 
 export const pageQuery = graphql`
-  query ($skip: Int!, $limit: Int!) {
-   allNodeBlog(
-     sort: {created: ASC}
-     filter: {relationships: {field_blog_category: {drupal_internal__tid: {in: 20}}}}
-     skip: $skip
-     limit: $limit
-   ) {
+  query {
+    allNodeBlog(
+      sort: { created: ASC }
+      filter: {
+        moderation_state: { eq: "published" }
+        relationships: {
+          field_blog_category: { drupal_internal__tid: { in: 20 } }
+        }
+      }
+    ) {
       edges {
         node {
           title
