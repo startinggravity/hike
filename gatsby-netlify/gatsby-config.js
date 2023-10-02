@@ -281,7 +281,7 @@ module.exports = {
         }`,
         resolveSiteUrl: ({
           site: {
-            siteMetadata: { url },
+            siteMetadata: { siteUrl },
           },
         }) => url,
         resolvePages: ({ allNodeBlog }) => {
