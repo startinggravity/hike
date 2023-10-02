@@ -153,7 +153,6 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          moderation_state
         }
       }
       totalCount
