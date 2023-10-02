@@ -265,13 +265,18 @@ module.exports = {
           site {
             siteMetadata {
               siteUrl
+            }
           }
-          allNodeBlog {
-            edges {
-              node {
-                changed
-                path {
-                  alias
+          allNodeBlog(
+            sort: {changed: DESC}
+            filter: {moderation_state: {eq: "published"}}
+            ) {
+              edges {
+                node {
+                  changed
+                  path {
+                    alias
+                  }
                 }
               }
             }
