@@ -1,5 +1,3 @@
-const siteUrl = `https://hikewithgravity.com`
-
 module.exports = {
   siteMetadata: {
     title: `Hike with Gravity`,
@@ -287,7 +285,7 @@ module.exports = {
           },
         }) => url,
         resolvePages: ({ allNodeBlog: { edges: post } }) => {
-          const posts = post.map(node => {
+          const posts = post.node.map(node => {
             return {
               path: node.path.alias,
               lastmod: node.changed,
