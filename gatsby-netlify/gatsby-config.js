@@ -281,10 +281,32 @@ module.exports = {
             }
           }
         }`,
-        serialize: ({ query: { node } }) => {
+        resolveSiteUrl: ({
+          site: {
+            siteMetadata: { url },
+          },
+        }) => url,
+        resolvePages: ({ allNodeBlog: { edges } }) => {
+          const posts = edges.map(node => {
+            return {
+              path: node.path.alias,
+              lastmod: node.changed,
+            }
+          })
+
+          const home = {
+            path: "/",
+            lastmod: posts[0].lastmod,
+          }
+
+          return [...posts, home]
+        },
+        serialize: ({ path, lastmod, changefreq, priority }) => {
           return {
-            url: node.path.alias + "/",
-            lastmod: node.changed,
+            url: path,
+            lastmod,
+            changefreq,
+            priority,
           }
         },
       },
