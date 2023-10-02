@@ -262,6 +262,10 @@ module.exports = {
       options: {
         query: `
         {
+          site {
+            siteMetadata {
+              siteUrl
+          }
           allNodeBlog {
             edges {
               node {
@@ -275,7 +279,7 @@ module.exports = {
         }`,
         serialize: ({ query: { node } }) => {
           return {
-            url: siteUrl + node.path.alias + '/',
+            url: node.path.alias + "/",
             lastmod: node.changed,
           }
         },
