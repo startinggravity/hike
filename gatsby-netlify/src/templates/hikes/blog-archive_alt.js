@@ -86,16 +86,7 @@ const BlogArchive = ({ data, pageContext }) => {
           <div className="mx-auto max-w-5xl">
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
-                I thru-hiked the Art Loeb Trail in November 2021.
-                Day-by-day reports will be posted when I have time to catch up
-                with my writing.
-                {/* of my hike are found on these pages. Read more about the PT{" "}
-              <Link
-                to={"/about/the-pinhoti-trail"}
-                title={"The Pinhoti Trail"}
-              >
-                here
-              </Link> */}
+                I thru-hiked the Art Loeb Trail in November 2021. This trail is located in Pisgah National Forest in North Carolina and is about 30 miles long.
               </p>
             </div>
           </div>

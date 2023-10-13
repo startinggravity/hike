@@ -28,7 +28,7 @@ const Hikes = () => {
           `Springer Mountain`,
           `Mount Katahdin`,
           `Benton MacKaye`,
-          `Pinhoti`,
+          `Pinhoti Trail`,
           `Foothills Trail`,
           `Bartram Trail`,
           `AT`,
@@ -157,8 +157,6 @@ const Hikes = () => {
                   <div className="hike-list__text">
                     <h3>
                       Art Loeb Trail 2021
-                      <br />
-                      <span>(reports coming soon)</span>
                     </h3>
                   </div>
                   <div className="hike-list__image">

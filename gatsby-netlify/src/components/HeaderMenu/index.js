@@ -54,15 +54,6 @@ class HeaderMenu extends React.Component {
                     </li>
                     <li className="main-menu__item">
                       <Link
-                        to="/hikes/bmt-2020"
-                        title="Hike Reports: Benton MacKaye Trail 2020"
-                        className="main-menu__link main-menu__link--benton-mackaye-trail-2020"
-                      >
-                        Benton MacKaye Trail 2020
-                      </Link>
-                    </li>
-                    <li className="main-menu__item">
-                      <Link
                         to="/hikes/cdt-2021"
                         title="Hike Reports: Continental Divide Trail 2021"
                         className="main-menu__link main-menu__link--continental-divide-trail-2021"
@@ -72,11 +63,11 @@ class HeaderMenu extends React.Component {
                     </li>
                     <li className="main-menu__item">
                       <Link
-                        to="/hikes/pt-2022"
-                        title="Hike Reports: Pinhoti Trail 2022"
-                        className="main-menu__link main-menu__link--continental-divide-trail-2021"
+                        to="/hikes/"
+                        title="Other Hikes"
+                        className="main-menu__link"
                       >
-                        Pinhoti Trail 2022
+                        Other Hikes
                       </Link>
                     </li>
                   </ul>
