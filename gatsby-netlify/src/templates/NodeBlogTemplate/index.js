@@ -30,7 +30,8 @@ const NodeBlogTemplate = ({ data: { node }, pageContext }) => {
     contentType = "main-content gear-blog-page"
     fullTitle = subtitle
     subTitle = title
-    pageDescription = "A gear list for " + title + " carried by Gravity on his hikes."
+    pageDescription =
+      "A gear list for " + title + " carried by Gravity on his hikes."
   } else {
     contentType = "main-content about-blog-page"
     fullTitle = node.rel.cat.name + ": " + title

@@ -8,7 +8,7 @@ import SubTitle from "../../components/field/subtitle"
 import Seo from "../../components/seo"
 
 export const pageQuery = graphql`
-  query {
+  query ($skip: Int!, $limit: Int!) {
     allNodeBlog(
       sort: { created: ASC }
       filter: {
@@ -17,6 +17,8 @@ export const pageQuery = graphql`
           field_blog_category: { drupal_internal__tid: { in: 21 } }
         }
       }
+      skip: $skip
+      limit: $limit
     ) {
       edges {
         node {
