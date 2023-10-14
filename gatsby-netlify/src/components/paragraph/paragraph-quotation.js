@@ -1,7 +1,11 @@
-import React from "react";
+import React from "react"
 
-export default function ParagraphQuotation({ quote, linkUrl, linkTitle, type }) {
-
+export default function ParagraphQuotation({
+  quote,
+  linkUrl,
+  linkTitle,
+  type,
+}) {
   return (
     <div
       className={
