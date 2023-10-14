@@ -87,7 +87,7 @@ const Gear = () => {
                     <StaticImage
                       alt="Polecat walking on the PCT"
                       src="../images/hiking_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -103,7 +103,7 @@ const Gear = () => {
                     <StaticImage
                       alt="Tents on the PCT"
                       src="../images/shelter_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -119,7 +119,7 @@ const Gear = () => {
                     <StaticImage
                       alt="Gravity on the PCT"
                       src="../images/clothing_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -135,7 +135,7 @@ const Gear = () => {
                     <StaticImage
                       alt="A stove at a campsite"
                       src="../images/cooking_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -151,7 +151,7 @@ const Gear = () => {
                     <StaticImage
                       alt="A view of a footpath"
                       src="../images/first-aid_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -167,7 +167,7 @@ const Gear = () => {
                     <StaticImage
                       alt="Yellow wildflowers"
                       src="../images/electronics_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />

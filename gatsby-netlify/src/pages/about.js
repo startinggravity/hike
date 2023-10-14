@@ -86,7 +86,7 @@ const About = () => {
                     <StaticImage
                       alt="A photo of Gravity"
                       src="../images/gravity_teaser.jpg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -102,7 +102,7 @@ const About = () => {
                     <StaticImage
                       alt="Gravity standing on Beauty Spot on the AT"
                       src="../images/gravity-trail_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -118,7 +118,7 @@ const About = () => {
                     <StaticImage
                       alt="Gravity walking in Oregon on the PCT"
                       src="../images/gravity-triple_teaser.jpg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -134,7 +134,7 @@ const About = () => {
                     <StaticImage
                       alt="A computer screen displays website code"
                       src="../images/about-site_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -150,7 +150,7 @@ const About = () => {
                     <StaticImage
                       alt="A rock in Roan Highlands"
                       src="../images/at_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -166,7 +166,7 @@ const About = () => {
                     <StaticImage
                       alt="The PCT in Washington"
                       src="../images/pct_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -182,7 +182,7 @@ const About = () => {
                     <StaticImage
                       alt="Wind River Range"
                       src="../images/cdt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -198,7 +198,7 @@ const About = () => {
                     <StaticImage
                       alt="A creek on the BMT"
                       src="../images/bmt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />

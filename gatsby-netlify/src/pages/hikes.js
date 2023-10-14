@@ -90,7 +90,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Appalachian Trail 2017"
                       src="../images/appalachian-trail_mcafee-knob.jpeg"
-                      width="1024"
+                      width={1024}
                       aspectRatio={6}
                       className="blog-thumb"
                     />
@@ -106,7 +106,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Pacific Crest Trail 2019"
                       src="../images/pacific-crest-trail_goat-rocks.jpeg"
-                      width="1024"
+                      width={1024}
                       aspectRatio={6}
                       className="blog-thumb"
                     />
@@ -122,7 +122,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Continental Divide Trail 2021"
                       src="../images/cdt_header.jpeg"
-                      width="1024"
+                      width={1024}
                       aspectRatio={6}
                       className="blog-thumb"
                     />
@@ -145,7 +145,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Benton MacKaye Trail 2020"
                       src="../images/bmt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -163,7 +163,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Art Loeb Trail 2021"
                       src="../images/alt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -183,7 +183,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Pinhoti Trail 2022"
                       src="../images/pt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
@@ -203,7 +203,7 @@ const Hikes = () => {
                     <StaticImage
                       alt="Foothills and Bartram trails 2022"
                       src="../images/fht-bt_teaser.jpeg"
-                      width="330"
+                      width={330}
                       aspectRatio={1}
                       className="blog-thumb"
                     />
