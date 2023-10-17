@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Appalachian Trail 2017"
   const coverImage = "../../images/appalachian-trail_mcafee-knob.jpeg"
   const socialImage = "/at_social.jpeg"
-  const thisPath = "/hikes/at-2017"
+  const thisPath = "/hikes/at-2017/"
   return (
     <>
       <Seo

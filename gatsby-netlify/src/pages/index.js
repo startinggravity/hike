@@ -31,7 +31,7 @@ const IndexPage = ({
           `Springer Mountain`,
           `Mount Katahdin`,
           "Benton MacKaye",
-          "Pinhoti",
+          "Pinhoti Trail",
           `AT`,
           `PCT`,
           `CDT`,
@@ -44,7 +44,7 @@ const IndexPage = ({
           `long distance hiking`,
           `blog`,
           `Gravity`,
-          "Hike with Gravity",
+          `Hike with Gravity`,
         ]}
         nodePath={thisPath}
         nodeImage="/homepage.jpeg"
@@ -89,7 +89,7 @@ const IndexPage = ({
               <ul className="secondary-menu__list">
                 <li className="secondary-menu__item">
                   <Link
-                    to={"/hikes"}
+                    to={"/hikes/"}
                     title="My Hikes"
                     className="welcome__links--hikes"
                   >
@@ -98,7 +98,7 @@ const IndexPage = ({
                 </li>
                 <li className="secondary-menu__item">
                   <Link
-                    to={"/gear"}
+                    to={"/gear/"}
                     title="My Gear"
                     className="welcome__links--gear"
                   >
@@ -107,7 +107,7 @@ const IndexPage = ({
                 </li>
                 <li className="secondary-menu__item">
                   <Link
-                    to={"/about"}
+                    to={"/about/"}
                     title="About Me"
                     className="welcome__links--about"
                   >

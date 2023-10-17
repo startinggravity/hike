@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Benton MacKaye Trail 2020"
   const coverImage = "../../images/bmt_header-1.jpeg"
   const socialImage = "/bmt_social.jpeg"
-  const thisPath = "/hikes/bmt-2020"
+  const thisPath = "/hikes/bmt-2020/"
   return (
     <>
       <Seo

@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Pinhoti Trail 2022"
   const coverImage = "../../images/pt_header.jpeg"
   const socialImage = "/pt_social.jpeg"
-  const thisPath = "/hikes/pt-2022"
+  const thisPath = "/hikes/pt-2022/"
   return (
     <>
       <Seo

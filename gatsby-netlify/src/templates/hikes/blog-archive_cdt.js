@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Continental Divide Trail 2021"
   const coverImage = "../../images/cdt_header.jpeg"
   const socialImage = "/cdt_social.jpeg"
-  const thisPath = "/hikes/cdt-2021"
+  const thisPath = "/hikes/cdt-2021/"
   return (
     <>
       <Seo

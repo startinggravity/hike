@@ -27,8 +27,8 @@ const About = () => {
           `White Mountains`,
           `Springer Mountain`,
           `Mount Katahdin`,
-          "Benton MacKaye",
-          "Pinhoti",
+          'Benton MacKaye',
+          'Pinhoti Trail',
           `AT`,
           `PCT`,
           `CDT`,
@@ -41,7 +41,7 @@ const About = () => {
           `long distance hiking`,
           `blog`,
           `Gravity`,
-          "Hike with Gravity",
+          'Hike with Gravity',
         ]}
         nodePath={thisPath}
         nodeImage={socialImage}
@@ -78,7 +78,7 @@ const About = () => {
           <div className="mx-auto max-w-5xl py-2.5">
             <div className="gear-list-teasers">
               <article className="hike-list__item">
-                <Link to={"/about/gravity"}>
+                <Link to={"/about/gravity/"}>
                   <div className="hike-list__text">
                     <h3>Gravity</h3>
                   </div>
@@ -94,7 +94,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/my-trail-name"}>
+                <Link to={"/about/my-trail-name/"}>
                   <div className="hike-list__text">
                     <h3>My Trail Name</h3>
                   </div>
@@ -126,7 +126,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/this-site"}>
+                <Link to={"/about/this-site/"}>
                   <div className="hike-list__text">
                     <h3>This Site</h3>
                   </div>
@@ -142,7 +142,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/the-appalachian-trail"}>
+                <Link to={"/about/the-appalachian-trail/"}>
                   <div className="hike-list__text">
                     <h3>The Appalachian Trail</h3>
                   </div>
@@ -158,7 +158,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/the-pacific-crest-trail"}>
+                <Link to={"/about/the-pacific-crest-trail/"}>
                   <div className="hike-list__text">
                     <h3>The Pacific Crest Trail</h3>
                   </div>
@@ -174,7 +174,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/the-continental-divide-trail"}>
+                <Link to={"/about/the-continental-divide-trail/"}>
                   <div className="hike-list__text">
                     <h3>The Continental Divide Trail</h3>
                   </div>
@@ -190,7 +190,7 @@ const About = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/about/the-benton-mackaye-trail"}>
+                <Link to={"/about/the-benton-mackaye-trail/"}>
                   <div className="hike-list__text">
                     <h3>The Benton MacKaye Trail</h3>
                   </div>

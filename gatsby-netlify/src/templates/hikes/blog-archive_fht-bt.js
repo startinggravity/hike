@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Foothills and Bartram trails 2022"
   const coverImage = "../../images/fht-bt_header.jpeg"
   const socialImage = "/fht-bt_social.jpeg"
-  const thisPath = "/hikes/fht-bt-2022"
+  const thisPath = "/hikes/fht-bt-2022/"
   return (
     <>
       <Seo

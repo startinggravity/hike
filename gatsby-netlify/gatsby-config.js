@@ -29,6 +29,9 @@ module.exports = {
     ],
   },
   trailingSlash: "always",
+  // flags: {
+  //   DETECT_NODE_MUTATIONS: true,
+  // },
   plugins: [
     `gatsby-plugin-netlify`,
     {
@@ -36,7 +39,7 @@ module.exports = {
       options: {
         baseUrl: `https://dev-hike-with-gravity.pantheonsite.io/`,
         skipFileDownloads: true,
-        concurrentFileRequests: 20,
+        concurrentFileRequests: 60,
         fastBuilds: true,
         disallowedLinkTypes: [
           `self`,
@@ -167,7 +170,7 @@ module.exports = {
               }
             `,
             output: "/hikes.xml",
-            title: "Hike with Gravity",
+            title: 'Hike with Gravity',
             link: "https://hikewithgravity.com/hikes.xml",
             match: "^/hikes/",
           },
@@ -288,17 +291,60 @@ module.exports = {
         resolvePages: ({ allNodeBlog }) => {
           const posts = allNodeBlog.edges.map(edge => {
             return {
-              path: edge.node.path.alias + '/',
+              path: edge.node.path.alias + "/",
               lastmod: edge.node.changed,
             }
           })
-
+          // Other pages.
           const home = {
             path: "/",
             lastmod: posts[0].lastmod,
           }
+          const hikes = {
+            path: "/hikes/",
+            lastmod: posts[0].lastmod,
+          }
+          const hikesAt = {
+            path: "/hikes/at-2017/",
+            lastmod: "2022-06-05T16:44:08.000Z",
+          }
+          const hikesPct = {
+            path: "/hikes/pct-2019/",
+            lastmod: "2022-05-09T18:34:35.000Z",
+          }
+          const hikesCdt = {
+            path: "/hikes/cdt-2021/",
+            lastmod: "2023-10-01T17:44:06.000Z",
+          }
+          const hikesAlt = {
+            path: "/hikes/alt-2021/",
+            lastmod: posts[0].lastmod,
+          }
+          const hikesBmt = {
+            path: "/hikes/bmt-2020/",
+            lastmod: "2023-02-03T19:57:59.000Z",
+          }
+          const about = {
+            path: "/about/",
+            lastmod: "2023-10-01T17:44:06.000Z",
+          }
+          const gear = {
+            path: "/gear/",
+            lastmod: "2023-01-18T23:15:04.000Z",
+          }
 
-          return [...posts, home]
+          return [
+            ...posts,
+            home,
+            hikes,
+            hikesAt,
+            hikesPct,
+            hikesCdt,
+            hikesAlt,
+            hikesBmt,
+            about,
+            gear,
+          ]
         },
         serialize: ({ path, lastmod, changefreq, priority }) => {
           return {

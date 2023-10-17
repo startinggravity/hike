@@ -53,7 +53,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const subTitle = "Art Loeb Trail 2021"
   const coverImage = "../../images/alt_header.jpeg"
   const socialImage = "/alt_social.jpeg"
-  const thisPath = "/hikes/alt-2021"
+  const thisPath = "/hikes/alt-2021/"
   return (
     <>
       <Seo
@@ -88,7 +88,9 @@ const BlogArchive = ({ data, pageContext }) => {
           <div className="mx-auto max-w-5xl">
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
-                I thru-hiked the Art Loeb Trail in November 2021. This trail is located in Pisgah National Forest in North Carolina and is about 30 miles long.
+                I thru-hiked the Art Loeb Trail in November 2021. This trail is
+                located in Pisgah National Forest in North Carolina and is about
+                30 miles long.
               </p>
             </div>
           </div>

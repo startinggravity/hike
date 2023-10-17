@@ -25,8 +25,8 @@ const Gear = () => {
           `White Mountains`,
           `Springer Mountain`,
           `Mount Katahdin`,
-          "Benton MacKaye",
-          "Pinhoti",
+          'Benton MacKaye',
+          'Pinhoti Trail',
           `AT`,
           `PCT`,
           `CDT`,
@@ -39,7 +39,7 @@ const Gear = () => {
           `long distance hiking`,
           `blog`,
           `Gravity`,
-          "Hike with Gravity",
+          'Hike with Gravity',
         ]}
         nodePath={thisPath}
         nodeImage={socialImage}
@@ -79,7 +79,7 @@ const Gear = () => {
           <div className="mx-auto max-w-5xl py-2.5">
             <div className="gear-list-teasers">
               <article className="hike-list__item">
-                <Link to={"/gear/hiking"}>
+                <Link to={"/gear/hiking/"}>
                   <div className="hike-list__text">
                     <h3>Hiking</h3>
                   </div>
@@ -95,7 +95,7 @@ const Gear = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/gear/shelter-sleeping"}>
+                <Link to={"/gear/shelter-sleeping/"}>
                   <div className="hike-list__text">
                     <h3>Shelter and Sleep System</h3>
                   </div>
@@ -111,7 +111,7 @@ const Gear = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/gear/clothing-shoes"}>
+                <Link to={"/gear/clothing-shoes/"}>
                   <div className="hike-list__text">
                     <h3>Clothing and Shoes</h3>
                   </div>
@@ -127,7 +127,7 @@ const Gear = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/gear/cooking-filtration"}>
+                <Link to={"/gear/cooking-filtration/"}>
                   <div className="hike-list__text">
                     <h3>Cooking and Filtration</h3>
                   </div>
@@ -143,7 +143,7 @@ const Gear = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/gear/first-aid-hygiene-miscellaneous"}>
+                <Link to={"/gear/first-aid-hygiene-miscellaneous/"}>
                   <div className="hike-list__text">
                     <h3>First Aid, Hygiene, and Miscellaneous</h3>
                   </div>
@@ -159,7 +159,7 @@ const Gear = () => {
                 </Link>
               </article>
               <article className="hike-list__item">
-                <Link to={"/gear/electronics"}>
+                <Link to={"/gear/electronics/"}>
                   <div className="hike-list__text">
                     <h3>Electronics</h3>
                   </div>
