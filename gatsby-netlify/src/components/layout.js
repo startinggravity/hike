@@ -8,6 +8,7 @@ import Trigger from "../helpers/trigger"
 import "../styles/globals.css"
 
 const Layout = ({ children }) => {
+
   return (
     <>
       <Trigger />

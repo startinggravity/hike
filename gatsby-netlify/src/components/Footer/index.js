@@ -1,14 +1,15 @@
 import React from "react"
 import { Link } from "gatsby"
+// import "./style.css"
 import footerLogo from "./footer_logo.svg"
 import ccLogo from "./creative_commons.svg"
 
 function FooterLogo() {
-  return <img src={footerLogo} alt="Hike with Gravity Logo" loading="lazy" />
+  return <img src={footerLogo} alt="Hike with Gravity Logo" loading="lazy"/>
 }
 
 function CreativeCommonsLogo() {
-  return <img src={ccLogo} alt="Creative Commons license Logo" loading="lazy" />
+  return <img src={ccLogo} alt="Creative Commons license Logo" loading="lazy"/>
 }
 
 const Footer = () => (
@@ -98,8 +99,8 @@ const Footer = () => (
         </p>
         <p>
           This site was built by
-          <a href="https://www.startinggravity.com"> Starting Gravity</a> using
-          the open-source projects <a href="https://drupal.org">Drupal</a> and
+          <a href="https://www.startinggravity.com"> Starting Gravity</a> using the
+          open-source projects <a href="https://drupal.org">Drupal</a> and
           <a href="https://gatsbyjs.org"> GatsbyJS</a>.
         </p>
       </div>

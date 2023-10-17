@@ -89,8 +89,8 @@ const BlogArchive = ({ data, pageContext }) => {
             <div className="mt-6 text-2xl prose mx-auto max-w-3xl px-5 py-4 text-gravBlack">
               <p>
                 I thru-hiked the Pinhoti Trail in the spring of 2022. Day-by-day
-                reports will be posted when when I have a chance to catch up on
-                other writing.
+                reports will be posted when when I have
+                a chance to catch up on other writing.
                 {/* of my hike are found on these pages. Read more about the PT{" "}
               <Link
                 to={"/about/the-pinhoti-trail"}

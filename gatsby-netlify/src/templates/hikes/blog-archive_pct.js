@@ -51,7 +51,7 @@ const BlogArchive = ({ data, pageContext }) => {
   const totalPosts = data.allNodeBlog.totalCount
   const fullTitle = "Hike Reports:"
   const subTitle = "Pacific Crest Trail 2019"
-  const coverImage = "../../images/pacific-crest-trail_goat-rocks.jpeg"
+  const coverImage ="../../images/pacific-crest-trail_goat-rocks.jpeg"
   const socialImage = "/pct_social.jpeg"
   const thisPath = "/hikes/pct-2019"
   return (

@@ -18,7 +18,9 @@ class Trigger extends Component {
     }
   }
   render() {
-    return <div />
+    return (
+      <div/>
+    )
   }
 }
 

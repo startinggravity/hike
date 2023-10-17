@@ -9,8 +9,8 @@ module.exports = {
         success: "#0070f3",
         cyan: "#79FFE1",
         gravGreen: "#8eb48c", //Logo and footer
-        gravDkGray: "#273246",
-        gravDkGrayFade: "rgba(39,50,70,.05)",
+        gravDkGray: "#273246", 
+        gravDkGrayFade: "rgba(39,50,70,.05)", 
         gravRedBrown: "#984a2d",
         gravYellow: "#f8b238",
         gravTan: "#c8ad90",

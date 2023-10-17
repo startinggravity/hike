@@ -14,15 +14,13 @@ const GearMenu = () => (
         <Link to="/gear/clothing-shoes">Clothing and Shoes</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/cooking-filtration">Cooking and Filtration</Link>
+          <Link to="/gear/cooking-filtration">Cooking and Filtration</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/first-aid-hygiene-miscellaneous">
-          First Aid, Hygiene, and Miscellaneous
-        </Link>
+          <Link to="/gear/first-aid-hygiene-miscellaneous">First Aid, Hygiene, and Miscellaneous</Link>
       </li>
       <li className="secondary-menu__item">
-        <Link to="/gear/electronics">Electronics</Link>
+          <Link to="/gear/electronics">Electronics</Link>
       </li>
     </ul>
   </div>

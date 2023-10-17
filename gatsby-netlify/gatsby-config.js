@@ -29,9 +29,6 @@ module.exports = {
     ],
   },
   trailingSlash: "always",
-  flags: {
-    PARALLEL_QUERY_RUNNING: true,
-  },
   plugins: [
     `gatsby-plugin-netlify`,
     {
@@ -291,7 +288,7 @@ module.exports = {
         resolvePages: ({ allNodeBlog }) => {
           const posts = allNodeBlog.edges.map(edge => {
             return {
-              path: edge.node.path.alias + "/",
+              path: edge.node.path.alias + '/',
               lastmod: edge.node.changed,
             }
           })
