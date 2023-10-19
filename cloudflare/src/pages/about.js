@@ -27,8 +27,8 @@ const About = () => {
           `White Mountains`,
           `Springer Mountain`,
           `Mount Katahdin`,
-          "Benton MacKaye",
-          "Pinhoti",
+          'Benton MacKaye',
+          'Pinhoti Trail',
           `AT`,
           `PCT`,
           `CDT`,
@@ -41,7 +41,7 @@ const About = () => {
           `long distance hiking`,
           `blog`,
           `Gravity`,
-          "Hike with Gravity",
+          'Hike with Gravity',
         ]}
         nodePath={thisPath}
         nodeImage={socialImage}

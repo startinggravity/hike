@@ -168,7 +168,7 @@ module.exports = {
               }
             `,
             output: "/hikes.xml",
-            title: "Hike with Gravity",
+            title: 'Hike with Gravity',
             link: "https://hikewithgravity.com/hikes.xml",
             match: "^/hikes/",
           },

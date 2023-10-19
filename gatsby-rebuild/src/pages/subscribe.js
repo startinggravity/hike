@@ -59,8 +59,8 @@ export default class Subscribe extends React.Component {
             `White Mountains`,
             `Springer Mountain`,
             `Mount Katahdin`,
-            "Benton MacKaye",
-            "Pinhoti",
+            'Benton MacKaye',
+            'Pinhoti Trail',
             `AT`,
             `PCT`,
             `CDT`,
@@ -73,7 +73,7 @@ export default class Subscribe extends React.Component {
             `long distance hiking`,
             `blog`,
             `Gravity`,
-            "Hike with Gravity",
+            'Hike with Gravity',
           ]}
           nodePath={thisPath}
           nodeImage={socialImage}

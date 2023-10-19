@@ -39,7 +39,7 @@ module.exports = {
       options: {
         baseUrl: `https://dev-hike-with-gravity.pantheonsite.io/`,
         skipFileDownloads: true,
-        concurrentFileRequests: 20,
+        concurrentFileRequests: 2,
         fastBuilds: true,
         disallowedLinkTypes: [
           `self`,
